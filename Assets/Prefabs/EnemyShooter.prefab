@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 5770290954689336655}
   - component: {fileID: 6975804815195030580}
   - component: {fileID: 5856092824487424047}
+  - component: {fileID: 8379308050785365554}
+  - component: {fileID: 6761493112056648002}
   m_Layer: 6
-  m_Name: EnemyShooter
+  m_Name: Vanguardista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +63,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0b8aa64a00844bab130a3c20451b3d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,7 +140,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 1.3333334}
   m_EdgeRadius: 0
 --- !u!114 &6975804815195030580
 MonoBehaviour:
@@ -155,6 +157,7 @@ MonoBehaviour:
   maxHealth: 20
   destroyOnDeath: 1
   invulnerabilityDuration: 0
+  deathEffectPrefab: {fileID: 1, guid: dab0c38d3d3443da9a339d4e5c1b9c6b, type: 3}
 --- !u!114 &5856092824487424047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +179,43 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &8379308050785365554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336f817f3b5d456592d805dac1016b79, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Effects.DamageFlash
+  spriteRenderer: {fileID: 17344527091435102}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  flashMaterial: {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
+  normalMaterial: {fileID: 0}
+--- !u!114 &6761493112056648002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f61ecb48d4f41d19fcf695e2c3f936e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Animations.SpriteAnimator
+  spriteRenderer: {fileID: 17344527091435102}
+  idleSprite: {fileID: 21300000, guid: a0b8aa64a00844bab130a3c20451b3d8, type: 3}
+  runFrames:
+  - {fileID: 21300000, guid: 344055e336a04444b0bf17797d5a1080, type: 3}
+  - {fileID: 21300000, guid: 10e554310548478f8ab2a0a934cb5b0e, type: 3}
+  - {fileID: 21300000, guid: 3ca32e1f36a24afca2d5912541f53f98, type: 3}
+  - {fileID: 21300000, guid: 40c147994da5410abf8bb53e680de55d, type: 3}
+  - {fileID: 21300000, guid: 21cb1505e21b47b4bc1c713f85aea3ea, type: 3}
+  - {fileID: 21300000, guid: d7863d331639435eb22492bfae228e25, type: 3}
+  runFps: 12
+  moveThreshold: 0.1

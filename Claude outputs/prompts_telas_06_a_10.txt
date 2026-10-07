@@ -1,0 +1,125 @@
+﻿REDLINE - FASE 01 - PROMPTS DAS TELAS 6 A 10
+=============================================
+
+Como usar:
+- Cole um prompt por vez, na MESMA conversa em que as telas anteriores foram geradas.
+- Gere na ordem (6, 7, 8, 9, 10). Cada tela continua a anterior.
+- Se o estilo começar a "fugir" (mais claro, pixels maiores, chão em outra altura),
+  reanexe a TELA 1 e diga: "siga exatamente o estilo, a escala e a altura do chão desta imagem".
+- Se o fundo vier com xadrez cinza/branco pintado, tudo bem: o recorte é feito depois.
+  Mas vale pedir de novo "fundo realmente transparente (PNG com canal alfa)".
+
+
+---------------------------------------------
+TELA 6 - Rua estreita com barricadas
+---------------------------------------------
+
+Agora crie a TELA 6 de 15, que continua imediatamente à DIREITA da última tela que você gerou (a tela 5, da praça com a fonte e a mesquita, que termina numa rua com sacos de areia e um tambor enferrujado), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de fim de tarde e mesma escala das telas anteriores. O personagem que te mandei no início teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos que já aparecem na borda direita da tela anterior (os sacos de areia, o tambor enferrujado e o toldo vermelho). A tela 6 começa logo DEPOIS deles.
+
+Trecho: uma rua estreita e tensa, cercada por muros altos de adobe com ameias no topo, como se fosse a entrada de uma zona controlada. Ao longo da rua, barricadas de sacos de areia em alturas diferentes, rolos de arame farpado no chão, pneus empilhados e caixas de munição de madeira. Em cima de um dos muros há um posto de vigia improvisado de madeira com teto de lona. Um muro tem uma passagem em arco bloqueada por tábuas pregadas. Marcas de tiro nas paredes e manchas de fuligem. No final, à direita, os muros se abrem para uma rua mais larga, com apenas entulho baixo.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos.
+- A BORDA DIREITA termina na rua aberta, SEM nenhum prédio ou muro cortado ao meio.
+- O chão (rua de terra batida e a faixa de terra com pedras embaixo) fica EXATAMENTE na mesma altura e espessura das telas anteriores, reto e plano de ponta a ponta. A rua começa na mesma linha da tela anterior, a cerca de 18% da altura da imagem contando de baixo para cima.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 2 plataformas com topo PLANO, reto e bem visível: uma barricada de sacos de areia larga (na altura da cintura do personagem) e o piso do posto de vigia de madeira em cima do muro (cerca de 1,5 vez a altura do personagem acima da barricada).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 7 - Posto de controle improvisado
+---------------------------------------------
+
+Agora crie a TELA 7 de 15, que continua imediatamente à DIREITA da última tela que você gerou (a tela 6, da rua estreita com barricadas), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de fim de tarde e mesma escala das telas anteriores. O personagem que te mandei no início teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos que já aparecem na borda direita da tela anterior. A tela 7 começa logo DEPOIS deles.
+
+Trecho: um posto de controle militar improvisado no meio da rua. Uma guarita de madeira com telhado de zinco amassado, uma cancela de metal listrada quebrada e caída de lado, dois contêineres de carga enferrujados empilhados (um em cima do outro, deslocados), pilhas de pneus, tambores de combustível e caixas de munição. Uma bandeira rasgada e sem símbolo pendurada num mastro. Holofote quebrado num poste. Ao fundo, casas baixas de adobe. No final, à direita, a rua continua livre com entulho baixo.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos.
+- A BORDA DIREITA termina na rua aberta, SEM nenhum prédio cortado ao meio.
+- O chão (rua de terra batida e a faixa de terra com pedras embaixo) fica EXATAMENTE na mesma altura e espessura das telas anteriores, reto e plano de ponta a ponta.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 3 plataformas com topo PLANO, reto e bem visível: a pilha de pneus (na altura da cintura do personagem), o contêiner de baixo (na altura da cabeça do personagem) e o contêiner de cima (cerca de 1,5 vez a altura do personagem acima do contêiner de baixo). O telhado da guarita também pode ser plano.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 8 - Ponte sobre canal seco
+---------------------------------------------
+
+Agora crie a TELA 8 de 15, que continua imediatamente à DIREITA da última tela que você gerou (a tela 7, do posto de controle), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de fim de tarde e mesma escala das telas anteriores. O personagem que te mandei no início teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos que já aparecem na borda direita da tela anterior. A tela 8 começa logo DEPOIS deles.
+
+Trecho: uma ponte de pedra antiga, larga e reta, atravessando um canal seco. O piso da ponte fica EXATAMENTE na mesma altura da rua das telas anteriores, para o personagem andar direto por cima dela. Por baixo da ponte, na faixa de terra, aparecem os arcos de pedra da ponte e o leito seco do canal com pedras e lixo. Na ponte, um mureta baixa de pedra quebrada em alguns pontos, um carro velho abandonado e sacos de areia. Nas duas pontas da ponte, pequenas torres de pedra decorativas e baixas. Ao fundo, a cidade continua com casas e palmeiras. No final, à direita, a ponte termina e volta a rua de terra.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos.
+- A BORDA DIREITA termina na rua de terra aberta, SEM nenhum prédio cortado ao meio.
+- O piso por onde se anda (rua e ponte) fica EXATAMENTE na mesma altura das telas anteriores, reto e plano de ponta a ponta, sem buracos e sem degraus.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 2 plataformas com topo PLANO, reto e bem visível: o teto do carro abandonado (na altura da cintura do personagem) e o topo de uma das torres de pedra da ponta da ponte (cerca de 1,5 vez a altura do personagem acima do chão).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 9 - Começo do bairro industrial
+---------------------------------------------
+
+Agora crie a TELA 9 de 15, que continua imediatamente à DIREITA da última tela que você gerou (a tela 8, da ponte sobre o canal seco), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma iluminação de fim de tarde e mesma escala das telas anteriores. O personagem que te mandei no início teria cerca de 1/7 da altura da imagem. A paleta continua quente, mas agora entram mais tons de metal enferrujado, cinza e verde-militar.
+
+IMPORTANTE: não repita objetos que já aparecem na borda direita da tela anterior. A tela 9 começa logo DEPOIS deles.
+
+Trecho: começo de um bairro industrial abandonado. Galpões de metal com chapas onduladas enferrujadas e algumas faltando, um grande tanque cilíndrico de combustível com marcas de tiro, canos grossos correndo ao longo de uma parede, e um caminhão-tanque abandonado sem pneus apoiado em blocos. Cerca de arame com um portão aberto. Placas de aviso sem texto legível. Ao fundo, chaminés e uma caixa-d'água de metal. No final, à direita, um pátio aberto de concreto com marcas de óleo.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos.
+- A BORDA DIREITA termina no pátio aberto, SEM nenhum galpão cortado ao meio.
+- O chão (rua de terra batida e a faixa de terra com pedras embaixo) fica EXATAMENTE na mesma altura e espessura das telas anteriores, reto e plano de ponta a ponta. Pode virar concreto rachado, mas na MESMA altura e espessura.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 2 plataformas com topo PLANO, reto e bem visível: o topo do caminhão-tanque (na altura da cabeça do personagem) e o telhado plano de um galpão baixo (cerca de 1,5 vez a altura do personagem acima do caminhão).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 10 - Pátio industrial com guindaste
+---------------------------------------------
+
+Agora crie a TELA 10 de 15, que continua imediatamente à DIREITA da última tela que você gerou (a tela 9, do começo do bairro industrial), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma iluminação de fim de tarde e mesma escala das telas anteriores. O personagem que te mandei no início teria cerca de 1/7 da altura da imagem. Mesma paleta da tela 9: tons quentes com metal enferrujado, cinza e verde-militar.
+
+IMPORTANTE: não repita objetos que já aparecem na borda direita da tela anterior. A tela 10 começa logo DEPOIS deles.
+
+Trecho: um pátio industrial de carga. Um guindaste de treliça amarelo desbotado e enferrujado parado, com o gancho pendurado. Contêineres empilhados em alturas diferentes (um, dois e três andares), uma passarela de metal com grade ligando o topo de duas pilhas de contêineres, paletes de madeira e tambores de óleo. Uma empilhadeira tombada. Ao fundo, a silhueta da muralha de pedra de uma cidadela começa a aparecer no horizonte, anunciando o próximo trecho. No final, à direita, o pátio termina numa área aberta de terra com entulho baixo.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos.
+- A BORDA DIREITA termina na área aberta, SEM nenhum contêiner ou estrutura cortada ao meio.
+- O chão fica EXATAMENTE na mesma altura e espessura das telas anteriores, reto e plano de ponta a ponta.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 3 plataformas com topo PLANO, reto e bem visível: a pilha de 1 contêiner (na altura da cabeça do personagem), a pilha de 2 contêineres (cerca de 1,5 vez a altura do personagem acima da primeira) e a passarela de metal ligando as pilhas. Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.

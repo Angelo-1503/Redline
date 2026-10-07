@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 4962839006538085391}
   - component: {fileID: 4753260684780913850}
   - component: {fileID: 687670441599255149}
+  - component: {fileID: 7814281014184567501}
+  - component: {fileID: 2869002023482908189}
   m_Layer: 6
-  m_Name: EnemyBasic
+  m_Name: Insurgente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: -1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +64,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,8 +87,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 24ecaea9cb9a411cad9dcd8921d4fefb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166,7 +168,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 1.3333334}
   m_EdgeRadius: 0
 --- !u!114 &4753260684780913850
 MonoBehaviour:
@@ -183,6 +185,7 @@ MonoBehaviour:
   maxHealth: 30
   destroyOnDeath: 1
   invulnerabilityDuration: 0
+  deathEffectPrefab: {fileID: 1, guid: dab0c38d3d3443da9a339d4e5c1b9c6b, type: 3}
 --- !u!114 &687670441599255149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +204,43 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &7814281014184567501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611674891693914973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336f817f3b5d456592d805dac1016b79, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Effects.DamageFlash
+  spriteRenderer: {fileID: 263768727968411001}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  flashMaterial: {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
+  normalMaterial: {fileID: 0}
+--- !u!114 &2869002023482908189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611674891693914973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f61ecb48d4f41d19fcf695e2c3f936e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Animations.SpriteAnimator
+  spriteRenderer: {fileID: 263768727968411001}
+  idleSprite: {fileID: 21300000, guid: 24ecaea9cb9a411cad9dcd8921d4fefb, type: 3}
+  runFrames:
+  - {fileID: 21300000, guid: 24ecaea9cb9a411cad9dcd8921d4fefb, type: 3}
+  - {fileID: 21300000, guid: 3adf774b630347b58a1d6ace2f679dea, type: 3}
+  - {fileID: 21300000, guid: 8881b15b4a3942e687eca83bafade16f, type: 3}
+  - {fileID: 21300000, guid: 2eef27f957e143728f53412f2d4c8709, type: 3}
+  - {fileID: 21300000, guid: c65f6f22eb7647379a51bf4f1e6786a7, type: 3}
+  - {fileID: 21300000, guid: 8be7fdcc4e524e3e9718ddb40261bf46, type: 3}
+  runFps: 12
+  moveThreshold: 0.1

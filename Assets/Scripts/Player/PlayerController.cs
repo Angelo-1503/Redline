@@ -4,8 +4,8 @@ namespace Redline.Player
 {
     /// <summary>
     /// Movimento horizontal + pulo estilo run-and-gun (Contra-like).
-    /// Também expõe para qual lado o personagem está olhando e se está mirando para cima,
-    /// para o PlayerShooting decidir a direção do tiro.
+    /// Também expõe para qual lado o personagem está olhando e a direção da mira
+    /// (8 direções), para o PlayerShooting decidir a direção do tiro.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerController : MonoBehaviour
@@ -28,6 +28,13 @@ namespace Redline.Player
 
         public bool FacingRight => facingRight;
         public bool IsAimingUp { get; private set; }
+
+        /// <summary>
+        /// Direção da mira em 8 direções (estilo Contra), já normalizada:
+        /// frente/trás, cima, baixo e as quatro diagonais. Sem apertar cima
+        /// ou baixo, é a direção para onde o personagem está olhando.
+        /// </summary>
+        public Vector2 AimDirection { get; private set; } = Vector2.right;
         public bool IsGrounded { get; private set; }
 
         private void Awake()
@@ -59,6 +66,28 @@ namespace Redline.Player
             {
                 spriteRenderer.flipX = !facingRight;
             }
+
+            AimDirection = ComputeAimDirection(horizontalInput, Input.GetAxisRaw("Vertical"));
+        }
+
+        private Vector2 ComputeAimDirection(float horizontal, float vertical)
+        {
+            float facing = facingRight ? 1f : -1f;
+            bool holdingSide = Mathf.Abs(horizontal) > 0.01f;
+
+            if (vertical > 0.5f)
+            {
+                // Cima sozinho = reto para cima; cima + lado = diagonal para cima.
+                return holdingSide ? new Vector2(facing, 1f).normalized : Vector2.up;
+            }
+
+            if (vertical < -0.5f)
+            {
+                // Baixo sozinho = reto para baixo; baixo + lado = diagonal para baixo.
+                return holdingSide ? new Vector2(facing, -1f).normalized : Vector2.down;
+            }
+
+            return new Vector2(facing, 0f);
         }
 
         private void FixedUpdate()

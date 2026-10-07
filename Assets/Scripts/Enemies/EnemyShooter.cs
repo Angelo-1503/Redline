@@ -35,7 +35,14 @@ namespace Redline.Enemies
 
         private void Update()
         {
-            if (playerTransform == null || bulletPrefab == null)
+            if (playerTransform == null)
+            {
+                return;
+            }
+
+            FacePlayer();
+
+            if (bulletPrefab == null)
             {
                 return;
             }
@@ -51,6 +58,23 @@ namespace Redline.Enemies
                 Fire();
                 nextFireTime = Time.time + 1f / Mathf.Max(0.01f, fireRate);
             }
+        }
+
+        /// <summary>
+        /// Vira o sprite para o lado do jogador (mesma técnica do EnemyBasic:
+        /// inverte o sinal de localScale.x), para não atirar "de costas".
+        /// </summary>
+        private void FacePlayer()
+        {
+            float direction = playerTransform.position.x - transform.position.x;
+            if (Mathf.Abs(direction) < 0.01f)
+            {
+                return;
+            }
+
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (direction > 0f ? 1f : -1f);
+            transform.localScale = scale;
         }
 
         private void Fire()

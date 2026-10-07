@@ -4,8 +4,10 @@ using UnityEngine;
 namespace Redline.Player
 {
     /// <summary>
-    /// Dispara o prefab de Bullet a partir do fire point correto, na direção que o
-    /// personagem está olhando (ou para cima, se PlayerController.IsAimingUp).
+    /// Dispara o prefab de Bullet na direção da mira do PlayerController, em
+    /// 8 direções (estilo Contra): frente/trás, cima, baixo e as diagonais.
+    /// Segure cima ou baixo para mirar na vertical; junto com esquerda/direita,
+    /// o tiro sai na diagonal.
     /// </summary>
     public class PlayerShooting : MonoBehaviour
     {
@@ -43,23 +45,14 @@ namespace Redline.Player
                 return;
             }
 
-            Transform origin;
-            Vector2 direction;
-            bool aimingUp = playerController != null && playerController.IsAimingUp;
+            bool facingRight = playerController == null || playerController.FacingRight;
+            Vector2 direction = playerController != null
+                ? playerController.AimDirection
+                : (facingRight ? Vector2.right : Vector2.left);
 
-            if (aimingUp)
-            {
-                origin = firePointUp != null ? firePointUp : transform;
-                direction = Vector2.up;
-            }
-            else
-            {
-                origin = firePointForward != null ? firePointForward : transform;
-                bool facingRight = playerController == null || playerController.FacingRight;
-                direction = facingRight ? Vector2.right : Vector2.left;
-            }
+            Vector3 spawnPosition = GetMuzzlePosition(direction);
 
-            GameObject bulletInstance = Instantiate(bulletPrefab, origin.position, Quaternion.identity);
+            GameObject bulletInstance = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
             Bullet bullet = bulletInstance.GetComponent<Bullet>();
             if (bullet != null)
             {
@@ -69,6 +62,32 @@ namespace Redline.Player
             {
                 Debug.LogWarning("[PlayerShooting] bulletPrefab não tem o componente Bullet.");
             }
+        }
+
+        /// <summary>
+        /// Ponto de onde o tiro sai para a direção de mira dada. A arma gira em
+        /// volta de um pivô na altura do fire point da frente: o tiro sai a uma
+        /// distância fixa desse pivô, na direção da mira. Para a frente, isso dá
+        /// exatamente o fire point da frente (espelhado quando olha para a esquerda).
+        /// </summary>
+        private Vector3 GetMuzzlePosition(Vector2 direction)
+        {
+            if (direction == Vector2.up && firePointUp != null)
+            {
+                return firePointUp.position;
+            }
+
+            float gunHeight = 0.4f;
+            float muzzleDistance = 0.72f;
+            if (firePointForward != null)
+            {
+                Vector3 local = transform.InverseTransformPoint(firePointForward.position);
+                gunHeight = local.y;
+                muzzleDistance = Mathf.Abs(local.x);
+            }
+
+            Vector3 localMuzzle = new Vector3(direction.x * muzzleDistance, gunHeight + direction.y * muzzleDistance, 0f);
+            return transform.TransformPoint(localMuzzle);
         }
     }
 }

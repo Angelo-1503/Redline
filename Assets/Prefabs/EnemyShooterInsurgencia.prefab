@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1040049809140144192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2640115791148924558}
+  - component: {fileID: 17344527091435102}
+  - component: {fileID: 5770290954689336655}
+  - component: {fileID: 6975804815195030580}
+  - component: {fileID: 5856092824487424047}
+  - component: {fileID: 8379308050785365554}
+  - component: {fileID: 6761493112056648002}
+  m_Layer: 6
+  m_Name: InsurgenteAtirador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2640115791148924558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14487, y: -0.08551, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &17344527091435102
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: f4f9c948b3634f25a59d0f8b86a25dac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!61 &5770290954689336655
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.75, y: 1.3333334}
+  m_EdgeRadius: 0
+--- !u!114 &6975804815195030580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197e35c3ef6d0754cbaad09f211ec83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Core.Health
+  maxHealth: 20
+  destroyOnDeath: 1
+  invulnerabilityDuration: 0
+  deathEffectPrefab: {fileID: 1, guid: dab0c38d3d3443da9a339d4e5c1b9c6b, type: 3}
+--- !u!114 &5856092824487424047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d7a0b6c0adc8c4e85fff74de2e1458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Enemies.EnemyShooter
+  bulletPrefab: {fileID: 2491966764921949055, guid: fbd0f38735f358a40bdc1ea1f99a99d9, type: 3}
+  firePoint: {fileID: 0}
+  fireRate: 1
+  bulletSpeed: 10
+  bulletDamage: 10
+  detectionRange: 8
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &8379308050785365554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 336f817f3b5d456592d805dac1016b79, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Effects.DamageFlash
+  spriteRenderer: {fileID: 17344527091435102}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  flashMaterial: {fileID: 2100000, guid: 24890495480e4dfc9a0c2409ba6a6c69, type: 2}
+  normalMaterial: {fileID: 0}
+--- !u!114 &6761493112056648002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040049809140144192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f61ecb48d4f41d19fcf695e2c3f936e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Animations.SpriteAnimator
+  spriteRenderer: {fileID: 17344527091435102}
+  idleSprite: {fileID: 21300000, guid: f4f9c948b3634f25a59d0f8b86a25dac, type: 3}
+  runFrames:
+  - {fileID: 21300000, guid: c0126873afa34a4580af5c010be3516b, type: 3}
+  - {fileID: 21300000, guid: 0c6867f940dc4ccf8353306232d9a34f, type: 3}
+  - {fileID: 21300000, guid: 3d326cc13faf44abbc021a6a5d06b561, type: 3}
+  - {fileID: 21300000, guid: 065c941dfea64d7b82bb765160c7287f, type: 3}
+  - {fileID: 21300000, guid: 6361b7107a7f44d3bd97ca03984784b3, type: 3}
+  - {fileID: 21300000, guid: a3d1e9c2f4994ee58d855a901920360c, type: 3}
+  runFps: 12
+  moveThreshold: 0.1

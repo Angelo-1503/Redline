@@ -175,3 +175,5 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 0
+  muzzleEffectPrefab: {fileID: 1, guid: d3f0a2335d9a45b98ec779e438e2d9e7, type: 3}
+  impactEffectPrefab: {fileID: 1, guid: 29939d762f694ac6bd97af3932dedf20, type: 3}

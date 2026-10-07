@@ -1,0 +1,18 @@
+REDLINE - FASE 02 - NOTAS TECNICAS DO MAPA (atualizado na tela 6, versao "secret")
+
+Telas 1 a 5: nivel da rua (y = -2.5). Cada tela tem 966 px (15.09375 unidades).
+Tela 6 (X = 65.46875): escada do "secret". Imagem mais alta (966x901), pivo do sprite y = 0.390311.
+  - Topo da escada:  x = 70.96875,  y = -2.5
+  - Pe da escada:    x = 74.0625, y = -4.81516
+  - Desnivel: 2.31516 unidades.
+Telas 7 a 10 (subsolo): devem ficar com Transform y = -4.81516 (2.31516 abaixo das outras).
+
+Objetos da cena ligados a descida:
+  - Ground          : chao de cima, de x = -10 ate 70.96875.
+  - GroundInferior  : chao de baixo, de 70.96875 ate o fim da fase. AUMENTAR quando entrar tela nova.
+  - Escada06        : colisor inclinado da escada (caixa girada -36.81 graus).
+  - Main Camera > CameraFollow: descentAmount 2.31516, descentStartX 70.96875, descentEndX 74.0625.
+
+Alturas das plataformas (MapPlatforms) sao sempre relativas ao Transform da tela.
+Na tela 6 a referencia e a calcada de CIMA. A tela 6 nao tem plataformas.
+Subsolo (telas 6 a 10): caminho do secret ate o bomb B, parede branca com faixa verde-agua.

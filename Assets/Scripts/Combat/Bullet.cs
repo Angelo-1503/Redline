@@ -16,6 +16,18 @@ namespace Redline.Combat
         [SerializeField] private float lifeTime = 2f;
         [SerializeField] private LayerMask hitMask;
 
+        [Header("Efeitos (opcional)")]
+        [Tooltip("Partícula instanciada no exato momento/posição em que o tiro sai.")]
+        [SerializeField] private GameObject muzzleEffectPrefab;
+        [Tooltip("Partícula instanciada no ponto de impacto, ao acertar um alvo válido.")]
+        [SerializeField] private GameObject impactEffectPrefab;
+
+        [Header("Áudio (opcional)")]
+        [Tooltip("Som tocado no momento em que o tiro sai.")]
+        [SerializeField] private AudioClip shootClip;
+        [Tooltip("Som tocado ao atingir um alvo válido.")]
+        [SerializeField] private AudioClip impactClip;
+
         private Rigidbody2D rb;
         private Vector2 direction = Vector2.right;
 
@@ -38,6 +50,16 @@ namespace Redline.Combat
 
         private void Start()
         {
+            if (muzzleEffectPrefab != null)
+            {
+                Instantiate(muzzleEffectPrefab, transform.position, transform.rotation);
+            }
+
+            if (shootClip != null)
+            {
+                AudioSource.PlayClipAtPoint(shootClip, transform.position);
+            }
+
             Destroy(gameObject, lifeTime);
         }
 
@@ -57,6 +79,16 @@ namespace Redline.Combat
             if (health != null)
             {
                 health.TakeDamage(damage);
+            }
+
+            if (impactEffectPrefab != null)
+            {
+                Instantiate(impactEffectPrefab, transform.position, Quaternion.identity);
+            }
+
+            if (impactClip != null)
+            {
+                AudioSource.PlayClipAtPoint(impactClip, transform.position);
             }
 
             Destroy(gameObject);

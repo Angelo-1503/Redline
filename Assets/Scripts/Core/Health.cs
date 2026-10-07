@@ -16,6 +16,16 @@ namespace Redline.Core
         [Tooltip("Tempo em segundos de invulnerabilidade após tomar dano. 0 = desativado.")]
         [SerializeField] private float invulnerabilityDuration = 0f;
 
+        [Header("Efeitos (opcional)")]
+        [Tooltip("Partícula instanciada na posição deste objeto no momento da morte.")]
+        [SerializeField] private GameObject deathEffectPrefab;
+
+        [Header("Áudio (opcional)")]
+        [Tooltip("Som tocado sempre que este objeto sofre dano (e sobrevive).")]
+        [SerializeField] private AudioClip hitClip;
+        [Tooltip("Som tocado no momento da morte deste objeto.")]
+        [SerializeField] private AudioClip deathClip;
+
         public int MaxHealth => maxHealth;
         public int CurrentHealth { get; private set; }
         public bool IsDead { get; private set; }
@@ -57,6 +67,10 @@ namespace Redline.Core
             {
                 Die();
             }
+            else if (hitClip != null)
+            {
+                AudioSource.PlayClipAtPoint(hitClip, transform.position);
+            }
         }
 
         public void Heal(int amount)
@@ -78,6 +92,17 @@ namespace Redline.Core
             }
 
             IsDead = true;
+
+            if (deathEffectPrefab != null)
+            {
+                Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+            }
+
+            if (deathClip != null)
+            {
+                AudioSource.PlayClipAtPoint(deathClip, transform.position);
+            }
+
             OnDied?.Invoke();
 
             if (destroyOnDeath)

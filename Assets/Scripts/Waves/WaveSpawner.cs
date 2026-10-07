@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Redline.Core;
+using Redline.Factions;
 using UnityEngine;
 
 namespace Redline.Waves
@@ -69,19 +70,19 @@ namespace Redline.Waves
 
         private void SpawnEnemy(Wave wave)
         {
-            if (wave.enemyPrefabs == null || wave.enemyPrefabs.Length == 0)
-            {
-                Debug.LogWarning("[WaveSpawner] Onda sem prefabs de inimigo configurados.");
-                return;
-            }
-
             if (spawnPoints == null || spawnPoints.Length == 0)
             {
                 Debug.LogWarning("[WaveSpawner] Nenhum spawn point configurado.");
                 return;
             }
 
-            GameObject prefab = wave.enemyPrefabs[UnityEngine.Random.Range(0, wave.enemyPrefabs.Length)];
+            GameObject prefab = PickEnemyPrefab(wave);
+            if (prefab == null)
+            {
+                Debug.LogWarning($"[WaveSpawner] {wave.waveName}: nenhum prefab de inimigo disponível.");
+                return;
+            }
+
             Transform point = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
             GameObject enemyInstance = Instantiate(prefab, point.position, Quaternion.identity);
@@ -96,6 +97,34 @@ namespace Redline.Waves
             {
                 Debug.LogWarning($"[WaveSpawner] Prefab '{prefab.name}' não tem componente Health — não será contado na onda.");
             }
+        }
+
+        /// <summary>
+        /// Com LevelFaction na cena, sorteia uma função da onda e pega o prefab
+        /// da facção inimiga (o jogador nunca enfrenta a própria facção).
+        /// Sem LevelFaction, usa a lista fixa de prefabs da onda.
+        /// </summary>
+        private GameObject PickEnemyPrefab(Wave wave)
+        {
+            LevelFaction level = LevelFaction.Instance;
+            if (level != null && wave.enemyRoles != null && wave.enemyRoles.Length > 0)
+            {
+                EnemyRole role = wave.enemyRoles[UnityEngine.Random.Range(0, wave.enemyRoles.Length)];
+                return level.GetEnemyPrefab(role);
+            }
+
+            if (wave.enemyPrefabs != null && wave.enemyPrefabs.Length > 0)
+            {
+                return wave.enemyPrefabs[UnityEngine.Random.Range(0, wave.enemyPrefabs.Length)];
+            }
+
+            if (level != null)
+            {
+                Debug.LogWarning($"[WaveSpawner] {wave.waveName} sem funções configuradas — usando corpo-a-corpo.");
+                return level.GetEnemyPrefab(EnemyRole.Melee);
+            }
+
+            return null;
         }
 
         private void HandleEnemyDied()
