@@ -1,0 +1,52 @@
+REDLINE - FASE 03 (MIRAGE) - NOTAS TECNICAS
+Cena criada a partir da Fase 2 (estado inicial). levelNumber 3 = jogador azul contra vermelhos.
+Fundo: Fase03_Fundo, verticalOffset -0.25. Telas: 966x836 px, pivo y 0.3621, rua em y = -2.5 (igual as telas 1-5 da Fase 2).
+Tela 1 (X = -10): base TR. Plataformas: sacada (3.2) e lixeira (1.36). Fim da fase: 5.09375.
+WaveSpawner DESATIVADO (os pontos de spawn antigos ficam fora da fase). Sem inimigos por enquanto.
+Novas telas: ~/tools/add_tela3.py N largura 'json plataformas' [sobreposicao].
+Trajeto planejado: 1 base TR, 2 topo do meio, 3 meio, 4 entrada do rato, 5 rato, 6 saida do rato, 7 tapete, 8 sacada do B, arena = bomb B.
+Tela 2 (X = 5.09375): casa da TV. Rampa da escada (de 1.6 a 3.2) e patamar (3.2). Fim da fase: 20.1875.
+Telas 1 e 2 APROXIMADAS: tela 1 cortada em 519 px, tela 2 cortada 196 px a esquerda (770 px), X = -1.890625. Fim da fase: 10.140625.
+Tela 2 cortada em 565 px (fim da parede da casa). Tela 3 (X = 6.9375): beco, 6 plataformas (sacada, lixeira, telhado da casa baixa, carroca, caixa, pilha). Fim da fase: 22.03125.
+Tela 3 cortada em 950 px. Tela 4 (X = 21.78125): entrada do rato, 957x895 px, pivo y 0.386223. Escada: topo x = 28.265625 (y -2.5), pe x = 31.4375 (y -4.95469), desnivel 2.45469.
+  Ground ate 28.265625; GroundInferior dali ate o fim; Escada04 (colisor inclinado); CameraFollow com descida. Fim da fase: 36.734375.
+  Telas do tunel: ~/tools/add_tela3_sub.py N largura pivoY json (Transform y = -4.95469).
+PortaRato (DoorTransition): gatilho x >= 32.3 no piso de baixo; porta em (32.953125, -4.95469). teleport DESMARCADO ate existir o proximo trecho. ParedeFimRato fecha o fim do tunel (x 36.1).
+Proximos trechos: cenarios fechados, separados, no nivel y = -4.95469 (a camera fica 2.45469 abaixo para qualquer x depois da escada).
+TELA 5 = interior do rato, cenario fechado e separado: Fase03_Tela05 em X = 60 (1152x784 px, 18 unidades, pivo y 0.294165), y = -4.95469.
+  GroundRato, ParedeRatoEsquerda/Direita. Plataformas: barril 1.47, pilha 2.29, prateleira 2.29, caixas 1.32.
+  PortaRato agora leva para (61.72, -4), camera presa de 60 a 78.
+  PortaSaidaRato (DoorTransition): gatilho x >= 75.7, porta em 76.25; teleport DESMARCADO ate existir o trecho dos apartamentos.
+TELA 6 = escada do rato / entrada da cozinha, cenario fechado: Fase03_Tela06 em X = 90 (1152x768 px, pivo y 0.26901), y = -4.95469. Patamar a +3.0 (y = -1.95469).
+  GroundEscadaCozinha, PatamarCozinha (bloco solido), EscadaCozinha (rampa solida, sobe para a ESQUERDA), paredes. Plataformas: caixa 1.4, barril 1.45.
+  PortaSaidaRato agora leva para (105.78, -4), camera 90 a 108.
+  PortaCozinha (DoorTransition com triggerFromRight): gatilho x <= 94.1 no patamar, porta em 93.14; teleport DESMARCADO ate existir a cozinha.
+  Daqui em diante o caminho segue para a ESQUERDA.
+TELA 7 = cozinha do tapete, cenario fechado: Fase03_Tela07 em X = 120 (1152x784 px, pivo y 0.294643), y = -4.95469. Porta azul da direita REMOVIDA (parede lisa de azulejo).
+  GroundCozinha, ParedeSalaCozinhaEsquerda/Direita. Plataformas: armario 3.12, mesa 1.27, fogao 1.66, bancada 1.49, prateleira 2.94.
+  PortaCozinha agora leva para (135.9, -4), camera 120 a 138.
+  PortaTapete (DoorTransition, triggerFromRight): arco da esquerda, gatilho x <= 122.6, porta em 121.77; teleport DESMARCADO ate existir a tela do tapete.
+TELA 8 = tapete (apartamentos do B), cenario fechado: Fase03_Tela08 em X = 150 (1152x784 px, pivo y 0.296556), y = -4.95469. Porta da esquerda REMOVIDA (parede lisa); arco da direita = chegada.
+  GroundTapete, ParedeTapeteEsquerda/Direita. Plataforma: poltrona 1.16.
+  PortaTapete (arco da cozinha) agora leva para (166, -4), camera 150 a 168.
+  SaidaTapete (DoorTransition, triggerFromRight, sem encolher): fim do corredor a esquerda, gatilho x <= 151.6, ponto 151.1; teleport DESMARCADO ate existir a arena (saida do tapete + van).
+COZINHA + TAPETE JUNTOS (sem transicao entre eles): arco da cozinha e arco/porta do tapete FECHADOS; pilastra de reboco na emenda.
+  Fase03_Tela08 (tapete, 1128x784, pivo 0.294643) em X = 150; Fase03_Tela07 (cozinha, 1107x784) em X = 167.625; fim em 184.921875. Tapete remapeado na vertical (rodape 692->706) e parede igualada a da cozinha.
+  Um chao so (GroundTapete, 150 a 184.92). Paredes: ParedeTapeteEsquerda (150.2) e ParedeSalaCozinhaDireita (184.62). Apagados: GroundCozinha, ParedeSalaCozinhaEsquerda, ParedeTapeteDireita, PortaTapete.
+  PortaCozinha (tela 6) leva para (182.82, -4), camera 150 a 184.92. Plataformas cozinha: x - 0.703125. Poltrona 1.05.
+  SaidaTapete continua no fim do corredor (x <= 151.6), teleport DESMARCADO.
+Porta azul da direita da cozinha DE VOLTA (e a chegada da PortaCozinha, em 182.82). So os arcos (cozinha e tapete) e a porta da esquerda do tapete ficaram fechados.
+SaidaTapete APAGADA: no corredor cozinha+tapete nao existe nenhuma transicao. Assets/Editor/ExternalSceneReloader.cs recarrega a cena aberta quando o .unity muda fora do Unity.
+TELA 9 = sacada + van (Fase03_Tela09, 1152x916, pivo 0.396288) em X = 132.234375, colada a esquerda do tapete, SEM transicao. Tapete agora em X = 150.234375 (1113x874, pivo 0.367277; canto da esquerda virou pilastra).
+  Embaixo do piso do tapete e da cozinha: parede de blocos (igual a da sacada) no lugar da faixa escura.
+  GroundTapete de 142.335938 (ponta da sacada) a 184.92. GroundRua (topo y = -9.05625). ParedeSacada embaixo da ponta. ParedeTapeteEsquerda em 131.9. Plataforma: teto da van (altura -0.773).
+  CameraFollow: leftDescent 3.4 entre x 152 e 146 (so vale para x >= 131). PortaCozinha: camera de 132.234375 a 184.92.
+  QuedaVan (AreaTransition, guid 3e9a7c51d2b64f08a1c5e7d9b0f2a463): pousar com x 132.3..142.23594 e y <= -4.45 escurece a tela; teleport DESMARCADO ate existir a arena do bomb B.
+ARENA = bomb B (Fase03_Arena, 1152x784, pivo 0.298469) em X = 210, y = -4.95469. GroundArena, LimiteArenaEsquerdo/Direito. Plataformas: banco 0.93, caixa grande 1.3, caixa pequena 2.0.
+  QuedaVan leva para (225.5, -4), camera 210 a 228. BossSpawner: useArenaTrigger, arenaTriggerX 211, camera presa 210-228, nextSceneName VAZIO (fim do jogo ainda nao definido). Sentinela em (215.5, -3.95469).
+COZINHA NOVA + TAPETE NOVO (refeitos pela fidelidade ao Mirage). O caminho agora segue para a DIREITA: cozinha -> tapete -> sacada (tela da van VIRADA).
+  Tela07 cozinha em X = 132.234375 (1152x816, pivo 0.327206); Tela08 tapete em X = 150.234375 (1152x896, pivo 0.387277); Tela09 sacada/van em X = 168.234375 (virada); fim em 186.234375.
+  Piso das tres refeito com as mesmas linhas (um ponto de fuga na emenda cozinha/tapete). Parede do tapete igualada a da cozinha.
+  PortaCozinha (tela 6) leva para (133.9, -4), camera 132.234375 a 186.234375. A vista da porta na tela 6 mostra a cozinha nova.
+  Chao do corredor ate a ponta da sacada (176.1328). Camera desce 3.8 entre x 168.5 e 174.5 (so vale entre 131 e 190; CameraFollow ganhou leftDescentMaxX).
+  QuedaVan: x 176.2528..186.1544; leva para a arena em (215, -4). Chefao em (224, -3.95469).

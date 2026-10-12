@@ -28,6 +28,18 @@ namespace Redline.CameraSystem
         [Tooltip("X do mundo onde a descida termina (pé da escada).")]
         [SerializeField] private float descentEndX = 0f;
 
+        [Header("Segundo desnível (sacada da Fase 3)")]
+        [Tooltip("Quanto a câmera desce A MAIS quando o jogador anda de leftDescentStartX até leftDescentEndX (pode ser para a esquerda ou para a direita). 0 = desligado.")]
+        [SerializeField] private float leftDescentAmount = 0f;
+        [Tooltip("X do mundo onde essa descida começa.")]
+        [SerializeField] private float leftDescentStartX = 0f;
+        [Tooltip("X do mundo onde ela termina (câmera já toda abaixada).")]
+        [SerializeField] private float leftDescentEndX = 0f;
+        [Tooltip("À esquerda deste X a descida deixa de valer (para não afetar outros trechos da fase).")]
+        [SerializeField] private float leftDescentMinX = 0f;
+        [Tooltip("À direita deste X a descida deixa de valer.")]
+        [SerializeField] private float leftDescentMaxX = 100000f;
+
         private Vector3 currentVelocity;
         private Camera cam;
 
@@ -57,13 +69,22 @@ namespace Redline.CameraSystem
         /// </summary>
         private float DescentAt(float x)
         {
-            if (Mathf.Approximately(descentAmount, 0f) || descentEndX <= descentStartX)
+            float total = 0f;
+            if (!Mathf.Approximately(descentAmount, 0f) && descentEndX > descentStartX)
             {
-                return 0f;
+                float t = Mathf.InverseLerp(descentStartX, descentEndX, x);
+                total += descentAmount * Mathf.SmoothStep(0f, 1f, t);
             }
 
-            float t = Mathf.InverseLerp(descentStartX, descentEndX, x);
-            return descentAmount * Mathf.SmoothStep(0f, 1f, t);
+            // Segunda descida: vale só entre leftDescentMinX e leftDescentMaxX e cresce de leftDescentStartX para leftDescentEndX.
+            if (!Mathf.Approximately(leftDescentAmount, 0f) && !Mathf.Approximately(leftDescentStartX, leftDescentEndX)
+                && x >= leftDescentMinX && x <= leftDescentMaxX)
+            {
+                float t = Mathf.InverseLerp(leftDescentStartX, leftDescentEndX, x);
+                total += leftDescentAmount * Mathf.SmoothStep(0f, 1f, t);
+            }
+
+            return total;
         }
 
         private void LateUpdate()

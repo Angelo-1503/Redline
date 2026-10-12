@@ -16,3 +16,18 @@ Objetos da cena ligados a descida:
 Alturas das plataformas (MapPlatforms) sao sempre relativas ao Transform da tela.
 Na tela 6 a referencia e a calcada de CIMA. A tela 6 nao tem plataformas.
 Subsolo (telas 6 a 10): caminho do secret ate o bomb B, parede branca com faixa verde-agua.
+Tela 7 (X = 80.5625, y = -4.81516): 898x1000 px, pivo y = 0.30267, sem plataformas (duto a 2.92 de altura, fora do alcance do pulo).
+Telas do subsolo: usar ~/tools/add_tela_sub.py (estende o GroundInferior, nao o Ground). Fim da fase: 123.4375.
+Tela 8 (X = 94.59375, y = -4.81516): 880x1000 px, pivo y = 0.30267, sem plataformas (fim do duto e porta dupla laranja do bomb B).
+Tela 9 (X = 108.34375, y = -4.81516): 966x1000 px, pivo y = 0.30267. Escada que SOBE para a sala do vidro.
+  - Pe da escada: x = 113.21875, y = -4.81516. Topo: x = 115.953125, y = -2.70063 (sobe 2.11453).
+  - Escada09 (colisor inclinado 37.7 graus), PisoVidro (chao elevado ate 123.4375), ParedeVidro (fecha a sala em x = 122.75).
+  - Objeto Vidro (116.5, -2.04438): SpriteRenderer por cima do janelao + WindowBreakCutscene (quadros Fase02_Vidro_1..4).
+    Arena ainda nao existe: teleportToArena desmarcado. Quando existir, preencher arenaSpawn / arenaStartX / arenaEndX.
+Tela 8: porta dupla laranja FECHADA (o caminho segue para a sala do vidro).
+ARENA DO CHEFAO (bomb B), separada do resto da fase: Fase02_Arena em X = 140 (1229x819 px, 19.2 x 12.8 unidades, pivo y = 0.265446).
+  - Piso em y = -4.81516 (GroundArena). Rampa de x = 153.7875 (altura 0.84) ate o patamar em x = 156.8125 (altura 2.49).
+  - Plataformas: caixa (1.35), pilha de caixas (2.16), tambores (1.37). Paredes em 140.475 e 158.75.
+  - Vidro > WindowBreakCutscene: teleportToArena marcado, arenaSpawn (142.6875, -0.115) = janela quebrada da arena.
+  - BossSpawner em modo arena: arenaTriggerX 141, arena 140 a 159.2. Sentinela em (150, -3.81516).
+  - O fim da fase com rolagem continua em 123.4375 (camera e parallax); a arena fica fora desse limite de proposito.

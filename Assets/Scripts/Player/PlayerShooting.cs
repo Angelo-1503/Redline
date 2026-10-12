@@ -65,6 +65,29 @@ namespace Redline.Player
         }
 
         /// <summary>
+        /// Dispara um projétil numa direção escolhida por outro script (usado em
+        /// cenas automáticas, como a do janelão da Fase 2). Funciona mesmo com
+        /// este componente desativado. Devolve o projétil criado.
+        /// </summary>
+        public GameObject FireInDirection(Vector2 direction)
+        {
+            if (bulletPrefab == null)
+            {
+                return null;
+            }
+
+            direction = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.right;
+            GameObject bulletInstance = Instantiate(bulletPrefab, GetMuzzlePosition(direction), Quaternion.identity);
+            Bullet bullet = bulletInstance.GetComponent<Bullet>();
+            if (bullet != null)
+            {
+                bullet.Init(direction, enemyLayer, bulletDamage, bulletSpeed);
+            }
+
+            return bulletInstance;
+        }
+
+        /// <summary>
         /// Ponto de onde o tiro sai para a direção de mira dada. A arma gira em
         /// volta de um pivô na altura do fire point da frente: o tiro sai a uma
         /// distância fixa desse pivô, na direção da mira. Para a frente, isso dá
