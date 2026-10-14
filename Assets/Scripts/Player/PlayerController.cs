@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Redline.Player
@@ -19,11 +20,19 @@ namespace Redline.Player
         [SerializeField] private float groundCheckRadius = 0.15f;
         [SerializeField] private LayerMask groundLayer;
 
+        [Header("Descer de plataformas")]
+        [Tooltip("Tecla que faz o personagem descer da plataforma em que está (caixas, rampas, sacadas). Baixo + Pulo também funciona.")]
+        [SerializeField] private KeyCode dropKey = KeyCode.C;
+        [Tooltip("Por quanto tempo a plataforma deixa de segurar o personagem depois de descer.")]
+        [SerializeField] private float dropDuration = 0.35f;
+
         private Rigidbody2D rb;
         private SpriteRenderer spriteRenderer;
 
         private float horizontalInput;
         private bool jumpRequested;
+        private bool dropRequested;
+        private Collider2D[] myColliders;
         private bool facingRight = true;
 
         public bool FacingRight => facingRight;
@@ -41,6 +50,7 @@ namespace Redline.Player
         {
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            myColliders = GetComponents<Collider2D>();
         }
 
         private void Update()
@@ -48,7 +58,13 @@ namespace Redline.Player
             horizontalInput = Input.GetAxisRaw("Horizontal");
             IsAimingUp = Input.GetAxisRaw("Vertical") > 0.5f;
 
-            if (Input.GetButtonDown("Jump") && IsGrounded)
+            bool holdingDown = Input.GetAxisRaw("Vertical") < -0.5f;
+            if (IsGrounded && (Input.GetKeyDown(dropKey) || (holdingDown && Input.GetButtonDown("Jump"))))
+            {
+                // Descer da plataforma (só funciona em plataformas de mão única; no chão firme não faz nada).
+                dropRequested = true;
+            }
+            else if (Input.GetButtonDown("Jump") && IsGrounded)
             {
                 jumpRequested = true;
             }
@@ -97,10 +113,55 @@ namespace Redline.Player
 
             rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
+            if (dropRequested)
+            {
+                dropRequested = false;
+                DropThroughPlatforms();
+            }
+
             if (jumpRequested)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpRequested = false;
+            }
+        }
+
+        /// <summary>
+        /// Solta o personagem das plataformas de mão única que estão embaixo dos pés
+        /// (as criadas pelo MapPlatforms), para ele cair até o que tiver embaixo.
+        /// </summary>
+        private void DropThroughPlatforms()
+        {
+            if (groundCheck == null)
+            {
+                return;
+            }
+
+            Collider2D[] under = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius + 0.1f, groundLayer);
+            foreach (Collider2D platform in under)
+            {
+                PlatformEffector2D effector = platform.GetComponent<PlatformEffector2D>();
+                if (platform.usedByEffector && effector != null && effector.useOneWay)
+                {
+                    StartCoroutine(IgnorePlatformFor(platform));
+                }
+            }
+        }
+
+        private IEnumerator IgnorePlatformFor(Collider2D platform)
+        {
+            foreach (Collider2D mine in myColliders)
+            {
+                if (mine != null) Physics2D.IgnoreCollision(mine, platform, true);
+            }
+
+            // Um empurrãozinho para baixo para sair de cima da plataforma na hora.
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Min(rb.linearVelocity.y, -2f));
+            yield return new WaitForSeconds(dropDuration);
+
+            foreach (Collider2D mine in myColliders)
+            {
+                if (mine != null && platform != null) Physics2D.IgnoreCollision(mine, platform, false);
             }
         }
 

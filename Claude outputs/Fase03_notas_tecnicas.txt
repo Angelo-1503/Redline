@@ -50,3 +50,38 @@ COZINHA NOVA + TAPETE NOVO (refeitos pela fidelidade ao Mirage). O caminho agora
   PortaCozinha (tela 6) leva para (133.9, -4), camera 132.234375 a 186.234375. A vista da porta na tela 6 mostra a cozinha nova.
   Chao do corredor ate a ponta da sacada (176.1328). Camera desce 3.8 entre x 168.5 e 174.5 (so vale entre 131 e 190; CameraFollow ganhou leftDescentMaxX).
   QuedaVan: x 176.2528..186.1544; leva para a arena em (215, -4). Chefao em (224, -3.95469).
+TELA 9 (van) REFEITA: sacada e van da imagem nova (1152x838, pivo 0.340095). Teto da van fica 0.63 ACIMA do piso (pula para cima). Ponta da sacada em 176.589844; rua em y = -7.7086. Camera desce 2.6. QuedaVan: x 177.3..186.15, y ate -3.2 (pousar no teto da van ou cair na rua).
+ARENA ALARGADA (pontas espelhadas): 1416x784, X = 207.9375 a 230.0625 (22.125 de largura), para cobrir janelas mais largas que 16:9. Chao, limites, camera do BossSpawner e da QuedaVan atualizados.
+TAPETE ENCURTADO: 1088 px da fonte (816 px, 12.75 un.) sem cortar poltrona, janelas nem o tapete vermelho (cortes em parede lisa, no meio do tapete e nas juntas dos blocos). Tela da van, rua, ParedeSacada, parede direita, QuedaVan e descida da camera deslocados -5.25. Fim do trecho: 180.984375.
+TETO: todas as maos-francesas do teto (cozinha, tapete e corredor da sacada) redesenhadas no mesmo sentido, a cada 214 px da fonte.
+LAMPADAS: corredor (cozinha ate a quina da sacada) com 4 lampadas iguais a cada 640 px da fonte (x 1150, 1790, 2430, 3070 no corredor inteiro); claroes antigos tirados e luz refeita igual para todas. Faixa de madeira das lampadas igualada.
+TELA 9 REFEITA (imagem nova da van, sem corredor desenhado pelo ChatGPT): 1152x969, pivo 0.44582, X = 162.984375. Corredor ate a quina (360 px da fonte) continua o tapete; laje ate 168.726562; rua em y = -9.88828; teto da van 1.27 abaixo do piso (plataforma x 7.03, largura 7.6). Camera desce 4.7 entre x 164 e 169. QuedaVan x 168.8766..180.8844.
+TELA 9 = TERRACO AZUL + VAN (imagem nova, como no CS2): 1455x906, pivo 0.407285, X = 162.984375 ate 185.71875. Corredor verde -> porta vista de lado -> terraco (mesma altura do piso) com banco e mureta -> beirada em 174.960938 -> rua (y -9.0211) com caixas e van (frente para a direita). Camera desce 3.9 entre 171 e 175.5.
+TELA 9 ALINHADA: linha do piso = linha 668 da fonte (igual cozinha/tapete), pivo 0.410311 (1455x931). Terraco com o MESMO piso e blocos do corredor. Rua y = -9.22031.
+ARENA v3: sem espelhar as pontas; alargada repetindo o vao do arco duas vezes (4 arcos), emendas escondidas nos suportes da lona. 1503x784, X = 207.9375 a 231.421875.
+ARENA v4: 2 arcos (o da esquerda fechado com reboco), alargada repetindo o trecho liso de muro antes da janela. 1387x784, X = 207.9375 a 229.609375.
+ARENA v5: sem banco; arcos trocados (esquerda aberto com viga, direita com a portinha dentro); 3 trechos lisos de muro repetidos. 1491x784, X = 207.9375 a 231.234375.
+ARENA v5 (imagem nova do bomb B, vista lateral do CS2): escala 0.92 (1413x942, pivo 0.291932), X = 207.9375 a 230.015625. Plataformas: teto da lona, duas caixas, mureta branca, banco. Jogador chega da van em x 209.7375; chefao em x 224.4375.
+TELA 9: chao do terraco voltou a ser o original da imagem (nao e mais a continuacao do piso do tapete).
+TELA 5 (rato) REFEITA: tunel em abobada com grades de enrolar e escada no fim (imagem nova), escala 0.92 (1413x942, pivo 0.326115), X = 60 a 82.078125. Sem plataformas. PortaSaidaRato no arco da escada (porta 80.4125). Camera do PortaRato ate 82.078125.
+TELA 6 (escada) REFEITA: escala 0.92 (1413x942), X = 90 a 112.078125. Patamar no topo y = -0.64219 (x ate 97.0438), rampa da escada ate 103.0381, angulo -35.73. PortaCozinha no vao da porta (x 92.5156). PortaSaidaRato chega em x 109.5781.
+TELA 6: arco da saida do tunel desenhado no lado direito (x 107.9688); PortaSaidaRato deixa o jogador na frente dele.
+TELA 4 REFEITA (janelao azul + porta azul do rato): 966x644, pivo 0.523366, X = 21.78125 a 36.875. Rua de cima ate 27.82555, escada ate 30.82312 (angulo -47.0), chao de baixo y = -5.7138. Camera desce 3.2138 (mudou de 2.45469). PortaRato na porta azul (x 35.3735).
+RATO LIGADO SEM TRANSICAO: Tela05 movida para X = 36.875, chao y = -5.7138, colada a direita da tela 4. Apagados PortaRato, ParedeFimRato e ParedeRatoEsquerda. levelEndX (camera e fundo) = 58.953125. PortaSaidaRato (para a escada) continua.
+RATO: voltou a transicao pela porta (backup antes_ligar_rato restaurado).
+TELA 4: porta azul trocada por uma entrada aberta escura com degraus descendo; PortaRato (transicao) mantida.
+TELA 3 REFEITA (muro com plantas, arco com escada para o A so de fundo, A vermelho, banco): 950x644 (16 px cortados a esquerda), pivo 0.255748, X = 6.9375. Plataforma: banco.
+TELA 2 REFEITA (meio do mapa: casas brancas, muro com arco, pilha de sacos e caixote, torre ao fundo): 966x644, pivo 0.22155, X = -8.15625. Tela 1 movida para X = -16.265625; jogador e camera comecam em x -6.265625; levelStartX = -16.265625. Plataformas: pilha (1.57 / 2.03 / 1.57).
+TELA 2 v5 (refeita, cortada na quina da casa branca da porta, 730 px): X = -4.46875, pivo 0.25672; tela 1 em -12.578125; jogador/camera deslocados 3.6875. Plataformas: sacos 1.26, caixote 1.57, sacos 1.25.
+TELA 1 REFEITA (side alley: predio com A/B vermelhos, predio vermelho, torre): 744x644 (cortada antes da casa branca repetida), pivo 0.21962, X = -16.09375. Jogador/camera comecam em x -13.59375. levelStartX = -16.09375. Plataforma: vaso.
+TELA 1 v4 (refeita com ligacao na tela 2): 779x644, pivo 0.19226, X = -16.640625. Jogador/camera em x -14.140625. levelStartX = -16.640625. Plataforma: vaso.
+TELA 1: contraste igualado as telas 2 e 3 (media e desvio por canal); faixa escura embaixo +44 px (779x688), pivo 0.24392.
+TELAS 1 e 2: terra embaixo do chao trocada pela mesma da tela 3.
+TELA 3: removido o predio cor de areia da ponta esquerda; predio rosa estendido ate a borda.
+TELA 3: removido o pedestal/mureta da ponta direita (pilar continua ate o chao).
+TELAS 1, 2 e 4 (rua de cima): chao (calcada, blocos e terra) trocado pelo da tela 3, alinhado pela linha do chao do jogo.
+TELA 3: +220 px de terra embaixo (950x864), pivo 0.445249, para nao aparecer o fundo quando a camera desce na escada da tela 4.
+TELA 4: barril removido (imagem e plataforma).
+TELA 9: chao do terraco no mesmo nivel do corredor (parte de cima subiu 24 px, superficie de concreto 652-712, borda de pedra 712-752 alinhada com os blocos); parede branca mantida embaixo. Banco 1.21, mureta 1.58.
+TELA 9: mureta do terraco removida (parede azul continuada atras); plataforma da mureta apagada.
+TELA 9: vao da porta de lado agora mostra parede verde e chao do tapete (em vez da parede azul).

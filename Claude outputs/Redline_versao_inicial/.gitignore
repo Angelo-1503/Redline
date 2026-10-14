@@ -1,0 +1,44 @@
+# Este .gitignore segue o padrao oficial da Unity para projetos Git
+# (baseado em https://github.com/github/gitignore/blob/main/Unity.gitignore)
+
+# Pastas geradas automaticamente pela Unity - NAO versionar
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+
+# Arquivos gerados por IDEs (VS Code / Visual Studio / Rider)
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Arquivos de build especificos de plataforma
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crash reports
+sysinfo.txt
+
+# Arquivos de configuracao local (as vezes contem caminhos de maquina)
+/[Aa]ssets/[Aa]ssetStoreTools*

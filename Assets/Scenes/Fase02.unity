@@ -1547,7 +1547,7 @@ Transform:
   m_GameObject: {fileID: 1709306406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150, y: -3.81516, z: 0}
+  m_LocalPosition: {x: 151.666667, y: -3.648493, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969491603}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81f2bcaaad7bb2c4a9d1d7d5b0c0a461, type: 3}
   m_Name:
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   lockCameraOnBoss: 1
   cameraFollow: {fileID: 519420033}
   arenaStartX: 140
-  arenaEndX: 159.2
+  arenaEndX: 162.4
   nextSceneName: Fase03
   nextSceneDelay: 2.5
 --- !u!1 &1975929947
@@ -3823,9 +3823,9 @@ MonoBehaviour:
   fadeDuration: 0.6
   blackHold: 0.4
   teleportToArena: 1
-  arenaSpawn: {x: 142.6875, y: -0.115}
+  arenaSpawn: {x: 143.1354, y: 0.6684}
   arenaStartX: 140
-  arenaEndX: 159.2
+  arenaEndX: 162.4
 --- !u!1 &7400000000000000401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,17 +3931,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 3.625
-    height: 1.35
-    width: 1.425
-  - x: 5.075
-    height: 2.163
-    width: 1.5
-  - x: 11.463
-    height: 1.369
-    width: 2.312
+  - x: 4.172
+    height: 1.59
+    width: 1.736
+    slope: 0
+    endHeight: 0
+  - x: 5.908
+    height: 2.538
+    width: 1.882
+    slope: 0
+    endHeight: 0
+  - x: 13.47
+    height: -0.2
+    width: 5.42
+    slope: 1
+    endHeight: 2.772
+  - x: 18.89
+    height: 2.772
+    width: 2.99
+    slope: 0
+    endHeight: 0
   thickness: 0.2
-  surfaceArc: 160
+  surfaceArc: 60
   groundLayerName: Ground
 --- !u!1 &7400000000000000411
 GameObject:
@@ -3969,8 +3980,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 149.6, y: -5.31516, z: 0}
-  m_LocalScale: {x: 19.2, y: 1, z: 1}
+  m_LocalPosition: {x: 151.2, y: -5.398493, z: 0}
+  m_LocalScale: {x: 22.4, y: 1.166667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3982,240 +3993,6 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400000000000000411}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &7400000000000000421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7400000000000000422}
-  - component: {fileID: 7400000000000000423}
-  m_Layer: 7
-  m_Name: BlocoRampaArena
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7400000000000000422
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000421}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.49375, y: -5.47766, z: 0}
-  m_LocalScale: {x: 5.4125, y: 3, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7400000000000000423
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000421}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &7400000000000000431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7400000000000000432}
-  - component: {fileID: 7400000000000000433}
-  m_Layer: 7
-  m_Name: RampaArena
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7400000000000000432
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000431}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.2470875, w: 0.9689932}
-  m_LocalPosition: {x: 155.539426, y: -3.591608, z: 0}
-  m_LocalScale: {x: 3.44574, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.6105}
---- !u!61 &7400000000000000433
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000431}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!1 &7400000000000000441
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7400000000000000442}
-  - component: {fileID: 7400000000000000443}
-  m_Layer: 7
-  m_Name: PatamarArena
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7400000000000000442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000441}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 158.00625, y: -3.82766, z: 0}
-  m_LocalScale: {x: 2.3875, y: 3, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7400000000000000443
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400000000000000441}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -4281,7 +4058,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000451}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.975, y: 0, z: 0}
+  m_LocalPosition: {x: 139.970833, y: 0.0, z: 0}
   m_LocalScale: {x: 1, y: 14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4359,7 +4136,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 159.25, y: 0, z: 0}
+  m_LocalPosition: {x: 162.458333, y: 0.0, z: 0}
   m_LocalScale: {x: 1, y: 14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4417,9 +4194,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 7400000000000000402}
   - {fileID: 7400000000000000412}
-  - {fileID: 7400000000000000422}
-  - {fileID: 7400000000000000432}
-  - {fileID: 7400000000000000442}
   - {fileID: 7400000000000000452}
   - {fileID: 7400000000000000462}
   - {fileID: 7400000000000000322}

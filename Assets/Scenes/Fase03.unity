@@ -416,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 73011444}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5833, z: 0}
+  m_LocalPosition: {x: -14.140625, y: -1.5833, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -694,7 +694,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -14.140625, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -718,14 +718,14 @@ MonoBehaviour:
   lockY: 1
   fixedY: 1
   clampToLevel: 1
-  levelStartX: -10
-  levelEndX: 36.734375
-  descentAmount: 2.45469
-  descentStartX: 28.265625
-  descentEndX: 31.4375
-  leftDescentAmount: 3.8
-  leftDescentStartX: 168.5
-  leftDescentEndX: 174.5
+  levelStartX: -16.640625
+  levelEndX: 36.875
+  descentAmount: 3.2138
+  descentStartX: 27.82555
+  descentEndX: 30.82312
+  leftDescentAmount: 3.9
+  leftDescentStartX: 171
+  leftDescentEndX: 175.5
   leftDescentMinX: 131
   leftDescentMaxX: 190
 --- !u!1 &619394800
@@ -1139,8 +1139,8 @@ Transform:
   m_GameObject: {fileID: 1018641927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.1328125, y: -3, z: 0}
-  m_LocalScale: {x: 38.265625, y: 1, z: 1}
+  m_LocalPosition: {x: 5.592462, y: -3, z: 0}
+  m_LocalScale: {x: 44.466175, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1552,7 +1552,7 @@ Transform:
   m_GameObject: {fileID: 1709306406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 224, y: -3.95469, z: 0}
+  m_LocalPosition: {x: 224.4375, y: -3.95469, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1837,8 +1837,8 @@ MonoBehaviour:
   player: {fileID: 73011451}
   lockCameraOnBoss: 1
   cameraFollow: {fileID: 519420033}
-  arenaStartX: 210.0
-  arenaEndX: 228.0
+  arenaStartX: 207.9375
+  arenaEndX: 230.015625
   nextSceneName: 
   nextSceneDelay: 2.5
 --- !u!1 &1975929947
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.CameraSystem.ParallaxBackground
   targetCamera: {fileID: 0}
-  levelStartX: -10
+  levelStartX: -16.640625
   levelEndX: 36.734375
   verticalOffset: -0.25
 --- !u!1 &7400000000000000005
@@ -2307,7 +2307,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -2.5, z: 0}
+  m_LocalPosition: {x: -16.640625, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2385,12 +2385,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 0.72
-    height: 3.2
-    width: 2.03
-  - x: 4.81
-    height: 1.36
-    width: 2.03
+  - x: 3.558
+    height: 1.101
+    width: 0.865
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -2421,7 +2418,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.890625, y: -2.5, z: 0}
+  m_LocalPosition: {x: -4.46875, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2499,14 +2496,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 3.0475
-    height: 1.6
-    width: 2.29
-    slope: 1
-    endHeight: 3.2
-  - x: 5.2875
-    height: 3.2
-    width: 3.17
+  - x: 4.521
+    height: 1.258
+    width: 1.573
+  - x: 6.113
+    height: 1.573
+    width: 0.944
+  - x: 7.175
+    height: 1.248
+    width: 1.622
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -2615,24 +2613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 0.48
-    height: 3.36
-    width: 1.92
-  - x: 3.3
-    height: 1.08
-    width: 0.82
-  - x: 3.05
-    height: 3.49
-    width: 4.0
-  - x: 4.72
-    height: 0.95
-    width: 2.47
-  - x: 11.07
-    height: 1.26
-    width: 1.54
-  - x: 12.67
-    height: 1.89
-    width: 1.16
+  - x: 10.689
+    height: 1.032
+    width: 2.693
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -2740,13 +2723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676c20af3ab54345b3be5be3fcf3d621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
-  platforms:
-  - x: 1.63
-    height: 1.03
-    width: 1.0
-  - x: 3.55
-    height: 2.84
-    width: 3.2
+  platforms: []
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -2776,8 +2753,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.5, y: -5.45469, z: 0}
-  m_LocalScale: {x: 8.46875, y: 1, z: 1}
+  m_LocalPosition: {x: 32.350275, y: -6.2138, z: 0}
+  m_LocalScale: {x: 9.04945, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2853,13 +2830,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400000000000000311}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.3233889, w: 0.9462662}
-  m_LocalPosition: {x: 29.545551, y: -4.122763, z: 0}
-  m_LocalScale: {x: 4.010771, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3986992, w: 0.9170817}
+  m_LocalPosition: {x: 28.958695, y: -4.447939, z: 0}
+  m_LocalScale: {x: 4.694762, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -46.994}
 --- !u!61 &7400000000000000313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2932,7 +2909,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.6, y: -1.5, z: 0}
+  m_LocalPosition: {x: 36.675, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3010,7 +2987,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.953125, y: -4.95469, z: 0}
+  m_LocalPosition: {x: 35.3735, y: -5.7138, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3028,10 +3005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2e41a9d5b84f0e9a6c3b1d8e5f7a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.DoorTransition
-  triggerX: 32.3
-  minPlayerY: -6
-  maxPlayerY: -3.75
-  doorPoint: {x: 32.953125, y: -4.95469}
+  triggerX: 34.7735
+  minPlayerY: -6.214
+  maxPlayerY: -4.114
+  doorPoint: {x: 35.3735, y: -5.7138}
   walkSpeed: 3.5
   enterDuration: 0.6
   endScale: 0.6
@@ -3041,7 +3018,7 @@ MonoBehaviour:
   teleport: 1
   destination: {x: 61.72, y: -4}
   destinationStartX: 60.0
-  destinationEndX: 78.0
+  destinationEndX: 82.078125
 --- !u!1 &7400000000000000045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3146,19 +3123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676c20af3ab54345b3be5be3fcf3d621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
-  platforms:
-  - x: 4.0
-    height: 1.47
-    width: 1.22
-  - x: 5.43
-    height: 2.29
-    width: 1.5
-  - x: 7.52
-    height: 2.29
-    width: 3.47
-  - x: 11.83
-    height: 1.32
-    width: 3.1
+  platforms: []
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -3188,8 +3153,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.0, y: -5.45469, z: 0}
-  m_LocalScale: {x: 18.0, y: 1, z: 1}
+  m_LocalPosition: {x: 71.0390625, y: -5.45469, z: 0}
+  m_LocalScale: {x: 22.078125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3344,7 +3309,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 78.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 82.578125, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3422,7 +3387,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000371}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.25, y: -4.95469, z: 0}
+  m_LocalPosition: {x: 80.4125, y: -4.95469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3440,10 +3405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2e41a9d5b84f0e9a6c3b1d8e5f7a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.DoorTransition
-  triggerX: 75.7
+  triggerX: 79.8125
   minPlayerY: -6
   maxPlayerY: -3.75
-  doorPoint: {x: 76.25, y: -4.95469}
+  doorPoint: {x: 80.4125, y: -4.95469}
   walkSpeed: 3.5
   enterDuration: 0.6
   endScale: 0.6
@@ -3451,9 +3416,9 @@ MonoBehaviour:
   fadeDuration: 0.6
   blackHold: 0.4
   teleport: 1
-  destination: {x: 105.78, y: -4}
+  destination: {x: 107.9688, y: -4}
   destinationStartX: 90.0
-  destinationEndX: 108.0
+  destinationEndX: 112.078125
 --- !u!1 &7400000000000000055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,13 +3523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676c20af3ab54345b3be5be3fcf3d621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
-  platforms:
-  - x: 10.93
-    height: 1.4
-    width: 1.52
-  - x: 12.54
-    height: 1.45
-    width: 1.22
+  platforms: []
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -3594,8 +3553,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000381}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 99.0, y: -5.45469, z: 0}
-  m_LocalScale: {x: 18.0, y: 1, z: 1}
+  m_LocalPosition: {x: 101.039062, y: -5.45469, z: 0}
+  m_LocalScale: {x: 22.078125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3672,8 +3631,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.09375, y: -3.95469, z: 0}
-  m_LocalScale: {x: 6.1875, y: 4, z: 1}
+  m_LocalPosition: {x: 93.021875, y: -3.14219, z: 0}
+  m_LocalScale: {x: 8.04375, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3749,13 +3708,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7400000000000000401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.3135783, w: 0.9495624}
-  m_LocalPosition: {x: 97.913175, y: -3.856359, z: 0}
-  m_LocalScale: {x: 5.037579, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3067932, w: 0.9517762}
+  m_LocalPosition: {x: 99.748939, y: -3.204318, z: 0}
+  m_LocalScale: {x: 7.684456, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -36.55}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35.732}
 --- !u!61 &7400000000000000403
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3828,7 +3787,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.46, y: -1.5, z: 0}
+  m_LocalPosition: {x: 89.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3906,7 +3865,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.96, y: -1.5, z: 0}
+  m_LocalPosition: {x: 112.578125, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3984,7 +3943,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.14, y: -1.95469, z: 0}
+  m_LocalPosition: {x: 92.5156, y: -0.64219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4002,11 +3961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2e41a9d5b84f0e9a6c3b1d8e5f7a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.DoorTransition
-  triggerX: 94.1
+  triggerX: 93.4156
   triggerFromRight: 1
-  minPlayerY: -1.7
-  maxPlayerY: -0.4
-  doorPoint: {x: 93.14, y: -1.95469}
+  minPlayerY: -0.842
+  maxPlayerY: 0.958
+  doorPoint: {x: 92.5156, y: -0.64219}
   walkSpeed: 3.5
   enterDuration: 0.6
   endScale: 0.6
@@ -4016,7 +3975,7 @@ MonoBehaviour:
   teleport: 1
   destination: {x: 133.9, y: -4}
   destinationStartX: 132.234375
-  destinationEndX: 186.234375
+  destinationEndX: 185.71875
 --- !u!1 &7400000000000000065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,8 +4122,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186.734375, y: -5, z: 0}
-  m_LocalScale: {x: 1, y: 14, z: 1}
+  m_LocalPosition: {x: 186.21875, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4320,7 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 11.23
+  - x: 5.98
     height: 0.91
     width: 1.86
   thickness: 0.2
@@ -4352,8 +4311,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.1835938, y: -5.45469, z: 0}
-  m_LocalScale: {x: 43.8984375, y: 1, z: 1}
+  m_LocalPosition: {x: 153.597656, y: -5.45469, z: 0}
+  m_LocalScale: {x: 42.726563, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4509,7 +4468,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 168.234375, y: -4.95469, z: 0}
+  m_LocalPosition: {x: 162.984375, y: -4.95469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4587,9 +4546,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 7.781
-    height: -0.773
-    width: 6.176
+  - x: 4.97
+    height: 1.21
+    width: 2.87
+  - x: 13.82
+    height: -1.41
+    width: 7.56
+  - x: 12.09
+    height: -2.71
+    width: 1.64
+  - x: 12.41
+    height: -1.97
+    width: 1.2
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -4619,8 +4587,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 181.1835938, y: -9.55625, z: 0}
-  m_LocalScale: {x: 10.1015625, y: 1, z: 1}
+  m_LocalPosition: {x: 180.339844, y: -9.72031, z: 0}
+  m_LocalScale: {x: 10.757812, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4697,8 +4665,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.6328125, y: -7.75, z: 0}
-  m_LocalScale: {x: 1, y: 3.7, z: 1}
+  m_LocalPosition: {x: 174.460938, y: -7.5875, z: 0}
+  m_LocalScale: {x: 1, y: 3.26562, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4793,18 +4761,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9a7c51d2b64f08a1c5e7d9b0f2a463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.AreaTransition
-  minX: 176.2528
-  maxX: 186.1544
-  minY: -12
-  maxY: -4.45
+  minX: 175.1109
+  maxX: 185.6188
+  minY: -14
+  maxY: -4.8
   landedTime: 0.2
   maxVerticalSpeed: 0.1
   fadeDuration: 0.6
   blackHold: 0.4
   teleport: 1
-  destination: {x: 215, y: -4}
-  destinationStartX: 210.0
-  destinationEndX: 228.0
+  destination: {x: 209.7375, y: -4}
+  destinationStartX: 207.9375
+  destinationEndX: 230.015625
 --- !u!1 &7400000000000000095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,7 +4800,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 210.0, y: -4.95469, z: 0}
+  m_LocalPosition: {x: 207.9375, y: -4.95469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4910,15 +4878,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.MapPlatforms
   platforms:
-  - x: 0
-    height: 0.926
-    width: 1.56
-  - x: 2.027
-    height: 1.3
-    width: 1.8
-  - x: 2.227
-    height: 2.0
-    width: 1.32
+  - x: 8.984
+    height: 3.881
+    width: 7.475
+  - x: 10.753
+    height: 2.013
+    width: 1.61
+  - x: 13.297
+    height: 2.372
+    width: 1.294
+  - x: 17.897
+    height: 2.013
+    width: 4.183
+  - x: 18.544
+    height: 1.351
+    width: 2.415
   thickness: 0.2
   surfaceArc: 160
   groundLayerName: Ground
@@ -4948,8 +4922,8 @@ Transform:
   m_GameObject: {fileID: 7400000000000000551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 219.0, y: -5.45469, z: 0}
-  m_LocalScale: {x: 18.0, y: 1, z: 1}
+  m_LocalPosition: {x: 218.9765625, y: -5.45469, z: 0}
+  m_LocalScale: {x: 22.078125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5026,7 +5000,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 209.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 207.4375, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5104,7 +5078,7 @@ Transform:
   m_GameObject: {fileID: 7400000000000000571}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 228.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: 230.515625, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

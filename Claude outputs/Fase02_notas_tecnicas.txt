@@ -31,3 +31,10 @@ ARENA DO CHEFAO (bomb B), separada do resto da fase: Fase02_Arena em X = 140 (12
   - Vidro > WindowBreakCutscene: teleportToArena marcado, arenaSpawn (142.6875, -0.115) = janela quebrada da arena.
   - BossSpawner em modo arena: arenaTriggerX 141, arena 140 a 159.2. Sentinela em (150, -3.81516).
   - O fim da fase com rolagem continua em 123.4375 (camera e parallax); a arena fica fora desse limite de proposito.
+ARENA aumentada 7/6 (1434x956, 22.4 unidades, pivo 0.265272) para cobrir janelas largas. Chao, rampa, patamar, plataformas, limites, chefao, arenaSpawn e arenaEndX (162.4) escalados em torno de (140, -4.81516).
+TESTE: chefao (Sentinela) desativado e BossSpawner desligado (sem passagem para a Fase 3). Para voltar: copiar Claude outputs/Fase02_backup_com_chefao.unity por cima da cena, ou reativar os dois no Inspector.
+ARENA: barris movidos para o canto direito (na frente da base da escada). Escada/patamar agora sao plataformas de mao unica (MapPlatforms: rampa 16.085->19.615 de 0.977 a 2.902, patamar 2.902); apagados BlocoRampaArena, RampaArena e PatamarArena. Barris: plataforma 1.63.
+ARENA: surfaceArc das plataformas da arena 160 -> 60 (a rampa inclinada barrava quem passava por baixo). Barra de baixo do corrimao estendida ate o poste.
+ARENA NOVA (refeita pelo ChatGPT: escada vazada com barris embaixo do patamar): 1434x956, pivo 0.265625. Plataformas: caixa 1.59, pilha 2.54, rampa 0.25->2.77, patamar 2.77, barris 1.63 (surfaceArc 60).
+ARENA: plataforma dos barris removida.
+ARENA: rampa agora comeca no chao (x 13.84, altura 0 -> 2.772). PlayerController ganhou "descer de plataforma": tecla C ou Baixo + Pulo.
