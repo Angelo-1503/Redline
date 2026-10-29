@@ -1,0 +1,82 @@
+REDLINE - FASE 05 (OVERPASS) - NOTAS TECNICAS
+Cena criada a partir da Fase 4, sem nenhuma tela, transicao, colisor ou sprite da Train. levelNumber 5 = jogador azul (Vanguarda) contra vermelhos.
+Mantidos: Badfallen (jogador, x -14.14), Main Camera, Ground provisorio (x -16.64 a 27.83, topo em y = -2.5), Canvas/UI, GameManager, WaveSpawner (DESATIVADO), BossSpawner, Sentinela (chefao, inativo), SpawnPoint1/2, Fundo.
+Fundo: Fase05_Fundo (1536x1024, mesmas configuracoes do Fase04_Fundo), verticalOffset -0.25. Salvo a partir da copia webp enviada no chat: pode ser substituido pelo PNG original com o mesmo nome.
+Camera e parallax: levelStartX -16.640625, levelEndX -1.546875 (fim da Tela 1). BossSpawner: arenaTriggerX 9999 (desligado) ate existir a arena.
+Trajeto: 1 spawn CT (rua do banco), 2-3 bomb A, 4 banheiros, 5-6 parque, 7 descida, 8 tuneis de baixo, 9 canal, arena = bomb B embaixo do viaduto.
+Escala: imagem gerada 1536x1024 reduzida para 966x644 (fator 0.629, 64 px por unidade).
+Tela 1 (X = -16.640625, y = -2.5): Fase05_Tela01, 966x644 px (15.09375 unidades), pivo (0, 0.240702). Fim: -1.546875.
+  Topo do piso = linha dos trilhos (772 da imagem original). A rua de paralelepipedos fica na frente dos pes; a guia e a terra embaixo sao o padrao de chao da Fase 5 (as proximas telas copiam este chao).
+  Banco "BANK" (borda esquerda), carro-forte, cacambas verdes, conteineres empilhados, caminhao amarelo com carreta de caixas, muro com a barraca "A".
+  Plataformas: cacambas (x 6.251, h 0.98, w 1.376), teto do carro-forte (1.818, 1.37, 2.85), conteiner de baixo (7.548, 1.62, 2.457), conteiner de cima (7.921, 2.83, 2.811), cabine do caminhao (10.3, 1.34, 0.953), caixas da carreta (11.401, 1.38, 3.145).
+ESCALA DA FASE 5 CORRIGIDA: os objetos da Tela 1 vieram pequenos em relacao ao personagem (caixa eletronico, cacamba, carro-forte).
+  Fator da Fase 5 = 0.82 (nao 0.629): Fase05_Tela01 agora 1260x840 px (19.6875 unidades), pivo (0, 0.242333), X = -16.640625, fim 3.046875. Usar o mesmo fator nas proximas telas.
+  Plataformas: cacambas (x 8.149, h 1.28, w 1.794), carro-forte (2.37, 1.78, 3.716), conteiner de baixo (9.84, 2.11, 3.203), conteiner de cima (10.327, 3.69, 3.664), cabine (13.427, 1.74, 1.243), caixas da carreta (14.862, 1.79, 4.1).
+  Camera e parallax: levelEndX = 3.046875.
+CameraFollow: fase (ou trecho) mais estreita que a tela agora encosta na ESQUERDA, em vez de centralizar.
+TOPO DO PISO DA FASE 5 MUDADO PARA A LINHA 798 da imagem original (paralelepipedos), para o personagem pisar na frente dos objetos nas duas telas. Pivo das telas de rua da Fase 5: (0, 0.216952). Alturas da Tela 1 subiram 0.33.
+  A guia e a terra das Telas 1 e 2 vieram identicas (mesmas juntas nas mesmas colunas): nao precisou trocar o chao.
+Tela 2 (X = 3.046875, y = -2.5): Fase05_Tela02, 1260x840 px (19.6875 unidades), mesmo pivo. Fim: 22.734375.
+  Banheiros (WC) com o cafe no terraco: muro de pedra com grade e pilares, banco, lixeira, predio de concreto com entrada escura e placa "WC", terraco com guarda-sois, arvore, escadinha e mesas de piquenique com baloes.
+  Plataformas: muro de pedra (x 0, h 0.81, w 6.983), lixeira (5.599, 1.04, 0.487), pilar com bola (2.434 e 6.15, h 1.90, w 0.577), marquise (6.406, 3.50, 6.534), terraco (12.941, 3.60, 2.306), pilar da direita (15.542, 3.45, 1.051), floreira (15.695, 1.14, 1.281), degrau de cima (16.977, 1.93, 2.05).
+  Camera e parallax: levelEndX = 22.734375.
+TELA 1 TROCADA PELA VERSAO 2 (feita com a Tela 2 como referencia; v1 guardada no scratchpad: Fase05_Tela01_v1.png).
+  Fase05_Tela01 v2: cortada em 1443 px da original (antes do pilar com bola, que ja existe na Tela 2) -> 1183x840 px (18.484 unidades), pivo (0, 0.246238). X = -16.640625, fim 1.84375.
+  Chao copiado da Tela 2 (linhas 794+ da Tela 2 -> 764+ desta, mesmas colunas): emenda sem diferenca. Topo do piso = linha 768.
+  Plataformas: cacambas (x 6.273, h 1.38, w 2.593), carro-forte (1.948, 1.87, 3.536), conteiner de baixo (6.847, 2.65, 3.936), conteiner de cima (7.79, 4.36, 2.849), cabine (9.41, 1.83, 1.476), caixas da carreta (10.937, 2.02, 3.055), lixeira (5.566, 1.0, 0.4).
+Tela 2 movida para X = 1.84375 (fim 21.53125). Camera e parallax: levelEndX = 21.53125.
+Tela 3 (X = 21.53125, y = -2.5): Fase05_Tela03, 1260x840 px, pivo (0, 0.246238). Fim: 41.21875.
+  A fonte: muro de pedra com pilares pontudos, grade e luminarias, dois bancos, poste, fonte de tres bacias, canteiro alto de concreto com arvore, portao de ferro aberto.
+  Chao copiado da Tela 2 (mesmo processo da Tela 1 v2). Topo do piso = linha 768.
+  Plataformas: bancos (x 0.231 e 3.754, h 0.83), borda da fonte (6.778, 1.02, 4.817), bacia do meio (8.328, 2.18, 1.742), muro baixo (11.98, 0.81, 3.677), canteiro alto (12.338, 2.05, 3.267).
+  Camera e parallax: levelEndX = 41.21875. Ground provisorio esticado para -16.64 a 41.22 (centro 12.289, escala 57.859).
+Tela 4 (X = 41.21875, y = -2.5): Fase05_Tela04, 1260x840 px, pivo (0, 0.246238). Fim: 60.90625.
+  Parquinho: tapume azul com a cobra amarela e flores, caixa de areia, escorregador, torre de madeira com arvore, balanco, PORTINHA de madeira aberta com escada descendo (borda direita).
+  Chao copiado da Tela 2. Plataformas: caixa de areia (x 0.487, h 1.01, w 3.882), topo do escorregador (6.47, 3.15, 1.179), torre (8.379, 2.61, 2.204), barra do balanco (10.532, 3.14, 4.741).
+  PortaParquinho (DoorTransition, copiada da PortaGalpao09 da Fase 4): gatilho x >= 58.528, porta em (59.028, -1.58). teleport DESMARCADO ate existirem os tuneis (Tela 5).
+  ParedeFimParque em x 61.40625. Camera e parallax: levelEndX = 60.90625. Ground provisorio -16.64 a 60.91.
+SUBSOLO DO PARQUE = cenario fechado e separado, X = 80, mesmo nivel (y = -2.5).
+  Fase05_Tela05: imagem gerada reduzida por 0.75 (porta dupla na mesma escala das portas das outras telas) com 40 px de teto repetidos em cima -> 1152x798 px (18 unidades), pivo (0, 0.309649). Fim 98.
+  Topo do piso = linha 690 da imagem original. Escada de entrada na esquerda, deposito com pneu, prateleira, porta dupla, estante, escada de saida para a luz do dia na direita.
+  Plataformas: pneu (x 4.746, h 0.86, w 1.406), prateleira (7.336, 2.60, 2.461), topo da porta dupla (10.371, 3.08, 2.52), estante (13.043, 2.43, 1.992).
+  GroundSubsolo 80 a 98. ParedeSubsoloEsquerda 80.789 (face 81.29). ParedeSubsoloDireita 98.2 (face 97.7).
+  PortaParquinho agora com teleport: leva para (82.49, -1.55), camera presa de 80 a 98.
+  SaidaSubsolo (DoorTransition) na escada da direita: gatilho x >= 96.1, porta em (96.6, -1.58). teleport DESMARCADO ate existir o proximo trecho.
+SAIDA DO SUBSOLO SEM TRANSICAO: SaidaSubsolo removida. A Tela 6 fica colada no fim do subsolo.
+Tela 6 (X = 98, y = -2.5): Fase05_Tela06, 1170x748 px, pivo (0, 0.276203). Fim: 116.28125.
+  Imagem gerada (1500x1000) reduzida por 0.78 (cacambas na escala das da Tela 1); do topo do piso (linha 690 da original) para baixo, chao trocado pelas linhas 630-839 da Fase05_Tela04 (paralelepipedos, guia e terra).
+  Saida do subsolo: patamar alto com "<- A", escada descendo ate o corrimao, patio com cacambas, lixeira, paletes, muro pichado com "<- B".
+  Rampa da escada do subsolo (MapPlatforms da Tela 5): x 14.8 a 18.0, de h 0 ate 3.01 (sobe ate o patamar).
+  Plataformas da Tela 6: patamar (x 0, h 3.01, w 5.314), escada descendo (5.314, de 3.01 ate 1.46, w 1.816), cacambas (8.495, 1.71, 3.352), lixeira (11.907, 1.34), paletes (12.748, 1.01), cacamba da direita (15.149, 1.56).
+  CorrimaoEscadaPatio: bloco solido em x 105.648 (largura 1.036), altura 1.46: o jogador pula por cima para cair no patio.
+  ParedeSubsoloDireita virou um muro baixo (x 98.4, altura 2.5) embaixo do patamar: obriga a subir pela rampa.
+  GroundSubsolo agora vai de 80 a 116.28. ParedeFimPatioB em 116.78. PortaParquinho: destinationEndX = 116.28125 (camera do subsolo segue ate o fim do patio).
+CORRECAO: o patio da Tela 6 fica UM NIVEL ABAIXO do subsolo (o patamar da Tela 6 e o proprio chao do subsolo).
+  Tela 6 em y = -5.51 (3.01 abaixo): o topo do patamar fica em -2.5, igual ao chao do subsolo. Rampa de subida do subsolo removida.
+  GroundSubsolo agora vai de 80 a 103.314 (inclui o patamar, solido). GroundPatioB (era ParedeSubsoloDireita): 98 a 116.28, topo em -5.51.
+  Plataforma do patamar removida da Tela 6 (o chao solido faz o papel). Escada descendo continua (x 5.314, de 3.01 ate 1.46).
+  CorrimaoEscadaPatio: colisor mais alto que o desenho (2.2 acima do patio, centro y -4.41) para ser preciso pular por cima; ParedeFimPatioB em y -1.
+  Camera: descentAmount 3.01, de x 103.314 ate 106.514 (desce acompanhando a escada).
+SUBSOLO REFEITO (nova imagem, so conecta com a Tela 6):
+  Fase05_Tela05: imagem nova cortada em 1370 px (fim do pilar, antes do lado de fora), "A" do pilar apagado, reduzida por 0.6, com 352 px (orig) de laje de concreto acrescentados em cima -> 822x826 px (12.84 unidades), pivo (0, 0.337046). X = 80, fim 92.84375.
+  Topo do piso = linha 555 da original. Plataformas: pneu (x 0.703, h 0.86), balde (5.888, 0.70), compensado (6.216, 1.43), estante (4.828, 2.13, 1.359), topo da porta dupla (7.266, 2.44, 1.8).
+  ParedeSubsoloEsquerda 80.906 (face 81.41). PortaParquinho leva para (82.61, -1.55), camera de 80 a 111.125.
+Tela 6 movida para X = 92.84375 (colada no subsolo), y = -5.51. Seta do "B" espelhada (agora "-> B"). Fim 111.125.
+  GroundSubsolo 80 a 98.158 (comeco da escada). GroundPatioB 92.84 a 111.125. CorrimaoEscadaPatio x 100.492. ParedeFimPatioB 111.625. Descida da camera de 98.158 ate 101.358.
+CORRECAO DA ESCADA DA TELA 6: a escada comeca na beira do patamar (linha 447 / x 350 da original) e termina no ultimo degrau (x 585, linha 620).
+  Rampa: x 4.266, de h 2.96 ate 0.85, largura 2.864. GroundSubsolo agora termina na beira do patamar (97.11) e e um bloco do chao do subsolo ate o chao do patio (y -4.005, altura 3.01): nao da para passar por baixo do patamar.
+  CorrimaoEscadaPatio: altura 1.8 (centro y -4.61). Descida da camera de 97.11 ate 99.97.
+Tela 7 (X = 111.125, y = -5.51, nivel do patio): Fase05_Tela07, 707x783 px, pivo (0, 0.263857). Fim: 122.171875.
+  Imagem gerada reduzida por 0.46 (paletes do mesmo tamanho dos da Tela 6); piso trocado pelas linhas 630-839 da Fase05_Tela04; 230 px de pilar repetidos em cima para cobrir a camera.
+  Corredor do B: muro pichado com cerca, paletes, pneu, casinha de chapa, pilar do viaduto com "B", tambor, muro alto com cerca de ferrugem e poste, muro baixo na direita.
+  Plataformas: paletes (x 0.144, h 0.55), muro pichado (0, 2.21, 3.436), tambor (6.325, 0.90), telhado da casinha (3.436, 2.42, 2.875), muro alto (6.311, 2.52, 3.234), muro baixo (9.523, 0.79, 1.517).
+  GroundPatioB ate 122.17. ParedeFimPatioB em 122.67. PortaParquinho: destinationEndX = 122.171875.
+MURO PICHADO DA TELA 7 IGUALADO AO MURO DA TELA 6: colunas 0-220 esticadas 27 px para cima (o muro da Tela 6 tinha 172 px acima do chao e o da Tela 7, 145). Plataforma do muro pichado: h 2.69. Copia antes: scratchpad (Fase05_Tela07_antes_muro.png).
+Tela 8 (X = 122.171875, y = -5.51): Fase05_Tela08, 737x782 px, pivo (0, 0.294885). Fim: 133.6875.
+  Canal embaixo da ponte de trilhos. Imagem reduzida por 0.48 (tambor/carretel na escala da Tela 7); chao de cima da esquerda trocado pelo da Tela 4; 260 px dos postes repetidos em cima e 30 px de terra embaixo.
+  Chao de cima = linha 600 da original; fundo do canal = linha 862 -> canal 1.965 abaixo (y -7.475).
+  Escada: rampa de x 1.688 (h 0) ate x 4.163 (h -1.96). Plataformas: tambor (7.05, -1.16), carretel (8.79, -1.26), caixa (9.585, -1.50), laje do meio (4.478, h 1.05, w 2.76). A ponte e so desenho (sem colisor).
+  GroundPatioB agora ate 123.86 (comeco da escada). BordaCanal: bloco solido embaixo do chao de cima (x 123.6, de -6.01 ate -7.475). GroundCanal 123.86 a 133.69, topo -7.475.
+  ParedeFimPatioB movida para 134.19 (y -2.5). PortaParquinho: destinationEndX = 133.6875.
+  Camera: segunda descida (leftDescent) de 1.965 entre x 123.86 e 126.32, valendo de 122.17 em diante.
+  PortaTunelCanal (DoorTransition) no tunel do monstro: gatilho x >= 131.872, porta em (132.372, -6.555), so no fundo do canal. teleport DESMARCADO ate existir a passagem subterranea.

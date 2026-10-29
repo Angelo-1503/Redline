@@ -1,0 +1,124 @@
+REDLINE - FASE 04 (TRAIN) - NOTAS TECNICAS
+Cena criada a partir da Fase 3, sem as telas, transicoes e colisores da Mirage. levelNumber 4 = jogador vermelho contra azuis.
+Fundo: Fase04_Fundo (1536x1024, 64 px por unidade, filtro Point, sem compressao, mesmas configuracoes do Fase03_Fundo), verticalOffset -0.25.
+Mantidos: Badfallen (jogador, x -14.14), Main Camera, Ground provisorio (x -16.64 a 27.83, topo em y = -2.5), Canvas/UI, GameManager, WaveSpawner (DESATIVADO), BossSpawner, Sentinela (chefao, inativo), SpawnPoint1/2, Fundo.
+Camera e parallax: levelStartX -16.640625, levelEndX 27.825549 (fim do Ground provisorio). Descidas da camera zeradas.
+BossSpawner: arenaTriggerX 9999 (desligado) ate existir a arena do bomb B; arenaStartX/arenaEndX zerados.
+Trajeto (revisado na tela 2): 1 spawn T, 2 saida do T (casa verde sobre a passagem, a passagem e so decoracao), 3-4 volta por fora, pelo fundo, ate o A (sem entrar pela ligacao/Ivy/Popdog), 5 bomb A (1), 6 bomb A (2), 7 conector/Z, 8 ladder room (desce), 9 B halls, arena = bomb B.
+Rua das telas em y = -2.5 (igual as fases anteriores). Tela 1 entra em X = -16.640625.
+Escala das telas: imagem gerada 1536x1024 reduzida para 966x644 (fator 0.629, 64 px por unidade) = personagem com ~92 px, igual ao sprite do jogador.
+Tela 1 (X = -16.640625, y = -2.5): Fase04_Tela01, 966x644 px (15.09375 unidades), pivo (0, 0.2432). Fim da tela: -1.546875.
+  Spawn T: vagao verde (borda esquerda), predio do mosaico com andaime, armarios eletricos, casa amarela; borda direita = patio aberto.
+  Plataformas (MapPlatforms): teto do vagao (x 0, h 2.58, w 2.98), caixote (3.59, 0.77, 0.66), andaime (5.62, 2.58, 2.49), armarios (8.33, 1.10, 1.69), telhado da casa amarela (10.12, 2.83, 2.18).
+  Pulo maximo do jogador ~2.45: vagao pelo caixote, andaime pelos armarios, casa pelos armarios.
+Tela 2 (X = -1.546875, y = -2.5): Fase04_Tela02, 966x637 px, pivo (0, 0.249012). Fim da tela: 13.546875.
+  A face da calcada da imagem gerada era 12 px mais alta que a da Tela 1: removidas 12 linhas (779-790 da imagem original) antes de reduzir, para a emenda ficar reta.
+  Saida do T: cabine amarela, cacamba com entulho, caixas brancas atras da cerca, casa verde com passagem coberta (vazada, mostra o fundo), predio verde com sacada de vidro, poste.
+  Plataformas: telhado da cabine amarela (x 0.98, h 1.98, w 2.80), cacamba (3.83, 1.20, 2.85), caixas brancas (4.67, 2.51, 1.72).
+TELAS 1 E 2 APROXIMADAS: Tela 1 cortada em 800 px (logo depois da casa amarela) -> fim em -4.140625. Tela 2 cortada 40 px a esquerda (926 px), X = -4.140625, fim em 10.328125.
+  Plataformas da Tela 2 deslocadas -0.625: cabine (0.355), cacamba (3.205), caixas brancas (4.045).
+CHAO DA TELA 2 IGUALADO AO DA TELA 1: guia (meio-fio) e faixa de terra da Tela 2 (linha 487 para baixo) trocadas pelas da Tela 1 (linha 497 para baixo),
+  repetindo a laje de x 676 a 734 da Tela 1 (periodo 58 px) com a fase continuando a Tela 1. Piso fino de cima (com objetos) mantido.
+  Pivo da Tela 2 ajustado para 0.250549 (topo do piso 3.4 px acima do pivo, igual a Tela 1).
+  Copia antes da troca: scratchpad da sessao (Fase04_Tela02_antes_chao.png).
+Regra para as proximas telas: depois de reduzir, trocar a guia+terra pela da Tela 1 do mesmo jeito, para o chao ficar identico em toda a fase.
+  Passagem da casa verde: a parte transparente (x 425-540, y 338-463 da Tela 2) foi preenchida com uma parede escura de concreto (entrada sombreada). Copia antes: scratchpad (Fase04_Tela02_antes_parede.png).
+Tela 3 (X = 10.328125, y = -2.5): Fase04_Tela03, 837x644 px (13.078125 unidades), pivo (0, 0.21677). Fim da tela: 23.40625.
+  Imagem gerada ESPELHADA (o galpao azul "09" tinha que ficar a direita); o "09" foi recolado sem espelhar. Cortada 90 px a esquerda (vagao cortado) e na borda do galpao a direita.
+  Chao: do topo do piso + 4 px para baixo trocado pelo da Tela 1 (linha 488 em diante, laje x 676-734, fase continuando a Tela 2).
+  Volta por fora: muro com hera e conteiner (esquerda), portico de canos, cacamba verde com caixote azul, predio de tijolo branco com porta de vidro, galpao azul "09" com a porta de carga aberta (entrada para o proximo trecho, ainda sem DoorTransition).
+  Plataformas: muro (x 0.01, h 1.16, w 2.98), conteiner (0.09, 2.09, 1.89), topo do portico (1.93, 3.71, 4.52), cacamba (3.87, 0.78, 2.00), caixote azul (5.09, 1.45, 0.77).
+  Camera e parallax: levelEndX = 23.40625 (fim da Tela 3). O Ground provisorio ainda vai ate 27.83.
+TUNEL DO GALPAO 09 = cenario fechado e separado, no MESMO nivel da rua (y = -2.5), comecando em X = 60.
+  PortaGalpao09 (DoorTransition): porta de carga do galpao "09" da Tela 3, gatilho x >= 20.15 no chao (y -3 a -0.5), porta em (20.75, -1.58).
+    Leva para (62, -1.55), camera presa de 60 a 75.09375 (AUMENTAR destinationEndX quando a Tela 5 entrar).
+Tela 4 (X = 60, y = -2.5): Fase04_Tela04, 966x754 px, pivo (0, 0.253268). Fim: 75.09375.
+  Imagem reduzida para 966x644 e com 110 px de teto escuro acrescentados em cima (a camera fica fixa em y = 1 e mostra ate y = 6; sem isso aparecia o ceu do fundo).
+  Salao de carga (porta de carga vista por dentro na esquerda), caixotes, corredor das salas (TV, porta branca, armario eletrico). Borda direita aberta para a Tela 5.
+  GroundTunel (x 60 a 75.09, AUMENTAR com a Tela 5), ParedeTunelEsquerda (x 59.8).
+  Plataformas: pilha de caixotes (x 2.48, h 1.78, w 1.20), caixote (3.88, 0.94, 1.04), armario eletrico (10.02, 2.30, 0.98).
+  Enquanto a Tela 5 nao existe, a camera (17.8 de largura) e mais larga que o tunel (15.09) e mostra um pedaco do fundo na esquerda.
+MuretaTela01_02: sprite Fase04_Mureta (72x92 px, mureta de concreto cinza desenhada por codigo), em (-4.045, -2.447), ordem -7 (atras das telas), tapa o vao entre a casa amarela (Tela 1) e a cabine amarela (Tela 2). Sem colisor.
+MuroTela02_03: sprite Fase04_MuroTela02_03 (120x79 px, montado com pedacos do muro com hera da Tela 3), em (9.4525, -2.509), ordem -7, liga o predio verde da Tela 2 ao muro da Tela 3. Sem colisor (a plataforma do muro continua so na Tela 3).
+Tela 5 (X = 75.09375, y = -2.5): Fase04_Tela05, 927x754 px, pivo (0, 0.254103). Fim: 89.578125. Colada na Tela 4, sem transicao.
+  A imagem gerada tinha outra porta de enrolar na esquerda: removida (x 68-130 da imagem original); o pilar de metal da esquerda (x 0-68) ficou na emenda, tapando a diferenca da faixa azul entre as telas.
+  Alinhada pela borda de baixo do piso (linha 738 da imagem, igual a 739 da Tela 4). O piso desta tela e mais fundo (trilho no meio): o jogador anda na frente, as caixas ficam no fundo.
+  Mesmo teto escuro de 110 px acrescentado em cima.
+  Corredor do trilho: canos, porta com veneziana amarela, "A ->", caixotes, abertura para o bomb A na direita (x ~88.1 a 89.1, ainda sem DoorTransition).
+  Plataformas: pilha de caixotes (x 9.13, h 2.23, w 1.12), caixote (10.32, 1.40, 1.04).
+  GroundTunel agora vai de 60 a 89.578125 (centro 74.789, escala 29.578). ParedeTunelDireita em x 89.9. PortaGalpao09: destinationEndX = 89.578125.
+PilarTunelFrente: sprite Fase04_PilarTunel (38x574 px, o pilar da emenda recortado da Tela 5, sem o piso), em (75.09375, -2.5), pivo (0, 0.020198), ordem 10 (NA FRENTE do jogador, ordem 0): o jogador passa por tras do pilar entre a Tela 4 e a Tela 5.
+SAIDA NATURAL DO TUNEL PARA O BOMB A (sem DoorTransition):
+  Tela 5 cortada em 896 px (pilar da direita removido). Fim agora em 89.09375. A vista de fora pintada na abertura (x 838-895, do pe da porta de enrolar ate a linha 517) virou transparente: por ali aparece o fundo.
+  Copia antes: scratchpad (Fase04_Tela05_antes_saida.png).
+  PilarSaidaFrente: sprite Fase04_PilarSaida (29x574 px, batente da saida recortado da Tela 5, x 809-838), em (87.734375, -2.5), ordem 10: o jogador passa por tras do batente ao sair.
+Tela 6 (X = 89.09375, y = -2.5): Fase04_Tela06, 900x644 px (14.0625 unidades), pivo (0, 0.277329). Fim: 103.15625.
+  Muro de tijolo da esquerda removido (cortados 105 px da imagem). Topo do piso = linha dos trilhos (734 da imagem original); do topo + 4 px para baixo, chao trocado pelo da Tela 1 (guia + terra).
+  Bomb A: caixas eletricas, vagao-prancha amarelo com 2 conteineres radioativos, vagao verde-oliva, muro de placas, torre, silo, guindaste portico.
+  Plataformas: caixa baixa (x 2.074, h 0.83, w 0.53), caixa alta (2.624, 1.19, 0.45), piso do vagao-prancha (3.07, 0.72, 0.30) e entre os conteineres (5.18, 0.72, 0.35), conteiner 1 (3.371, 2.07, 1.79), conteiner 2 (5.533, 2.07, 1.84), teto do vagao verde (7.489, 2.68, 4.38).
+  GroundTunel agora vai de 60 a 103.15625 (centro 81.578, escala 43.156). ParedeTunelDireita movida para x 103.65625 (fim da Tela 6, ate a Tela 7 entrar). PortaGalpao09: destinationEndX = 103.15625.
+MUDANCA: A SAIDA DO TUNEL PARA O BOMB A VOLTOU A SER POR TRANSICAO (a Tela 6 v2 veio com outra porta de carga na esquerda).
+  Tela 5 restaurada (927 px, com a vista de fora na abertura e o pilar da direita). PilarSaidaFrente removido. Fim do tunel de novo em 89.578125:
+  GroundTunel 60 a 89.578 (centro 74.789, escala 29.578), ParedeTunelDireita em 89.9, PortaGalpao09 destinationEndX = 89.578125.
+  SaidaTunelBombA (DoorTransition): abertura do fim do corredor do trilho, gatilho x >= 88 no chao, porta em (88.64, -1.58).
+    Leva para (121.3, -1.55), na frente da porta de carga do predio do bomb A; camera presa de 120 a 135.09375 (AUMENTAR com a Tela 7).
+BOMB A = cenario separado, no mesmo nivel da rua (y = -2.5), comecando em X = 120.
+Tela 6 v2 (X = 120, y = -2.5): Fase04_Tela06, 966x754 px, pivo (0, 0.236584). Fim: 135.09375. Versao 1 guardada no scratchpad (Fase04_Tela06_v1.png).
+  Predio de chapa azul com porta de carga aberta (de onde o jogador sai) na esquerda; em cima, 110 px de fachada repetida para cobrir a camera ate y = 6.
+  Chao igual ao do tunel (concreto claro com trilho e faixa amarela, laje escura embaixo), sem troca. Topo do piso = linha 735 da imagem original.
+  Plataformas: caixa eletrica (x 2.919, h 1.06, w 0.46), piso do vagao-prancha (3.882, 0.74, 0.51) e entre os conteineres (6.162, 0.74, 0.40), conteiner 1 (4.403, 2.07, 1.76), conteiner 2 (6.663, 2.07, 1.75), teto do vagao verde (8.531, 2.68, 4.46).
+  GroundBombA (120 a 135.09), ParedeBombAEsquerda (x 120.2), ParedeBombADireita (x 135.6, mover quando a Tela 7 entrar).
+Tela 6 cortada em 855 px (logo depois do vagao verde) -> fim em 133.359375. Copia antes do corte: scratchpad (Fase04_Tela06_v2_antes_corte.png).
+Tela 7 (X = 133.359375, y = -2.5): Fase04_Tela07, 871x644 px (13.609375 unidades), pivo (0, 0.276018). Fim: 146.96875.
+  Cortados 151 px a esquerda (patio vazio). Chao igual ao da Tela 6 (concreto do tunel), sem troca. Topo do piso = linha 736 da imagem original.
+  Bomb A (2): caixa eletrica, vagao marrom, caixotes, bueiro; ao fundo muro de placas, silo e predio de tijolo vermelho.
+  Plataformas: caixa eletrica (x 0.236, h 1.14, w 0.58), teto do vagao marrom (1.022, 2.62, 6.69), pilha de caixotes (8.059, 1.76, 1.42), caixote (9.484, 0.95, 0.88).
+MuroTela06_07: sprite Fase04_MuroTela06_07 (60x204 px, fatia do muro de placas da Tela 7), em (133, -2.447), ordem -7, fecha o vao do muro do fundo entre as Telas 6 e 7.
+  GroundBombA agora vai de 120 a 146.96875 (centro 133.484, escala 26.969). ParedeBombADireita em 147.46875. SaidaTunelBombA: destinationEndX = 146.96875.
+Tela 7 cortada em 712 px (logo depois do muro de placas) -> fim em 144.484375. Copia antes: scratchpad (Fase04_Tela07_antes_corte.png).
+Tela 8 (X = 144.484375, y = -2.5): Fase04_Tela08, 917x644 px (14.328125 unidades), pivo (0, 0.275041). Fim: 158.8125.
+  Corredor A->B (1): predio de tijolo cinza com portao de garagem azul, andar de cima de chapa azul que avanca formando a passagem coberta, parede de tijolo vermelho com "B ->", cabine de chapa, pilar, muro baixo.
+  Cortados 78 px a esquerda. O vao transparente embaixo da passagem (entre a parede de tijolo e o pilar) foi preenchido repetindo o tijolo da propria parede.
+  Plataformas: teto da cabine (x 8.187, h 1.58, w 2.35), topo da passagem coberta (8.276, 3.56, 3.26), muro baixo (11.273, 0.94, 1.72).
+  GroundBombA agora vai de 120 a 158.8125 (centro 139.406, escala 38.813). ParedeBombADireita em 159.3125. SaidaTunelBombA: destinationEndX = 158.8125.
+CHAO DA TELA 8 IGUALADO AO DA TELA 7: da linha 464 para baixo (faixa amarela, piso e laje), trocado pelo piso da Tela 7 repetido
+  (imagem original da Tela 7 cortada em 151 e reduzida para 871x644; trecho x 443-705, periodo 262 px, de junta a junta da laje; o bueiro (x 444-506) apagado copiando o piso 150 px a direita;
+  fase continuando a Tela 7: coluna c da Tela 8 = coluna 712+c). Copia antes: scratchpad (Fase04_Tela08_antes_chao.png).
+Regra para as proximas telas do bomb A/corredor: fazer a mesma troca, continuando a fase (coluna = largura acumulada desde o inicio da Tela 7).
+Tela 8 cortada em 836 px (logo depois do muro baixo) -> fim em 157.546875. Copia antes: scratchpad (Fase04_Tela08_antes_corte.png).
+Tela 9 (X = 157.546875, y = -2.5): Fase04_Tela09, 883x644 px (13.796875 unidades), pivo (0, 0.277329). Fim: 171.34375.
+  Corredor A->B (2): pilar com faixas pretas e amarelas, predio de tijolo com porta tapada, janelas gradeadas e "B ->", rodape de concreto, viga de aco com luminarias, cerca de grade, cabine de chapa, muro baixo.
+  Cortados 132 px a esquerda. Piso trocado pelo das Telas 7/8 (mesmo trecho, fase = 712 + 836 + coluna).
+  Plataformas: rodape de concreto (x 0.816, h 0.98, w 6.49), teto da cabine (9.376, 1.96, 2.53), viga de aco de cima (0.029, 4.22, 12.31), muro baixo (11.902, 1.78, 1.30).
+  GroundBombA agora vai de 120 a 171.34375 (centro 145.672, escala 51.344). ParedeBombADireita em 171.84375. SaidaTunelBombA: destinationEndX = 171.34375.
+TELA 9 TROCADA PELA VERSAO 2 (a v1 ficou identica a Tela 8; copia da v1 no scratchpad: Fase04_Tela09_v1.png).
+  Fase04_Tela09 v2: 882x754 px, pivo (0, 0.239087), mesmo X (157.546875). Fim: 171.328125. Cortados 133 px a esquerda.
+  Beco entre predios altos: predio de tijolo de 2 andares com porta tapada e exaustor, paletes, caixa eletrica no poste, passarela curta com luminarias, cerca de grade, predio de concreto com tubo de ventilacao.
+  Piso trocado pelo das Telas 7/8 (topo do piso = linha 732 da imagem original). 110 px acrescentados em cima so nas colunas do predio de concreto da direita (que ia ate o topo da imagem).
+  Plataformas: rodape (x 0.757, h 0.72, w 3.30), paletes (4.088, 1.08, 1.88), caixa eletrica (6.28, 2.61, 0.94), passarela (6.28, 4.33, 4.75).
+  GroundBombA 120 a 171.328125 (centro 145.664, escala 51.328). ParedeBombADireita em 171.828125. SaidaTunelBombA: destinationEndX = 171.328125.
+MURO DA TELA 8 REMOVIDO E PREDIOS ENCOSTADOS: Tela 8 cortada em 724 px (logo depois do pilar com a placa amarela) -> fim em 155.796875. Plataforma do muro baixo removida.
+  Copia antes: scratchpad (Fase04_Tela08_antes_tirar_muro.png).
+  Tela 9 movida para X = 155.796875 (fim 169.578125) e piso refeito com a fase nova (712 + 724 + coluna).
+  GroundBombA 120 a 169.578125 (centro 144.789, escala 49.578). ParedeBombADireita em 170.078125. SaidaTunelBombA: destinationEndX = 169.578125.
+  Fresta entre os predios fechada: coluna 723 da Tela 8 com alfa cheio onde o pilar e opaco; colunas 0-5 da Tela 9 preenchidas com a cor do pilar de concreto (eram transparentes, 5 px de vao).
+  CORRECAO: o preenchimento das colunas 0-5 da Tela 9 deixou a textura listrada; desfeito (Tela 9 refeita da imagem original).
+  Agora a Tela 9 fica 5 px por baixo da Tela 8: X = 155.71875, ordem -6 (atras da Tela 8, que e -5). Piso refeito com a fase 712 + 724 - 5.
+  Fim da Tela 9: 169.5. GroundBombA 120 a 169.5 (centro 144.75, escala 49.5). ParedeBombADireita em 170. SaidaTunelBombA: destinationEndX = 169.5.
+  Tela 9 puxada mais 5 px para a esquerda (10 px por baixo da Tela 8): X = 155.640625, fim 169.421875, piso com a fase 712 + 724 - 10. GroundBombA centro 144.711 escala 49.422; ParedeBombADireita 169.921875; destinationEndX 169.421875.
+ARENA DO CHEFAO (bomb B) = cenario fechado e separado, X = 200, mesmo nivel da rua (y = -2.5).
+  Fase04_Arena: imagem gerada 1536x1024 reduzida por 0.95 (vagao marrom com a mesma altura do da Tela 7) -> 1459x973 px (22.797 unidades), pivo (0, 0.238849). Fim: 222.796875.
+  Topo do piso = linha 776 da imagem original (faixa tracejada vermelha e branca na frente dos trilhos). Sem teto acrescentado (a imagem ja cobre a camera).
+  Portoes de madeira abertos na esquerda (entrada), mural com estrelas, vagao marrom, vagao amarelo do bomb com as caixas (radiacao e "B"), vagao-tanque, cabine laranja, portas duplas na direita.
+  Plataformas: base de concreto (x 1.722, h 1.57, w 2.865), carretel (2.776, 2.20, 0.935), teto do vagao marrom (4.661, 2.86, 4.884), piso do vagao do bomb (9.648 / 11.994 / 14.666, h 1.02), caixa radiacao (10.836, 1.96, 1.158), caixa "B" (13.463, 2.05, 1.202), passarela do tanque (15.289, 2.81, 5.344).
+  GroundArena 200 a 222.797. ParedeArenaEsquerda 201.133 (face em 201.63), ParedeArenaDireita 221.727 (face em 221.23).
+  Sentinela (chefao) em (218.56, -1.5), inativo ate o gatilho. BossSpawner: useArenaTrigger, arenaTriggerX 204.13, camera presa de 200 a 222.797, nextSceneName vazio.
+  PassagemProvisoriaBombB (DoorTransition): fim da Tela 9, gatilho x >= 168.4, porta em (168.9, -1.58), leva para (202.63, -1.55). PROVISORIA: mover para os portoes da Tela 10 quando ela existir.
+Tela 9 cortada em 776 px (logo depois do predio de concreto) -> fim em 167.765625. Copia antes: scratchpad (Fase04_Tela09_antes_corte.png).
+Tela 10 (X = 167.765625, y = -2.5): Fase04_Tela10, 966x754 px, pivo (0, 0.238253). Fim: 182.859375.
+  Porta do bomb B: muro baixo com pichacao, fachada de tijolo com pilares, portoes de madeira abertos com a escada. 110 px de fachada repetida em cima.
+  Piso trocado pelo das Telas 7/8 (topo = linha 733 da original, fase = 712 + 724 - 10 + 776 + coluna).
+  Plataforma: muro baixo (x 0, h 1.65, w 2.95).
+  PortaBombB (era PassagemProvisoriaBombB): gatilho x >= 176.043, porta em (176.543, -1.58), leva para (202.63, -1.55) na arena.
+  GroundBombA 120 a 182.859 (centro 151.43, escala 62.859). ParedeBombADireita em 183.359. SaidaTunelBombA: destinationEndX = 182.859375.
+  Muro da Tela 10 colado na cerca da Tela 9: Tela 10 puxada 7 px para a esquerda e por baixo da Tela 9 (X = 167.65625, ordem -7), piso refeito com a fase -7. Fim 182.75; GroundBombA ate 182.75; ParedeBombADireita 183.25; SaidaTunelBombA destinationEndX 182.75; PortaBombB gatilho 175.934, porta 176.434.

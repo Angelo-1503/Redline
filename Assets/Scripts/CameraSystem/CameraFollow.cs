@@ -55,12 +55,23 @@ namespace Redline.CameraSystem
         /// Prende a câmera num trecho da fase (ex.: a arena do chefão). Se o
         /// trecho for mais estreito que a tela, a câmera encosta a borda direita
         /// da tela em endX, para não mostrar nada depois do fim da fase.
+        /// Com alignLeftIfNarrow é o contrário: a borda esquerda da tela encosta em
+        /// startX e a sobra aparece só à direita (usado pelas portas, para cenários
+        /// fechados como o túnel da Fase 4, que continuam para a direita).
         /// </summary>
-        public void LockToRange(float startX, float endX)
+        public void LockToRange(float startX, float endX, bool alignLeftIfNarrow = false)
         {
             clampToLevel = true;
-            levelEndX = endX;
-            levelStartX = Mathf.Min(startX, endX - ViewHalfWidth * 2f);
+            if (alignLeftIfNarrow)
+            {
+                levelStartX = startX;
+                levelEndX = Mathf.Max(endX, startX + ViewHalfWidth * 2f);
+            }
+            else
+            {
+                levelEndX = endX;
+                levelStartX = Mathf.Min(startX, endX - ViewHalfWidth * 2f);
+            }
         }
 
         /// <summary>
@@ -105,10 +116,11 @@ namespace Redline.CameraSystem
                 float halfWidth = cam.orthographicSize * cam.aspect;
                 float minX = levelStartX + halfWidth;
                 float maxX = levelEndX - halfWidth;
-                // Se a fase for mais estreita que a tela, centraliza.
+                // Se a fase for mais estreita que a tela, encosta na esquerda
+                // (a sobra aparece só à direita, onde a fase vai continuar).
                 desiredPosition.x = minX <= maxX
                     ? Mathf.Clamp(desiredPosition.x, minX, maxX)
-                    : (levelStartX + levelEndX) * 0.5f;
+                    : minX;
             }
 
             transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref currentVelocity, smoothTime);

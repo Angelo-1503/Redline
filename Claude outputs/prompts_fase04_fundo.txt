@@ -1,0 +1,63 @@
+REDLINE - FASE 04 (TRAIN) - PROMPT DO FUNDO + PLANO DAS TELAS
+================================================================
+
+Fase 4 = fase PAR: o jogador é Red (Insurgência) contra Blues (Vanguarda).
+
+Como usar:
+- Abra uma conversa NOVA no ChatGPT para a Fase 4.
+- Anexe junto com o prompt:
+    1) Fase03_Fundo.png (Assets/Art/Maps) como referência de ESTILO (pixel art, nitidez, tamanho do pixel);
+    2) 1 a 3 prints do Train do CS como referência de ESTRUTURAS (pátio, vagões, prédios de concreto).
+- Se ele copiar a cidade da Mirage, responda: "use só o estilo da primeira imagem;
+  o conteúdo deve ser o pátio ferroviário das outras imagens".
+- Se vier com chão/trilhos ocupando a parte de baixo inteira, tudo bem: o fundo fica atrás das telas.
+
+
+---------------------------------------------
+PLANO DO TRAJETO (11 telas + arena no bomb B; NÃO passa pelo spawn CT nem pela ligação)
+---------------------------------------------
+
+Rua/piso principal: trilhos e cascalho do pátio, na mesma altura das fases anteriores.
+Vagões e trens parados viram as plataformas (sobe no teto deles, como no Train de verdade).
+
+ 1. Spawn T (PRONTA)
+ 2. Saída do T (PRONTA)
+ 3. Volta por fora, galpão azul "09" (PRONTA): a porta de carga leva ao túnel.
+ 4. Túnel (1), cenário fechado (PRONTA): salão de carga e corredor das salas.
+ 5. Túnel (2), colada na 4 (PRONTA): corredor do trilho; a saída leva ao bomb A.
+ 6. Bomb A (1) (PRONTA): prédio com porta de carga, vagão-prancha radioativo, vagão verde.
+ 7. Bomb A (2) (PRONTA): vagão marrom, caixotes, silo.
+ 8. Corredor A->B (1) (PRONTA): passagem coberta embaixo do prédio azul.
+ 9. Corredor A->B (2): beco de tijolo (porta tapada, janelas gradeadas, cerca, cabine).
+10. Corredor A->B (3): saída para o bomb B (portões abertos com escada) -> transição para o bomb B (Tela 11).
+11. Bomb B (prévia), cenário fechado: vagão-tanque, vagão amarelo-oliva, mezanino, cabine laranja.
+ Arena do chefão = Bomb B: vagão-prancha amarelo do bomb, mural soviético com estrelas, vagões marrom e branco.
+
+
+---------------------------------------------
+FUNDO DA FASE 4 - Pátio ferroviário (Train)
+---------------------------------------------
+
+Crie o FUNDO (cenário distante, parallax) de uma fase de um jogo 2D de ação run-and-gun em pixel art, vista lateral.
+
+Use EXATAMENTE o estilo da primeira imagem anexada (o fundo da fase anterior): mesmo tamanho de pixel, mesma nitidez, contornos limpos, cores sólidas sem desfoque, mesma composição em camadas (céu em cima e o cenário ocupando a metade de baixo, com construções mais próximas embaixo e mais distantes perto do horizonte). NÃO copie a cidade árabe dela: use só o estilo.
+
+O CONTEÚDO vem das outras imagens anexadas (o mapa Train do Counter-Strike): um grande pátio ferroviário industrial do Leste Europeu, de era soviética, visto de longe.
+
+O que deve aparecer:
+- Fileiras de vagões de carga e vagões-tanque parados em vários trilhos paralelos, em tons de verde-escuro, azul desbotado, ferrugem e cinza, alguns com pichações sem texto legível.
+- Postes de catenária (fios elétricos dos trens) correndo ao longo dos trilhos.
+- Galpões ferroviários compridos com telhado em dente de serra e janelas altas de vidro sujo.
+- Uma torre de controle ferroviária de concreto e uma caixa-d'água de metal sobre pernas.
+- Um guindaste pórtico de carga, amarelo desbotado.
+- Ao fundo, no horizonte, prédios de apartamentos soviéticos de concreto (blocos retangulares cinza), chaminés altas de fábrica soltando fumaça clara e torres de energia.
+- Algumas bétulas e pinheiros entre as construções, com folhagem de começo de outono (verde com toques de amarelo e laranja).
+- Céu de dia, azul claro um pouco mais frio e pálido que o das fases anteriores, com algumas nuvens brancas e cinza-claras em pixel art.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024.
+- Céu ocupando mais ou menos a metade de cima; o pátio e a cidade ocupando a metade de baixo até a borda inferior.
+- As bordas esquerda e direita devem poder ficar lado a lado sem nenhum objeto grande cortado ao meio nas extremidades.
+- Paleta mais fria e industrial que as fases anteriores: cinza-concreto, verde-militar, ferrugem, tijolo vermelho-escuro e azul desbotado, com luz de sol do dia.
+- SEM personagens, SEM pessoas, SEM animais, SEM texto legível, SEM logotipos, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.

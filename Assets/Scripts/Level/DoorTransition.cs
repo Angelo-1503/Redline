@@ -167,7 +167,7 @@ namespace Redline.Level
                 CameraFollow follow = cam != null ? cam.GetComponent<CameraFollow>() : null;
                 if (follow != null)
                 {
-                    follow.LockToRange(destinationStartX, destinationEndX);
+                    follow.LockToRange(destinationStartX, destinationEndX, true);
                 }
                 if (cam != null)
                 {
@@ -176,9 +176,10 @@ namespace Redline.Level
                     float minX = destinationStartX + half;
                     float maxX = destinationEndX - half;
                     Vector3 camPos = cam.transform.position;
+                    // Trecho mais estreito que a tela: encosta a câmera na esquerda (igual ao LockToRange acima).
                     camPos.x = minX <= maxX
                         ? Mathf.Clamp(destination.x, minX, maxX)
-                        : (destinationStartX + destinationEndX) * 0.5f;
+                        : minX;
                     cam.transform.position = camPos;
                 }
             }

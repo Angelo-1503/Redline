@@ -1,0 +1,60 @@
+REDLINE - FASE 05 (OVERPASS) - PROMPT DO FUNDO + PLANO DAS TELAS
+==================================================================
+
+Fase 5 = fase ÍMPAR: o jogador é Blue (Vanguarda) contra Reds (Insurgência).
+
+Como usar:
+- Abra uma conversa NOVA no ChatGPT para a Fase 5.
+- Anexe junto com o prompt:
+    1) Fase04_Fundo.png (Assets/Art/Maps) como referência de ESTILO (pixel art, nitidez, tamanho do pixel, composição em camadas);
+    2) 1 a 3 prints da Overpass do CS como referência de ESTRUTURAS (o viaduto, o parque, os prédios).
+- Se ele copiar o pátio ferroviário do Train, responda: "use só o estilo da primeira imagem;
+  o conteúdo deve ser a cidade com o viaduto das outras imagens".
+
+
+---------------------------------------------
+PLANO DO TRAJETO (começa no spawn CT; rascunho, para ajustar com os prints)
+---------------------------------------------
+
+Cidade alemã com um viaduto de autoestrada de concreto passando por cima de um parque e de um canal.
+Rua/piso principal: calçada de lajes de concreto; trechos de grama e cascalho no parque.
+O jogador é CT: COMEÇA no spawn CT, passa pelo bomb A, atravessa o parque e desce até o canal,
+e termina no bomb B, embaixo do viaduto.
+
+ 1. Spawn CT: rua com o prédio do banco/escritórios, carros da polícia estacionados, barreiras.
+ 2. Bomb A (1): praça do A com o outdoor grande e o caminhão.
+ 3. Bomb A (2): saída do A, caçambas e caixotes, escadaria.
+ 4. Banheiros públicos (o prédio dos "toilets") e o caminho para o parque.
+ 5. Parque (1): fonte e bancos.
+ 6. Parque (2): parquinho infantil (escorregador, balanço, trepa-trepa).
+ 7. Descida para os túneis de baixo (escada, entrada de concreto).
+ 8. Túneis de baixo (cenário fechado): galeria de concreto com canos e água no chão.
+ 9. Canal: margem de concreto, água, os pilares enormes do viaduto ("monster").
+ Arena do chefão = Bomb B: embaixo do viaduto, entre os pilares, junto ao canal.
+
+
+---------------------------------------------
+FUNDO DA FASE 5 - Cidade com o viaduto (Overpass)
+---------------------------------------------
+
+Crie o FUNDO (cenário distante, parallax) de uma fase de um jogo 2D de ação run-and-gun em pixel art, vista lateral.
+
+Use EXATAMENTE o estilo da primeira imagem anexada (o fundo da fase anterior): mesmo tamanho de pixel, mesma nitidez, contornos limpos, cores sólidas sem desfoque, mesma composição em camadas (céu em cima e o cenário ocupando a metade de baixo, com construções mais próximas embaixo e mais distantes perto do horizonte). NÃO copie o pátio ferroviário dela: use só o estilo.
+
+O CONTEÚDO vem das outras imagens anexadas (o mapa Overpass do Counter-Strike): uma cidade alemã moderna de médio porte, com um grande viaduto de autoestrada passando sobre um parque e um canal, visto de longe.
+
+O que deve aparecer:
+- Atravessando a imagem de um lado ao outro, um VIADUTO de autoestrada de concreto cinza-claro, alto, apoiado em pilares grossos, com mureta de proteção e postes de luz em cima.
+- Embaixo e na frente do viaduto: a copa verde e densa de árvores de um parque grande (tílias e carvalhos), com algumas copas começando a amarelar.
+- Um canal de água esverdeada com margens de concreto passando por baixo do viaduto.
+- Prédios de apartamentos alemães de 4 a 6 andares, de reboco claro (bege, branco, cinza e amarelo-claro), telhados inclinados de telha vermelha ou cinza, varandas e janelas brancas.
+- Um prédio de escritórios de vidro e um prédio de banco de pedra clara mais ao fundo.
+- No horizonte, mais prédios, um guindaste de construção amarelo, a torre de uma igreja e chaminés de usina distantes.
+- Céu de dia, azul claro, com nuvens brancas grandes em pixel art (um pouco mais nublado que o das fases anteriores).
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024.
+- Céu ocupando mais ou menos a metade de cima; a cidade, o parque e o viaduto ocupando a metade de baixo até a borda inferior.
+- Paleta urbana e verde: verde das árvores, cinza-claro do concreto, reboco bege e branco, telhas vermelhas, azul do vidro e do céu.
+- SEM personagens, SEM pessoas, SEM carros em movimento, SEM animais, SEM texto legível, SEM logotipos, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.

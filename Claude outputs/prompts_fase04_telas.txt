@@ -1,0 +1,421 @@
+REDLINE - FASE 04 (TRAIN) - PROMPTS DAS TELAS
+=============================================
+
+Como usar:
+- Gere as telas na MESMA conversa em que o fundo da Fase 4 foi gerado (o ChatGPT já conhece a paleta).
+- Na TELA 1 anexe:
+    1) Fase03_Tela01.png (Assets/Art/Maps) como referência de ESTILO, ESCALA e ALTURA DO CHÃO;
+    2) Player_red_run_0.png (Assets/Art/Characters) como referência de TAMANHO do personagem;
+    3) 1 ou 2 prints do Spawn T do Train como referência de ESTRUTURAS.
+- Gere na ordem. Cada tela continua a anterior.
+- Se o estilo começar a "fugir" (mais claro, pixels maiores, chão em outra altura),
+  reanexe a TELA 1 da Fase 4 e diga: "siga exatamente o estilo, a escala e a altura do chão desta imagem".
+- Se o fundo vier com xadrez cinza/branco pintado, tudo bem: o recorte é feito depois.
+  Mas vale pedir de novo "fundo realmente transparente (PNG com canal alfa)".
+
+
+---------------------------------------------
+TELA 1 - Spawn T: pátio de concreto entre os vagões
+---------------------------------------------
+Anexar: Fase03_Tela01.png (estilo/escala/chão), Player_red_run_0.png (tamanho) e o print do Spawn T do Train.
+
+Agora crie a TELA 1 de 9 da fase, o primeiro trecho por onde o personagem anda. É uma tela de cenário em primeiro plano (o fundo de pátio ferroviário que você acabou de gerar fica atrás dela), em vista lateral, como num jogo run-and-gun.
+
+Use EXATAMENTE o estilo da primeira imagem anexada (uma tela da fase anterior): mesmo tamanho de pixel, mesma nitidez, mesmo nível de detalhe, mesma escala das construções e, principalmente, a MESMA ALTURA E ESPESSURA DO CHÃO (a calçada clara por onde se anda e a faixa escura embaixo dela). NÃO copie as casas dela: use só o estilo e a escala.
+
+O personagem da segunda imagem anexada teria cerca de 1/7 da altura da imagem. Use-o só como referência de tamanho: ele NÃO deve aparecer na tela.
+
+A terceira imagem é o Spawn T do mapa Train do Counter-Strike, vista em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais e as cores dela, com a mesma paleta do fundo que você gerou.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA (começo da fase): um vagão de carga fechado verde-claro desbotado, com números pintados e marcas de ferrugem, parado sobre um trilho rente ao chão. Por cima dele, a ponta de um telhado de madeira escura apoiado em vigas, como uma cobertura de plataforma de trem. O vagão fecha a tela desse lado.
+- Logo depois, no chão, papelões amassados e uma paleteira amarela caída.
+- No MEIO: um prédio alto e estreito de concreto cinza, com um grande mosaico em relevo na parede mostrando o rosto de um operário anônimo em estilo soviético (sem ser nenhuma pessoa real), uma janela alta e estreita de vidro escuro, uma porta de metal pequena e um ANDAIME de metal encostado na fachada, com pranchas de madeira formando um patamar. Fios elétricos saem de um poste de madeira ao lado do prédio.
+- Depois do prédio: uma árvore de copa verde, uma cerca baixa de ferro, dois armários elétricos de metal cinza (caixas grandes e retangulares), caixotes e tambores enferrujados.
+- À DIREITA: uma casa baixa de reboco bege-amarelado descascado, com uma janela de vidro sujo com moldura de metal, uma grade de ventilação e uma pilastra de tijolo branco pintado na quina. A casa termina ANTES da borda direita.
+- BORDA DIREITA: o pátio continua aberto, só com o piso de lajotas de concreto e um pouco de sujeira.
+- Ao fundo da tela, atrás do prédio, um galpão de tijolo escuro e uma passarela/ponte cinza de concreto com uma placa amarela sem texto.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA é o começo da fase: o vagão verde fecha a tela daquele lado.
+- A BORDA DIREITA termina no pátio aberto, SEM nenhum prédio, casa, vagão ou muro cortado ao meio.
+- O chão por onde se anda é um piso de grandes lajotas de concreto gastas e manchadas, com o trilho do vagão EMBUTIDO RENTE à superfície (o trilho não forma degrau). Ele fica EXATAMENTE na mesma altura e espessura do chão da primeira imagem anexada, reto e plano de ponta a ponta. Embaixo dele, a faixa escura de terra e cascalho, também com a mesma espessura da referência.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 3 plataformas com topo PLANO, reto e bem visível: os armários elétricos de metal (na altura da cintura do personagem), o patamar de pranchas do andaime (cerca de 1,5 vez a altura do personagem acima do chão) e o teto do vagão verde (mais ou menos na mesma altura do patamar do andaime). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- O andaime NÃO deve ter escada visível: só a estrutura de metal e o patamar de pranchas.
+- SEM personagens, SEM inimigos, SEM animais, SEM texto legível, SEM logotipos, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 2 - Saída do T: casa verde sobre a passagem
+---------------------------------------------
+Anexar: 1) Fase04_Tela01.png (tela anterior: estilo, escala e chão); 2) o print da saída do T do Train (CS:GO).
+
+Agora crie a TELA 2 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 1, do pátio do Spawn T, que termina depois da casa baixa amarela com pilastra de tijolo branco, num pátio aberto de lajotas de concreto), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e mesma escala da tela anterior. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos que já aparecem na tela anterior (a casa amarela, os armários elétricos, a árvore, o prédio do mosaico, o vagão verde). A tela 2 começa logo DEPOIS da casa amarela.
+
+A segunda imagem anexada é a saída do Spawn T do mapa Train do Counter-Strike, vista de cima e em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dela.
+
+Trecho, da esquerda para a direita:
+- Uma cabine de obra feita de chapa ondulada de metal amarela e desbotada, com manchas de ferrugem, uma porta de metal, uma plaquinha sem texto legível e um telhado de chapa de metal quase plano, com um cano de chaminé soltando um pouco de fumaça branca.
+- Uma caçamba de vagão aberto (vagão gôndola) de metal marrom enferrujado, parada sobre um trilho rente ao chão, cheia de entulho, papéis e caixas de papelão.
+- Atrás dela, uma cerca de tela de metal e uma pilha de caixas de metal brancas e cinza-claras (armários elétricos empilhados em dois andares).
+- No MEIO: uma casa de dois andares de madeira e reboco verde-acinzentado descascado, com telhado inclinado de telhas de ardósia cinza, janelas brancas de quatro vidros, um aparelho de ar-condicionado velho e uma chaminé. O andar de cima é apoiado em vigas de madeira escura, formando uma PASSAGEM COBERTA aberta embaixo da casa, com o piso marcado por faixas amarelas na diagonal, por onde se vê o outro lado.
+- Logo depois, colado à casa: um prédio de concreto verde-claro desbotado de dois andares, com uma sacada fechada de vidro (uma cabine de controle com janelas largas) e uma marquise de metal plana por cima dela, uma porta com batente amarelo, uma hera subindo pela parede e pichações vermelhas sem texto legível.
+- À DIREITA do prédio: um poste de madeira com cruzetas e fios elétricos, e o pátio de concreto continua livre, só com um pouco de cascalho.
+- Ao fundo da tela, atrás das construções: um galpão comprido de tijolo com janelas altas e um prédio cinza alto com tanques de metal.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior (pátio aberto), sem repetir objetos.
+- A BORDA DIREITA termina no pátio aberto, SEM nenhuma casa, prédio, vagão ou muro cortado ao meio.
+- O chão (piso de lajotas de concreto com o trilho EMBUTIDO RENTE à superfície, e a faixa escura de terra e cascalho embaixo) fica EXATAMENTE na mesma altura e espessura da tela anterior, reto e plano de ponta a ponta, inclusive dentro da passagem embaixo da casa verde.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- 3 plataformas com topo PLANO, reto e bem visível: a borda de cima da caçamba com entulho (na altura do peito do personagem), a pilha de caixas de metal brancas (cerca de 1,5 vez a altura do personagem acima do chão) e o telhado de chapa da cabine amarela (mais ou menos na mesma altura da pilha de caixas). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM texto legível, SEM logotipos, SEM armas, SEM mãos, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 3 - Volta por fora (1): galpão azul "09" e pórtico de canos
+---------------------------------------------
+Anexar: 1) Fase04_Tela02.png (tela anterior: estilo, escala e chão); 2) o print desta região do Train (CS:GO).
+
+Agora crie a TELA 3 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 2, que termina no prédio verde com a sacada de vidro e num poste de madeira com fios, seguido de um pedaço de pátio aberto), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e mesma escala da tela anterior. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos que já aparecem na tela anterior (o prédio verde da sacada de vidro, a casa verde, o poste de madeira, a caçamba, a cabine amarela). A tela 3 começa logo DEPOIS do poste.
+
+A segunda imagem anexada é esta região do mapa Train do Counter-Strike, vista de cima e em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dela.
+
+Trecho, da esquerda para a direita:
+- Um galpão industrial grande, com paredes de chapa de metal ondulada azul-acinzentada em faixas horizontais e vigas pretas, base de tijolos brancos pintados e sujos, e um número "09" grande pintado em amarelo na fachada. Na parte de baixo, uma porta de carga larga ABERTA (porta de enrolar recolhida), mostrando o interior iluminado com paredes brancas e uma marca azul no piso. Duas luminárias retangulares acima da porta. Barras de proteção de metal (para-choques de doca) presas na base de tijolo.
+- Depois do galpão, um prédio menor de tijolo branco com uma porta de vidro e uma plaquinha de aviso amarela com um símbolo, sem texto.
+- No MEIO da tela, atravessando por cima: um PÓRTICO DE CANOS de aço, uma ponte de vigas metálicas cinza apoiada em dois pilares de aço, carregando um feixe de canos grossos enferrujados, com faixas pretas e amarelas de aviso na viga de baixo e um holofote no alto de um dos pilares.
+- Embaixo do pórtico: uma caçamba de lixo verde-escura com caixotes de madeira azuis empilhados em cima dela.
+- À DIREITA: um muro baixo de concreto bege com hera subindo e, logo atrás, um contêiner de carga branco desbotado com bordas enferrujadas. O muro e o contêiner terminam ANTES da borda direita.
+- BORDA DIREITA: o pátio continua aberto, só com o chão.
+- Ao fundo da tela, atrás das construções: chaminés altas de tijolo e a ponta de vagões de carga verdes e marrons.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior (pátio aberto), sem repetir objetos.
+- A BORDA DIREITA termina no pátio aberto, SEM nenhum galpão, muro, contêiner ou vagão cortado ao meio.
+- O chão (o piso fino de concreto por onde se anda, a guia de lajes e a faixa escura de terra embaixo) fica EXATAMENTE na mesma altura e espessura da tela anterior, reto e plano de ponta a ponta. As lajes da guia têm o mesmo tamanho das da tela anterior.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro da porta de carga aberta NÃO pode ficar transparente: mostre o interior iluminado do galpão.
+- 3 plataformas com topo PLANO, reto e bem visível: a tampa da caçamba verde (na altura da cintura do personagem), os caixotes azuis empilhados em cima dela (cerca de 1,5 vez a altura do personagem acima do chão) e o topo do pórtico de canos (cerca de 1,5 vez a altura do personagem acima dos caixotes, bem em cima deles). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além do número "09" do galpão.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+TÚNEL DO GALPÃO 09 (cenário FECHADO, separado, como os cômodos da Mirage)
+O jogador entra pela porta de carga do galpão "09" (Tela 3) e reaparece aqui.
+Tela 4 e Tela 5 ficam coladas (sem transição entre elas). A Tela 5 termina na saída para o bomb A.
+=============================================
+
+
+---------------------------------------------
+TELA 4 - Túnel (1): dentro do galpão, corredor das salas
+---------------------------------------------
+Anexar: 1) Fase04_Tela03.png (estilo, escala e altura do chão); 2) o print do primeiro corredor do túnel (CS:GO).
+
+Agora crie a TELA 4 de 9. É o INTERIOR do galpão azul "09" da tela anterior: o personagem entrou pela porta de carga aberta e agora anda por dentro, da esquerda para a direita. É um cenário FECHADO, visto de lado, como um corte do prédio: paredes ao fundo, teto em cima, chão embaixo, sem céu.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma nitidez e mesma escala da primeira imagem anexada. O personagem teria cerca de 1/7 da altura da imagem. Iluminação interna fria, de lâmpadas fluorescentes.
+
+A segunda imagem anexada é este corredor no mapa Train do Counter-Strike, em perspectiva. Transforme-o numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: a parede interna do galpão com a porta de carga por onde o personagem entrou, vista por dentro: porta de enrolar recolhida no alto e a luz do dia entrando pela abertura. Essa parede fecha a tela à esquerda.
+- Um salão de carga com paredes brancas e cinza-claras com uma faixa horizontal azul-petróleo, pilares de metal com eletrodutos e canos finos descendo pela parede, uma luminária fluorescente na parede e tomadas industriais. No chão, perto da entrada, uma faixa de piso tátil amarelo com bordas brancas e amarelas de aviso. Dois caixotes de madeira cinza desbotada, grandes, empilhados um em cima do outro, e um terceiro caixote no chão ao lado.
+- No MEIO: a entrada de um corredor de salas, com uma viga larga de metal cinza por cima da passagem. Dentro: paredes de divisória cinza-escuro, uma TV/monitor preso na parede com tela azul-clara, um painel com uma seta azul luminosa, uma porta branca de metal com visor escuro e teclado de senha ao lado, um tapete azul no chão em frente à porta, um armário elétrico alto cinza com triângulos de aviso, um cabo preto solto no chão, forro de placas brancas com luminárias fluorescentes e canos no teto.
+- BORDA DIREITA: o corredor CONTINUA aberto (sem parede), com o mesmo chão, o mesmo teto e a mesma faixa azul, para emendar na próxima tela.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, cenário fechado.
+- NADA transparente: a imagem inteira é preenchida (paredes, teto e chão). Sem céu.
+- A BORDA ESQUERDA é fechada pela parede com a porta de carga. A BORDA DIREITA é o corredor aberto, sem nenhuma parede, porta ou objeto cortado ao meio.
+- O chão por onde se anda fica EXATAMENTE na mesma altura da primeira imagem anexada (a superfície do chão a cerca de 25% da altura da imagem, contando de baixo para cima), reto e plano de ponta a ponta: piso de concreto liso cinza-claro. Embaixo dele, uma faixa escura (a laje/fundação), com a mesma espessura da faixa de terra da referência.
+- O teto fica bem alto: pelo menos 4 vezes a altura do personagem acima do chão.
+- 3 plataformas com topo PLANO, reto e bem visível: o caixote sozinho no chão (na altura da cintura do personagem), a pilha de dois caixotes (cerca de 1,5 vez a altura do personagem acima do chão) e o topo do armário elétrico alto (mais ou menos na mesma altura da pilha de caixotes). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM texto legível, SEM interface.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 5 - Túnel (2): corredor do trilho até o bomb A
+---------------------------------------------
+Anexar: 1) Fase04_Tela04.png (a tela anterior); 2) e 3) os dois prints do corredor do trilho (CS:GO).
+
+Agora crie a TELA 5 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 4, o corredor de salas dentro do galpão, que termina com o corredor aberto), como se a câmera andasse para a direita. Continua sendo um cenário FECHADO, visto de lado, com paredes ao fundo, teto em cima e chão embaixo, sem céu.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação fluorescente fria e mesma escala da tela anterior. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos da tela anterior (a porta branca com teclado, a TV na parede, o armário elétrico alto, os caixotes do salão). A tela 5 começa logo DEPOIS deles.
+
+A segunda e a terceira imagens anexadas são este corredor no mapa Train do Counter-Strike, em perspectiva. Transforme-o numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: o batente grosso de metal cinza-escuro de uma porta de enrolar, com a porta recolhida num rolo no alto e um cabo de aço descendo pela lateral, marcando a passagem do corredor das salas para o corredor do trilho. A parede em volta do batente é de tijolos de concreto cinza pintados.
+- Depois do batente, um corredor comprido de manutenção de trens: paredes brancas com uma faixa horizontal azul-petróleo larga na altura da cintura, pilares de metal a intervalos regulares com eletrodutos, três canos grossos brancos/cinza-claros correndo juntos ao longo do alto da parede, cabos pretos pendurados em curva perto do teto, luminárias fluorescentes compridas presas na parede, uma grade de ventilação baixa perto do chão, pequenas setas vermelhas pintadas sem texto e uma letra "A" com uma seta pintada à mão em laranja na parede.
+- No meio do corredor, encaixada na parede: uma porta de serviço alta e estreita com veneziana amarelo-esverdeada (duas grades de ventilação amarelas uma em cima da outra) e batente de metal.
+- No chão, um trilho de trem EMBUTIDO RENTE ao piso de concreto claro, com faixas de piso tátil amarelo e bordas de aviso amarelas e brancas, e grandes setas amarelas pintadas apontando para a direita.
+- No teto, forro de painéis de metal cinza com um difusor de ar redondo e vigas.
+- Perto do final, à direita: dois caixotes de madeira cinza-claro empilhados e um terceiro no chão ao lado.
+- BORDA DIREITA: a parede do fim do corredor com uma abertura larga para fora, por onde entra a luz do dia e se vê o pátio do bomb A com um vagão de carga verde-escuro e um vagão marrom enferrujado. Essa parede fecha a tela à direita.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, cenário fechado.
+- NADA transparente: a imagem inteira é preenchida (paredes, teto e chão), inclusive a vista do lado de fora pela abertura.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior (o mesmo teto escuro com vigas, a mesma altura de chão), sem repetir objetos.
+- A BORDA DIREITA é fechada pela parede com a abertura para o bomb A.
+- O chão por onde se anda fica EXATAMENTE na mesma altura e espessura da tela anterior, reto e plano de ponta a ponta, com o trilho rente ao piso (sem degrau). Embaixo do piso, a mesma faixa escura de laje da tela anterior.
+- O teto fica na mesma altura do teto da tela anterior.
+- 2 plataformas com topo PLANO, reto e bem visível: o caixote sozinho (na altura da cintura do personagem) e a pilha de dois caixotes (cerca de 1,5 vez a altura do personagem acima do chão).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "A" com a seta.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+BOMB A (cenário aberto, com céu). Continua DIRETO a saída do corredor do trilho (Tela 5),
+sem transição: o personagem sai andando do túnel para o pátio. Tela 6 e Tela 7 ficam coladas.
+=============================================
+
+
+---------------------------------------------
+TELA 6 (versão 2) - Bomb A (1): saída do túnel e o vagão-prancha radioativo
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela05.png (o corredor de onde o personagem sai: altura do chão, piso e prédio); 2) Fase04_Tela03.png (estilo das telas ao ar livre, céu transparente); 3) Fase04_Tela06.png (a versão anterior desta tela: manter os mesmos vagões e o mesmo fundo); 4) em diante: os prints do bomb A (CS:GO).
+
+Agora crie a TELA 6 de 9 da fase. Ela continua imediatamente à DIREITA da primeira imagem anexada (o corredor do trilho, dentro de um prédio, que termina numa saída larga para fora com uma porta de enrolar recolhida no alto). O personagem sai andando do corredor direto para o pátio do bomb A, ao ar livre, sem porta fechada e sem corte, e segue para a direita. Vista lateral, como num jogo run-and-gun.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e mesma escala da primeira imagem anexada. O personagem teria cerca de 1/7 da altura da imagem.
+
+A segunda imagem anexada mostra como ficam as telas ao ar livre (céu transparente). A terceira é a versão anterior desta mesma tela: mantenha os mesmos objetos dela (o vagão-prancha amarelo com os dois contêineres radioativos, o vagão verde-oliva, o muro de placas, a torre, o silo e o guindaste pórtico), mas refaça o lado ESQUERDO e o CHÃO como descrito abaixo. A partir da quarta, as imagens são o bomb A do mapa Train do Counter-Strike, em perspectiva.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA, cerca de 1/5 da largura: o FIM do prédio de onde o personagem sai, visto de lado. Embaixo, a saída do corredor: o batente de metal escuro, a porta de enrolar recolhida no alto com faixa preta e amarela, e o trilho saindo rente ao chão para fora. Acima da saída, a parede externa do prédio sobe ATÉ O TOPO DA IMAGEM: chapa ondulada azul-acinzentada com vigas pretas e uma faixa de tijolos brancos pintados, terminando à direita numa quina reta com calha e cano de descida. Essa parte do prédio é TODA preenchida, sem céu, e continua o teto escuro e as vigas da primeira imagem na borda esquerda.
+- Logo depois da quina do prédio, começa o pátio a céu aberto: uma caixa elétrica bege baixa no chão.
+- No MEIO: sobre o trilho rente ao chão, o VAGÃO-PRANCHA amarelo baixo com um X laranja pintado no piso, carregando DOIS contêineres brancos de chapa canelada com o tampo amarelo e o símbolo de radiação preto.
+- Depois: o VAGÃO DE CARGA fechado verde-oliva desbotado, com portas de correr, listras amarelas de aviso nas pontas e marcas de ferrugem.
+- Ao fundo, atrás dos vagões: o muro alto de placas de concreto onduladas cinza com manchas amarelas, a torre de controle de concreto com cabine de vidro e o silo cilíndrico de metal escuro com faixa amarela. Por cima, atravessando o alto da tela, a viga de aço escura do guindaste pórtico com o gancho pendurado.
+- BORDA DIREITA: o pátio continua aberto, só com o chão e os trilhos.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- O CHÃO é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: piso de concreto claro com o trilho embutido rente ao piso, faixas de piso tátil amarelo e setas amarelas pintadas, e embaixo a mesma faixa escura de laje de concreto. Ele continua igual do corredor para o pátio (NÃO use terra marrom nem calçada de lajes).
+- Fundo REALMENTE TRANSPARENTE só onde seria o céu, À DIREITA da quina do prédio (PNG com canal alfa, sem xadrez pintado). A parte do prédio na esquerda é toda preenchida.
+- A BORDA DIREITA termina no pátio aberto, SEM nenhum vagão, muro ou prédio cortado ao meio.
+- 4 plataformas com topo PLANO, reto e bem visível: a caixa elétrica bege (na altura do joelho do personagem), o piso do vagão-prancha amarelo (na altura da cintura do personagem), os tampos amarelos dos dois contêineres radioativos (cerca de 1,5 vez a altura do personagem acima do chão) e o teto do vagão verde-oliva (cerca de 1,5 vez a altura do personagem acima dos tampos dos contêineres). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior, e o vagão verde fica colado logo depois do vagão-prancha.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível (o símbolo de radiação pode aparecer).
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 7 - Bomb A (2): vagão marrom, caixotes e o silo
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela06.png (a tela anterior); 2) em diante: os prints do bomb A (CS:GO).
+
+Agora crie a TELA 7 de 10, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 6, do bomb A, que termina no pátio aberto depois do vagão de carga verde-oliva), como se a câmera andasse para a direita. Continua sendo o pátio do bomb A, ao ar livre.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e mesma escala da tela anterior. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos da tela anterior (o prédio azul com a porta de carga, o vagão-prancha amarelo com os contêineres radioativos, o vagão verde-oliva, a torre de controle, o guindaste pórtico). A tela 7 começa logo DEPOIS do vagão verde.
+
+As outras imagens anexadas são o bomb A do mapa Train do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- Uma caixa elétrica bege baixa no chão, com uma plaquinha de aviso amarela.
+- Um VAGÃO DE CARGA fechado marrom-ferrugem com teto arredondado claro, portas de correr com ripas e duas listras amarelas verticais, sobre um trilho rente ao chão.
+- Depois dele, encostados no muro do fundo: uma pilha de caixotes de madeira cinza-claro (dois empilhados e um no chão ao lado).
+- No chão, uma tampa de bueiro redonda de ferro e marcas de pintura brancas de pátio ferroviário.
+- Ao fundo, atrás de tudo: o muro alto de placas de concreto onduladas cinza com manchas amarelas (continuando o da tela anterior), um grande silo cilíndrico de metal escuro com faixa amarela e escadinha, e mais atrás um prédio industrial alto de tijolo vermelho-escuro com janelas brancas de muitos vidros e cabos elétricos passando no alto.
+- BORDA DIREITA: o pátio continua aberto, só com o chão e o trilho.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior (pátio aberto), sem repetir objetos. A BORDA DIREITA termina no pátio aberto, SEM nenhum vagão, muro ou prédio cortado ao meio.
+- O chão é o MESMO da tela anterior, na MESMA altura e espessura, reto de ponta a ponta: piso de concreto claro com o trilho embutido rente ao piso, a faixa de piso tátil amarelo e setas amarelas pintadas, e embaixo a faixa escura de laje de concreto (NÃO use terra marrom nem calçada de lajes).
+- 4 plataformas com topo PLANO, reto e bem visível: a caixa elétrica bege (na altura do joelho do personagem), o caixote sozinho (na altura da cintura), a pilha de dois caixotes (cerca de 1,5 vez a altura do personagem acima do chão) e o teto do vagão marrom (cerca de 1,5 vez a altura do personagem acima da caixa elétrica, com a caixa colada no vagão). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas para o personagem, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+CORREDOR DO BOMB A PARA O BOMB B (ao ar livre, continua a Tela 7 sem transição).
+Tela 8 = começo (passagem coberta embaixo do prédio azul), Tela 9 = meio (beco de tijolo),
+Tela 10 = saída para o bomb B (portões com escada). Os portões da Tela 10 levam à arena (bomb B).
+=============================================
+
+
+---------------------------------------------
+TELA 8 - Corredor A->B (1): passagem coberta embaixo do prédio azul
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela07.png (a tela anterior); 2) o print do começo do corredor (portão de garagem e passagem coberta).
+
+Agora crie a TELA 8 de 10, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 7, do bomb A, que termina no pátio aberto depois dos caixotes), como se a câmera andasse para a direita. Ao ar livre, vista lateral, como num jogo run-and-gun.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e mesma escala da tela anterior. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos da tela anterior (o vagão marrom, os caixotes, o silo, o muro de placas). A tela 8 começa logo DEPOIS deles.
+
+A segunda imagem anexada é o começo do corredor que leva do bomb A ao bomb B no mapa Train do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- Um prédio de dois andares: o térreo de tijolos de concreto cinza-claro pintados, com um grande portão de garagem de metal azul-acinzentado FECHADO, com faixas pretas e amarelas e uma letra amarela apagada pintada nele, uma placa de aviso com triângulo vermelho (sem texto legível) e uma luminária comprida acima do portão. O andar de cima é de chapa ondulada azul-escura com vigas pretas e janelas iluminadas, e ele AVANÇA para a direita por cima da rua, formando uma PASSAGEM COBERTA: um teto baixo com vigas e canos grossos enferrujados correndo por baixo, apoiado num pilar de tijolo do lado direito.
+- Embaixo da passagem coberta, a rua continua (o personagem passa por baixo): mais escuro, com uma luminária de parede acesa, e ao fundo da passagem uma parede de tijolo vermelho-escuro com duas janelas gradeadas e uma letra "B" com uma seta pintada à mão em laranja.
+- Dentro da passagem, encostada na parede do fundo: uma cabine baixa de chapa canelada cinza com uma porta branca, com teto plano.
+- No pilar da direita, uma placa de aviso amarela triangular com um símbolo de carga suspensa.
+- Depois do pilar, a rua continua a céu aberto por um trecho curto, com um muro baixo de tijolo cinza e algumas plantinhas no chão.
+- BORDA DIREITA: a rua continua aberta, só com o chão.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Embaixo da passagem coberta NÃO pode ficar transparente: mostre a parede de tijolo do fundo.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior (pátio aberto), sem repetir objetos. A BORDA DIREITA termina na rua aberta, SEM nenhum prédio ou muro cortado ao meio.
+- O chão é o MESMO da tela anterior, na MESMA altura e espessura, reto de ponta a ponta, inclusive embaixo da passagem: piso de concreto claro com o trilho embutido rente ao piso (o trilho pode terminar no começo desta tela), faixas amarelas pintadas, e embaixo a faixa escura de laje de concreto (NÃO use terra marrom nem calçada de lajes).
+- O teto da passagem coberta fica alto o bastante para o personagem passar em pé e pular por baixo (pelo menos 2 vezes a altura do personagem acima do chão).
+- 3 plataformas com topo PLANO, reto e bem visível: o teto da cabine de chapa (na altura do peito do personagem), o muro baixo de tijolo depois do pilar (na altura da cintura) e o topo da passagem coberta, por cima, no lado de fora (cerca de 1,5 vez a altura do personagem acima do teto da cabine, com a cabine logo embaixo da borda da passagem).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B" com a seta.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 9 (versão 2) - Corredor A->B (2): beco entre prédios altos
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela08.png (a tela anterior); 2) Fase04_Tela09.png (a versão anterior desta tela, que ficou PARECIDA DEMAIS com a tela 8: serve só para mostrar o que NÃO repetir); 3) o print do meio do corredor (CS:GO).
+
+Agora crie a TELA 9 de 10, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 8, que termina na rua aberta depois do muro baixo de tijolo cinza), como se a câmera andasse para a direita. Ao ar livre, vista lateral.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta e mesma escala da primeira imagem anexada. O personagem teria cerca de 1/7 da altura da imagem. Um beco mais estreito e sombreado, entre prédios ALTOS, com luminárias penduradas acesas.
+
+MUITO IMPORTANTE: esta tela tem que ser BEM DIFERENTE da tela 8 e da segunda imagem anexada. NÃO desenhe: cabine de chapa com porta branca, muro baixo de tijolo cinza, parede de tijolo vermelho com duas janelas gradeadas, letra "B" com seta, portão de garagem, passagem coberta, pilar com faixas pretas e amarelas, nem uma viga reta atravessando a tela de ponta a ponta.
+
+A terceira imagem anexada é o meio do corredor do bomb A ao bomb B no mapa Train do Counter-Strike, em perspectiva. Use dela os prédios altos, o pilar de concreto, a porta de madeira tapada, as luminárias penduradas e a cerca de grade, em VISTA LATERAL.
+
+Trecho, da esquerda para a direita:
+- Um pilar de concreto grosso e manchado, do chão até o alto da imagem.
+- Depois dele, a fachada ALTA (três andares, subindo quase até o topo da imagem) de um prédio antigo de tijolo marrom-escuro, com cornija de concreto, janelas altas e estreitas lá em cima com vidros quebrados, um exaustor redondo na parede e manchas de umidade escorrendo. Embaixo, uma porta velha de madeira clara com tábuas pregadas atravessadas, dentro de um batente de concreto, e um rodapé alto de concreto que avança um pouco da parede.
+- Na frente do prédio, no chão: uma pilha de paletes de madeira e uma caixa elétrica cinza alta presa num poste.
+- No MEIO, no alto: uma passarela metálica escura com grade de proteção, CURTA, saindo do prédio de tijolo e apoiada em dois postes finos de ferro, com duas luminárias industriais penduradas embaixo dela, acesas.
+- À DIREITA: uma cerca alta de painéis de grade de metal branco presos em postes, e atrás dela, mais ao fundo, a parede lateral de um prédio de concreto cinza-claro com um tubo de ventilação grosso e prateado subindo pela parede e uma escada de incêndio de ferro (só decoração).
+- No chão, cascalho solto, poças e algumas plantinhas nas beiradas.
+- BORDA DIREITA: o beco continua aberto, só com o chão.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- A BORDA ESQUERDA continua naturalmente a borda direita da primeira imagem anexada (rua aberta), sem repetir objetos. A BORDA DIREITA termina no beco aberto, SEM nenhum prédio ou cerca cortados ao meio.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: piso de concreto claro com a faixa amarela e as setas amarelas pintadas, e embaixo a faixa escura de laje de concreto (NÃO use terra marrom nem calçada de lajes).
+- 4 plataformas com topo PLANO, reto e bem visível: o rodapé de concreto do prédio (na altura do joelho do personagem), a pilha de paletes (na altura da cintura), o topo da caixa elétrica alta (cerca de 1,5 vez a altura do personagem acima do chão, colada nos paletes) e a passarela metálica curta (cerca de 1,5 vez a altura do personagem acima da caixa elétrica, começando logo acima dela). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas para o personagem (a escada de incêndio é só decoração, no fundo), SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 10 - Corredor A->B (3): a porta do bomb B (fim do corredor)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela09.png (a tela anterior); 2) Fase04_Arena.png (o interior do bomb B, para os portões combinarem); 3) o print da saída para o bomb B (portões com a escada, CS:GO).
+
+Agora crie a TELA 10 de 10, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 9, o beco que termina na cerca de grade e no prédio de concreto cinza com o tubo de ventilação prateado), como se a câmera andasse para a direita. Ao ar livre, vista lateral. É o FIM do corredor: a entrada do bomb B. Uma tela CURTA.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação e mesma escala da primeira imagem anexada. O personagem teria cerca de 1/7 da altura da imagem.
+
+IMPORTANTE: não repita objetos da tela anterior (o prédio de tijolo com a porta tapada, os paletes, a caixa elétrica, a passarela com as luminárias, a cerca de grade, o tubo de ventilação).
+
+A segunda imagem anexada é o interior do bomb B: os portões de madeira bege com reforços em X da borda esquerda dela são os MESMOS portões desta tela, vistos agora por fora. A terceira imagem é a saída do corredor para o bomb B no mapa Train do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL.
+
+Trecho, da esquerda para a direita:
+- Um trecho curto de parede de tijolos de concreto cinza com uma pichação preta (rabisco sem letras legíveis).
+- O resto da tela é a fachada ALTA de um galpão de tijolo cinza com pilares de concreto (subindo até o topo da imagem), com um grande emblema redondo de metal no alto e, preso na parede, um grande painel vermelho desbotado com uma estrela dourada em relevo, no estilo dos murais soviéticos.
+- Embaixo, no MEIO da fachada: uma abertura larga com DOIS portões de chapa de madeira bege com reforços de metal em X, ABERTOS para os lados, e lá dentro uma escada larga de concreto SUBINDO para o fundo, até um patamar iluminado (por ali o personagem entra no bomb B). Acima dos portões, uma luminária de braço curvo acesa.
+- Ao lado dos portões, uma placa de aviso amarela triangular e um cano fino de metal descendo pela parede.
+- BORDA DIREITA: a fachada do galpão continua até a borda, fechando a tela (o personagem não passa dali).
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro da abertura dos portões NÃO pode ficar transparente: mostre a escada e o patamar.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos. A BORDA DIREITA é fechada pela fachada do galpão.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: piso de concreto claro com a faixa amarela e as setas amarelas pintadas, e embaixo a faixa escura de laje de concreto (NÃO use terra marrom nem calçada de lajes). A escada fica DENTRO da abertura, ao fundo; o chão da frente continua reto.
+- SEM plataformas novas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+BOMB B (cenário FECHADO: um galpão ferroviário enorme, coberto, sem céu).
+O jogador entra pelos portões com a escada da Tela 10 e reaparece aqui (transição de porta).
+Tela 11 = prévia do bomb B (vagões); depois a ARENA do chefão, com o vagão amarelo do bomb.
+=============================================
+
+
+---------------------------------------------
+TELA 11 - Bomb B (prévia): os vagões dentro do galpão
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela05.png (cenário fechado: estilo, escala, altura do chão e teto preenchido); 2) Fase04_Tela10.png (a tela de onde o personagem vem); 3) em diante: os prints do bomb B (CS:GO).
+
+Agora crie a TELA 11 da fase. É o INTERIOR de um galpão ferroviário enorme e antigo (o bomb B do mapa Train do Counter-Strike): o personagem acabou de subir a escada dos portões de madeira e agora anda por dentro, da esquerda para a direita. Cenário FECHADO, visto de lado: paredes ao fundo, teto em cima, chão embaixo, sem céu.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma nitidez e mesma escala da primeira imagem anexada (o personagem teria cerca de 1/7 da altura da imagem). Luz do dia entrando por janelas altas, com faixas de sol e sombra, e luminárias industriais penduradas.
+
+A segunda imagem anexada é a tela de fora, de onde o personagem vem (os portões de madeira bege com reforços em X e a escada). A partir da terceira, as imagens são o bomb B, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: a parede interna de tijolo cinza com os dois portões de madeira bege com reforços de metal em X, ABERTOS, vistos por dentro, com o alto da escada chegando no piso. Essa parede fecha a tela à esquerda.
+- Ao fundo, em toda a tela: a parede alta do galpão de tijolo e concreto, com janelas altas em arco com vidros quebrados e um exaustor, vigas de aço enormes cruzando o teto e luminárias industriais penduradas em cabos.
+- Do lado esquerdo, encostado na parede do fundo: um mezanino baixo de madeira compensada sobre uma base de concreto, com papéis espalhados por cima e um carretel de cabo de madeira.
+- No MEIO: sobre um trilho rente ao chão, um VAGÃO-TANQUE cilíndrico cinza-escuro com escadinha amarela na lateral e uma passarela de metal no topo.
+- Depois: um VAGÃO DE CARGA fechado amarelo-oliva desbotado, com portas de correr e listras amarelas verticais.
+- No alto, à direita, presa na parede do fundo: uma cabine suspensa de chapa ondulada laranja enferrujada, com janelas gradeadas e uma pequena sacada (sem texto legível).
+- BORDA DIREITA: o galpão continua aberto (sem parede), com o mesmo chão, o mesmo teto e a mesma parede do fundo, para emendar na arena.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, cenário fechado.
+- NADA transparente: a imagem inteira é preenchida (paredes, teto e chão). Sem céu.
+- A BORDA ESQUERDA é fechada pela parede com os portões. A BORDA DIREITA é o galpão aberto, sem nenhuma parede, vagão ou objeto cortado ao meio.
+- O chão fica EXATAMENTE na mesma altura da primeira imagem anexada, reto e plano de ponta a ponta: piso de concreto gasto com trilhos embutidos rentes ao piso e faixas tracejadas vermelhas e brancas, e embaixo uma faixa escura de laje de concreto com a mesma espessura da primeira imagem.
+- O teto fica bem alto: pelo menos 5 vezes a altura do personagem acima do chão.
+- 4 plataformas com topo PLANO, reto e bem visível: o carretel de cabo (na altura da cintura do personagem), o mezanino de madeira (cerca de 1,5 vez a altura do personagem acima do chão), a passarela no topo do vagão-tanque (mais ou menos na mesma altura do mezanino) e o teto do vagão amarelo-oliva (cerca de 1,5 vez a altura do personagem acima da passarela do tanque, com o tanque colado nele). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas para o personagem (a escadinha do tanque é só decoração), SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+ARENA DO CHEFÃO - Bomb B (versão independente: não precisa da Tela 11)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela05.png (cenário fechado: estilo, nitidez, piso e teto preenchido); 2) Fase04_Tela09.png (a paleta e os materiais mais recentes da fase); 3) em diante: os prints do bomb B (CS:GO), principalmente os que mostram o vagão amarelo com as duas caixas e o mural vermelho com as estrelas.
+
+ATENÇÃO À ESCALA: nesta imagem o personagem fica MENOR (1/10 da altura), para a arena caber mais larga. Depois ela é ampliada no jogo e fica na mesma escala das outras telas.
+
+Agora crie a ARENA final da fase: o bomb B do mapa Train do Counter-Strike, o lugar da luta contra o chefão. É o INTERIOR de um galpão ferroviário enorme e antigo, amplo e alto. Cenário FECHADO, visto de lado: paredes ao fundo, teto em cima, chão embaixo, sem céu. O personagem chega pela esquerda.
+
+Use o mesmo estilo de pixel art, a mesma nitidez, o mesmo contorno e o mesmo tipo de piso das duas primeiras imagens anexadas (que são outras telas desta fase), mas com tudo um pouco MENOR: aqui o personagem teria cerca de 1/10 da altura da imagem, mantendo as proporções entre o personagem e os objetos. Luz do dia entrando por janelas altas em arco, com faixas de sol e sombra no chão e nas paredes, e luminárias industriais penduradas em cabos.
+
+A partir da terceira, as imagens anexadas são o bomb B, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA (por onde o personagem chega): a parede interna de tijolo cinza com dois grandes portões de chapa de madeira bege com reforços de metal em X, ABERTOS, vistos por dentro, com o alto de uma escada de concreto chegando no piso. Essa parede fecha a tela à esquerda.
+- Ao fundo, em toda a largura: a parede alta do galpão de tijolo e concreto, com janelas altas em arco com vidros quebrados e um exaustor, vigas de aço enormes cruzando o teto e luminárias industriais penduradas.
+- Do lado esquerdo, encostado na parede do fundo: um mezanino de madeira compensada sobre uma base de concreto, com papéis espalhados e um carretel de cabo de madeira em cima.
+- Ao lado, sobre trilho rente ao chão: um VAGÃO DE CARGA marrom-ferrugem.
+- No MEIO, o destaque da arena: o VAGÃO DO BOMB, um vagão-prancha AMARELO baixo, sobre trilho rente ao chão, com um X laranja pintado no piso, carregando DUAS caixas altas de madeira com armação de metal amarela por fora, uma grade em cima e um símbolo de radiação pequeno; numa delas, a letra "B" pintada em laranja. Atrás dele, mais ao fundo, um vagão de carga branco-acinzentado desbotado.
+- Na parede do fundo, atrás do vagão do bomb: um GRANDE MURAL em relevo no estilo soviético, com cortinas vermelhas desbotadas, arcos dourados e estrelas douradas grandes em relevo; ao lado dele, no alto, um grande emblema redondo de metal.
+- À DIREITA do vagão do bomb: um VAGÃO-TANQUE cilíndrico cinza-escuro com uma passarela de metal no topo, e uma cabine suspensa de chapa ondulada laranja enferrujada presa no alto da parede (sem texto legível).
+- BORDA DIREITA: a parede do fim do galpão, de tijolo e concreto, com portas duplas altas fechadas. Essa parede fecha a tela à direita.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, cenário fechado.
+- NADA transparente: a imagem inteira é preenchida (paredes, teto e chão). Sem céu.
+- As BORDAS ESQUERDA e DIREITA são fechadas pelas paredes descritas, sem nenhum vagão cortado ao meio.
+- O chão fica reto e plano de ponta a ponta, a cerca de 22% da altura da imagem contando de baixo para cima: piso de concreto gasto com trilhos embutidos rentes ao piso (sem degrau) e faixas tracejadas vermelhas e brancas, e embaixo uma faixa escura de laje de concreto.
+- O teto fica bem alto (a arena é alta e espaçosa, para o chefão e o personagem pularem).
+- 6 plataformas com topo PLANO, reto e bem visível (medidas pela altura do personagem desta imagem, que é 1/10 da altura dela): o carretel de cabo (na altura da cintura do personagem), o mezanino de madeira (cerca de 1,5 vez a altura do personagem acima do chão), o teto do vagão marrom (cerca de 1,5 vez a altura do personagem acima do mezanino, colado nele), o piso do vagão do bomb (na altura do joelho do personagem), os tampos das duas caixas amarelas (cerca de 1,5 vez a altura do personagem acima do piso do vagão) e a passarela no topo do vagão-tanque (mais ou menos na mesma altura dos tampos das caixas). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas para o personagem, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B"; o símbolo de radiação e as estrelas podem aparecer.
+- Pixel art nítida, cores sólidas, sem desfoque.

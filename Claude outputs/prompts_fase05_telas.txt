@@ -1,0 +1,297 @@
+REDLINE - FASE 05 (OVERPASS) - PROMPTS DAS TELAS
+================================================
+
+Como usar:
+- Gere as telas na MESMA conversa em que o fundo da Fase 5 foi gerado (o ChatGPT já conhece a paleta).
+  Se o fundo ainda não foi gerado, gere ele antes (prompts_fase05_fundo.txt).
+- Gere na ordem. Cada tela continua a anterior.
+- Se o estilo começar a "fugir" (mais claro, pixels maiores, chão em outra altura),
+  reanexe a TELA 1 da Fase 5 e diga: "siga exatamente o estilo, a escala e a altura do chão desta imagem".
+- Depois de reduzir, o chão de cada tela é igualado ao da Tela 1 (guia e terra), como na Fase 4.
+
+
+---------------------------------------------
+TELA 1 - Spawn CT: a rua do banco
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase04_Tela03.png (Assets/Art/Maps: estilo, escala e ALTURA DO CHÃO de uma tela de rua);
+2) Player_blue_run_0.png (Assets/Art/Characters: tamanho do personagem); 3) o print da rua do banco (CS:GO).
+
+Agora crie a TELA 1 de 9 da fase, o primeiro trecho por onde o personagem anda. É uma tela de cenário em primeiro plano (o fundo da cidade com o viaduto que você acabou de gerar fica atrás dela), em vista lateral, como num jogo run-and-gun.
+
+Use EXATAMENTE o estilo da primeira imagem anexada (uma tela de outra fase): mesmo tamanho de pixel, mesma nitidez, mesmo nível de detalhe, mesma escala das construções e, principalmente, a MESMA ALTURA E ESPESSURA DO CHÃO (a calçada clara por onde se anda, a guia de lajes e a faixa escura de terra embaixo). NÃO copie os objetos dela: use só o estilo e a escala.
+
+O personagem da segunda imagem anexada teria cerca de 1/7 da altura da imagem. Use-o só como referência de tamanho: ele NÃO deve aparecer na tela.
+
+A terceira imagem é a rua do banco no mapa Overpass do Counter-Strike, perto do spawn CT e do bomb A, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais e as cores dela, com a mesma paleta do fundo que você gerou.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA (começo da fase): o prédio de um banco moderno dos anos 70, de três andares, com faixas horizontais de janelas de vidro esverdeado e pilares de concreto cinza-claro. No térreo, uma marquise branca comprida sobre a calçada, portas de vidro e três caixas eletrônicos embutidos na parede. No telhado, um grande letreiro de letras vermelhas-alaranjadas dizendo apenas "BANK". O prédio fecha a tela à esquerda.
+- Na calçada em frente ao banco: um carro-forte blindado verde-oliva acinzentado estacionado, uma lixeira, uma placa de rua num poste e grades de metal baixas (barreiras de contenção).
+- Duas caçambas de lixo verdes com tampa fechada encostadas na parede.
+- No MEIO, na rua: dois contêineres de carga pequenos verde-oliva, de chapa, empilhados um meio em cima do outro, como uma barricada.
+- Mais à direita: um caminhão antigo com a cabine amarela desbotada e uma carreta-prancha carregada de caixas de madeira verde-oliva amarradas, parado atravessado na rua.
+- Atrás do caminhão: um muro de concreto bege com uma fileira de pilares e uma barraca de madeira de tábuas cinza com uma letra "A" pintada em laranja.
+- BORDA DIREITA: a rua continua aberta, só com a calçada e um poste de luz.
+- Ao fundo da tela: prédios de apartamentos brancos de vários andares, álamos altos e fios elétricos passando no alto.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- A BORDA ESQUERDA é o começo da fase: o prédio do banco fecha a tela daquele lado.
+- A BORDA DIREITA termina na rua aberta, SEM nenhum prédio, caminhão ou muro cortado ao meio.
+- O chão por onde se anda é uma rua de paralelepípedos e asfalto com trilhos de bonde EMBUTIDOS RENTES à superfície (sem degrau). Ele fica EXATAMENTE na mesma altura e espessura do chão da primeira imagem anexada, reto e plano de ponta a ponta. Embaixo dele, a faixa escura de terra e cascalho, também com a mesma espessura da referência.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Atrás das portas de vidro do banco NÃO pode ficar transparente: mostre o interior.
+- 4 plataformas com topo PLANO, reto e bem visível: as caçambas de lixo verdes (na altura da cintura do personagem), o teto do carro-forte (cerca de 1,5 vez a altura do personagem acima do chão), o contêiner verde-oliva de cima da barricada (mais ou menos na mesma altura do teto do carro-forte) e as caixas de madeira em cima da carreta do caminhão (cerca de 1,5 vez a altura do personagem acima do chão). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além de "BANK" no letreiro e da letra "A".
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 1 (versão 2) - Spawn CT: a rua do banco, emendando com a Tela 2
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela02.png (a tela que vem DEPOIS desta: estilo, escala, chão e o lado esquerdo dela);
+2) Fase05_Tela01.png (a versão anterior desta tela: manter os mesmos objetos); 3) o print da rua do banco (CS:GO).
+
+Agora refaça a TELA 1 de 9 da fase. Ela fica imediatamente à ESQUERDA da primeira imagem anexada (a tela 2, que começa com um muro baixo de pedra clara, pilares de pedra com bolas em cima e uma grade de ferro preta). A BORDA DIREITA desta tela tem que emendar PERFEITAMENTE na borda esquerda da tela 2, como se as duas fossem uma imagem só cortada ao meio.
+
+Use EXATAMENTE o estilo, o tamanho de pixel, a paleta, a iluminação, o nível de detalhe e a ESCALA da primeira imagem anexada: os carros, as portas, as caçambas e os contêineres têm tamanho proporcional ao banco de praça, à lixeira e à porta dos banheiros dela (um personagem de pé teria a altura de uma porta).
+
+A segunda imagem é a versão anterior desta tela: mantenha os mesmos objetos e a mesma ordem dela, mas no estilo e na escala da primeira. A terceira é o lugar no mapa Overpass do Counter-Strike, em perspectiva.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA (começo da fase): o prédio de um banco moderno dos anos 70, de três andares, com faixas horizontais de janelas de vidro esverdeado e pilares de concreto cinza-claro. No térreo, uma marquise branca comprida, portas de vidro e três caixas eletrônicos embutidos na parede. No telhado, um grande letreiro de letras vermelhas-alaranjadas dizendo apenas "BANK". O prédio fecha a tela à esquerda.
+- Na frente do banco: um carro-forte blindado verde-oliva acinzentado estacionado, uma lixeira, uma placa de rua num poste e grades de metal baixas.
+- Duas caçambas de lixo verdes com tampa fechada.
+- No MEIO: dois contêineres de carga verde-oliva empilhados, o de cima deslocado para a direita, como uma barricada.
+- Mais à direita: um caminhão antigo com a cabine amarela desbotada e uma carreta-prancha carregada de caixas de madeira verde-oliva.
+- Atrás do caminhão: um muro de concreto bege com pilares e uma barraca de madeira cinza com uma letra "A" pintada em laranja.
+- BORDA DIREITA: um poste de luz e, logo depois, o começo do muro baixo de pedra clara com grade de ferro preta e um pilar de pedra com bola em cima, IGUAL ao da borda esquerda da primeira imagem, para a emenda ficar contínua.
+- Ao fundo: prédios de apartamentos brancos, álamos altos e árvores verdes como as da primeira imagem.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- O CHÃO é EXATAMENTE o da primeira imagem anexada, na MESMA altura e espessura e com o MESMO desenho, reto de ponta a ponta: a faixa de paralelepípedos cinza com grama nas frestas, a guia de pedra clara em blocos e a faixa escura de terra embaixo. SEM trilhos de bonde e SEM asfalto: os veículos ficam em cima dos paralelepípedos, na mesma linha onde ficam o banco de praça e o muro da primeira imagem.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Atrás das portas de vidro do banco NÃO pode ficar transparente: mostre o interior.
+- 4 plataformas com topo PLANO, reto e bem visível: as caçambas de lixo (na altura da cintura do personagem), o teto do carro-forte (cerca de 1,5 vez a altura do personagem acima do chão), o contêiner de cima da barricada (cerca de 1,5 vez a altura do personagem acima do contêiner de baixo) e as caixas de madeira em cima da carreta (cerca de 1,5 vez a altura do personagem acima do chão). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além de "BANK" no letreiro e da letra "A".
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 2 - Banheiros públicos (WC) com o café no terraço
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela01.png (a tela anterior: estilo, escala e chão); 2) a 4) os prints dos banheiros (CS:GO).
+
+Agora crie a TELA 2 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 1, a rua do banco, que termina na rua aberta com um poste de luz depois do caminhão amarelo), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da tela anterior: as portas, os bancos e as lixeiras têm o mesmo tamanho dos objetos da tela anterior (um personagem de pé teria a altura de uma porta).
+
+IMPORTANTE: não repita objetos da tela anterior (o banco, o carro-forte, as caçambas, os contêineres, o caminhão). A tela 2 começa logo DEPOIS do poste de luz.
+
+As outras imagens anexadas são os banheiros públicos do parque no mapa Overpass do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- Um muro baixo de pedra cinza com pilares de pedra com bolas em cima e uma grade de ferro preta, marcando a entrada do parque; atrás dele, cercas vivas verdes e flores roxas.
+- Um banco de praça de metal verde e uma lixeira verde redonda.
+- No MEIO: o prédio dos banheiros públicos, um bloco baixo de concreto aparente cinza-claro, com uma entrada larga e escura (sem porta), uma plaquinha azul com "WC" e os símbolos de banheiro, uma luminária de parede e marcas de umidade. Por cima do prédio, um TERRAÇO de café: piso de pedra, uma grade preta baixa em volta, mesinhas redondas de ferro, guarda-sóis de lona creme e amarela, postes de luz antigos pretos e, no fundo do terraço, uma parede de tábuas de madeira com uma pérgola de vigas brancas.
+- Atrás do prédio, a copa enorme de uma árvore velha (um carvalho) passando por cima de tudo.
+- À DIREITA: uma escadinha de 3 degraus largos de concreto (só decoração, no fundo) e um muro de arrimo de concreto com mesas de piquenique verdes e balões coloridos amarrados (azuis, vermelhos e amarelos) em cima dele, no fundo.
+- BORDA DIREITA: o caminho de paralelepípedos continua aberto, só com o chão.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro da entrada dos banheiros NÃO pode ficar transparente: mostre o interior escuro.
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos. A BORDA DIREITA termina no caminho aberto, SEM nenhum prédio, muro ou árvore cortados ao meio.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: paralelepípedos cinza (pode ter grama nas frestas), a guia de pedra e a faixa escura de terra embaixo (aqui sem os trilhos de bonde).
+- 4 plataformas com topo PLANO, reto e bem visível: o banco de praça (na altura do joelho do personagem), o muro baixo de pedra da entrada do parque (na altura da cintura), a marquise de concreto sobre a entrada dos banheiros (cerca de 1,5 vez a altura do personagem acima do chão) e o piso do terraço do café (cerca de 1,5 vez a altura do personagem acima da marquise). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM escadas para o personagem (a escadinha do fundo é só decoração), SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além de "WC" na plaquinha.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 3 - Parque (1): a fonte
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela02.png (a tela anterior: estilo, escala e chão); 2) e 3) os prints da fonte (CS:GO).
+
+Agora crie a TELA 3 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 2, dos banheiros com o café no terraço, que termina no caminho de paralelepípedos depois da escadinha e das mesas de piquenique), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da tela anterior: os bancos, as luminárias e os pilares têm o mesmo tamanho dos da tela anterior (um personagem de pé teria a altura de uma porta).
+
+IMPORTANTE: não repita objetos da tela anterior (o prédio dos banheiros, o terraço do café, os guarda-sóis, as mesas de piquenique, os balões). A tela 3 começa logo DEPOIS deles.
+
+As outras imagens anexadas são a praça da fonte no parque do mapa Overpass do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- Ao fundo, em toda a tela: muros altos de pedra cinza irregular (alvenaria de pedra) com pilares de pedra clara com remates pontudos em cima, luminárias antigas de parede e uma grade de ferro preta por cima de parte do muro. Atrás dos muros, as copas de árvores grandes e o alto de prédios de apartamentos.
+- Na frente do muro, dois bancos de praça de metal verde-escuro.
+- No MEIO: uma FONTE de pedra clara, redonda, com uma bacia larga embaixo cheia de água, e duas bacias menores empilhadas em cima, com um remate no topo.
+- À DIREITA: um canteiro alto de concreto (uma caixa grande de concreto aparente) com flores roxas e uma árvore grande crescendo de dentro dele, e na frente um muro baixo de concreto com uma grade fina preta e mais flores roxas.
+- No chão, partes de grama nas beiradas do caminho.
+- BORDA DIREITA: o caminho de paralelepípedos continua aberto, com um portão de ferro aberto entre dois pilares de pedra no fundo.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- A BORDA ESQUERDA continua naturalmente a borda direita da tela anterior, sem repetir objetos. A BORDA DIREITA termina no caminho aberto, SEM nenhum muro, árvore ou canteiro cortados ao meio.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: paralelepípedos cinza (pode ter grama nas frestas), a guia de pedra e a faixa escura de terra embaixo.
+- 4 plataformas com topo PLANO, reto e bem visível: os bancos de praça (na altura do joelho do personagem), a borda da bacia de baixo da fonte (na altura da cintura), o muro baixo de concreto da direita (na altura da cintura) e o topo do canteiro alto de concreto (cerca de 1,5 vez a altura do personagem acima do chão, logo atrás do muro baixo).
+- SEM escadas, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível (a pichação do fundo, se aparecer, sem letras legíveis).
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 4 - Parque (2): o parquinho, com a portinha para os túneis
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela03.png (a tela anterior: estilo, escala e chão); 2) a 4) os prints do parquinho (CS:GO).
+
+Agora crie a TELA 4 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 3, da fonte, que termina no caminho de paralelepípedos depois do portão de ferro aberto), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da tela anterior: os brinquedos, os pilares e as portas têm tamanho proporcional aos bancos e à fonte dela (um personagem de pé teria a altura de uma porta).
+
+IMPORTANTE: não repita objetos da tela anterior (a fonte, os bancos verdes, o canteiro alto com a árvore, o portão de ferro). A tela 4 começa logo DEPOIS do portão.
+
+As outras imagens anexadas são o parquinho infantil do parque no mapa Overpass do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- Ao fundo, em toda a tela: um muro alto de pedra cinza irregular com o topo arredondado, com pilares de pedra clara com bolas brancas em cima. Na frente do muro, um TAPUME de tábuas de madeira pintado de azul-esverdeado, com flores coloridas desenhadas (vermelhas, amarelas, laranja e verdes) e uma grande cobra amarela de escamas desenhada ao longo dele, com a cabeça na esquerda. Atrás do muro, as copas de árvores grandes e o alto de prédios de apartamentos e um guindaste amarelo.
+- O chão do parquinho é de grama rala e terra, NA MESMA ALTURA do caminho.
+- Da esquerda para a direita, dentro do parquinho: uma caixa de areia baixa com moldura de madeira e um escorregador de metal prateado com a escadinha atrás; uma árvore jovem crescendo de dentro de uma torre de madeira (um caixote alto de tábuas cinza-escuras com flores pintadas); e um balanço de ferro verde-escuro com duas cadeirinhas penduradas, dentro de outra caixa de areia.
+- BORDA DIREITA: o muro de pedra termina num pilar de pedra clara com bola em cima e, logo antes dele, uma PORTINHA estreita de madeira escura ABERTA no muro, com um batente de pedra e uma escada de concreto descendo para baixo lá dentro (por ali o personagem vai para os túneis embaixo do parque). A portinha fica perto da borda direita. Uma lanterna antiga presa no pilar.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro da portinha aberta NÃO pode ficar transparente: mostre o interior escuro com o começo da escada descendo.
+- A BORDA ESQUERDA continua naturalmente a borda direita da primeira imagem anexada, sem repetir objetos. A BORDA DIREITA é fechada pelo muro de pedra com o pilar e a portinha.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: paralelepípedos cinza (pode ter grama e terra por cima no trecho do parquinho, na mesma altura), a guia de pedra e a faixa escura de terra embaixo.
+- 4 plataformas com topo PLANO, reto e bem visível: a moldura da caixa de areia (na altura do joelho do personagem), o topo do escorregador (cerca de 1,5 vez a altura do personagem acima do chão), o topo da torre de madeira (mais ou menos na mesma altura do escorregador) e a barra de cima do balanço (cerca de 1,5 vez a altura do personagem acima do chão, com a torre logo ao lado). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM personagens, SEM crianças, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+SUBSOLO DO PARQUE (cenário FECHADO, separado). O jogador entra pela portinha do parquinho
+(Tela 4) e reaparece aqui, no pé da escada. Sai pela escada que sobe na direita.
+=============================================
+
+
+---------------------------------------------
+TELA 5 - Subsolo do parque: os depósitos
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela04.png (estilo, escala e altura do chão desta fase); 2) em diante: os prints do subsolo (CS:GO).
+
+Agora crie a TELA 5 de 9 da fase. É o SUBSOLO embaixo do parque: o personagem desceu a escada da portinha do parquinho e agora anda por dentro, da esquerda para a direita. Cenário FECHADO, visto de lado, como um corte do prédio: paredes ao fundo, teto em cima, chão embaixo, sem céu.
+
+Use o estilo, o tamanho de pixel e a ESCALA da primeira imagem anexada (um personagem de pé teria a altura de uma porta), mas aqui a imagem é TODA preenchida, sem céu: um corte de um subsolo. Iluminação fria e escura de subsolo, com lâmpadas fluorescentes no teto e uma luz vermelha de alarme.
+
+A partir da segunda, as imagens anexadas são esse subsolo no mapa Overpass do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: o pé de uma escada de concreto que desce do alto da esquerda (por onde o personagem chegou), com corrimão de metal, e uma luminária de parede amarelada. A parede fecha a tela à esquerda.
+- Um corredor de paredes de blocos de concreto cinza-escuro com vigas de aço escuras em X, uma luz vermelha de alarme presa no alto e uma placa pequena de aviso vermelha e branca sem texto legível.
+- Um portão de garagem de metal recolhido no alto, marcando a passagem para a sala seguinte, com um pneu velho encostado na parede.
+- No MEIO: um depósito grande de concreto com forro de placas no teto e luminárias fluorescentes compridas: canos azuis-claros grossos correndo na parede do fundo, uma parede de blocos com uma prateleira de metal e uma chapa de compensado encostada, um balde branco, um cortador de grama verde e uma galinha branca no chão.
+- Uma porta dupla de metal cinza com um triângulo amarelo de alto risco elétrico e uma estante de metal com latas de tinta.
+- Uma grelha de ralo de metal no chão e uma tampa de bueiro redonda.
+- BORDA DIREITA: uma escada de concreto larga SUBINDO para a direita até uma abertura clara lá em cima, por onde entra a luz do dia (por ali o personagem sai). Na parede ao lado da escada, uma letra "A" com uma seta pintada em laranja. A parede fecha a tela à direita, com a escada encostada nela.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, cenário fechado.
+- NADA transparente: a imagem inteira é preenchida (paredes, teto e chão), inclusive a abertura do alto da escada da direita (mostre a luz do dia e um pedaço de parede de fora).
+- O chão por onde se anda fica na MESMA altura do chão da primeira imagem anexada (a cerca de 25% da altura da imagem, contando de baixo para cima), reto e plano de ponta a ponta: piso de concreto liso cinza com manchas de umidade, e embaixo uma faixa escura de laje de concreto com a mesma espessura da faixa de terra da primeira imagem.
+- O teto fica a pelo menos 4 vezes a altura do personagem acima do chão.
+- 4 plataformas com topo PLANO, reto e bem visível: o pneu deitado (na altura do joelho do personagem), a estante de metal (cerca de 1,5 vez a altura do personagem acima do chão), a prateleira de metal da parede de blocos (mais ou menos na mesma altura da estante) e o topo da porta dupla de metal (cerca de 1,5 vez a altura do personagem acima do chão, logo ao lado da estante).
+- SEM personagens, SEM inimigos, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "A" com a seta. A galinha é só um detalhe de cenário, pequena.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 6 - Saída do subsolo: o patamar, a escada e o pátio do "B"
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela04.png (estilo, escala, céu transparente e CHÃO das telas ao ar livre);
+2) Fase05_Tela05.png (o subsolo: esta tela começa logo à direita dele); 3) o print da saída do subsolo (CS:GO).
+
+Agora crie a TELA 6 de 9. Ela continua imediatamente à DIREITA da segunda imagem anexada (o subsolo, que termina na direita com uma escada de concreto subindo para a luz do dia). O personagem sobe essa escada, sai para fora num patamar alto e depois desce outra escada para um pátio. Ao ar livre, vista lateral, como num jogo run-and-gun.
+
+Use o estilo, o tamanho de pixel, a paleta, a iluminação de dia, a ESCALA e o CHÃO da primeira imagem anexada (uma tela ao ar livre desta fase). NÃO copie o formato fechado da segunda imagem: aqui tem céu transparente. A terceira imagem é esse lugar no mapa Overpass do Counter-Strike, em perspectiva: transforme-o numa VISTA LATERAL, mantendo as estruturas, os materiais e as cores.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: a saída do subsolo vista de fora: muros de concreto aparente cinza-claro e, entre eles, um PATAMAR de concreto ALTO e plano (cerca de 1,5 vez a altura do personagem acima do chão do pátio), onde chega a escada que vem do subsolo. Na parede do fundo do patamar, uma letra "A" com uma seta para a esquerda pintada em laranja e uma caixinha elétrica cinza. O patamar e os muros ocupam só a parte esquerda da tela.
+- Do patamar, uma ESCADA de concreto DESCE para a direita, com um corrimão de metal fino dos dois lados. A escada NÃO chega até o chão: o último degrau termina mais ou menos na altura do joelho do personagem, e ali, no fim da escada, há um CORRIMÃO de metal atravessado, fechando a escada. (O personagem pula por cima desse corrimão para cair no pátio.)
+- Embaixo e à direita: o PÁTIO, com chão plano. Encostadas no muro do fundo: duas caçambas de lixo verdes com tampa cinza-azulada e uma lixeira verde menor, uma pilha de paletes de madeira e uma tampa de bueiro redonda no chão.
+- À DIREITA: um muro de concreto com uma grande pichação colorida (verde, rosa e preta, sem letras legíveis) e uma letra "B" com uma seta para a esquerda pintada em laranja, e mais uma caçamba verde na frente.
+- Ao fundo, atrás dos muros: um prédio antigo de apartamentos de reboco claro com janelas e sacadas de ferro, uma cerca de tela, postes com fios, álamos e uma torre de TV alta e fina ao longe.
+- BORDA DIREITA: o pátio continua aberto, só com o chão.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- A BORDA ESQUERDA é a saída do subsolo (muros e o patamar alto). A BORDA DIREITA termina no pátio aberto, SEM nenhum muro, caçamba ou prédio cortado ao meio.
+- O chão do pátio é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: paralelepípedos cinza (pode ter manchas de asfalto e cascalho por cima), a guia de pedra e a faixa escura de terra embaixo. O patamar e a escada ficam POR CIMA desse chão.
+- O topo do patamar é PLANO e reto, e a escada desce em linha reta do patamar até o corrimão do fim.
+- 4 plataformas com topo PLANO, reto e bem visível: o patamar alto da esquerda, as caçambas de lixo (na altura da cintura do personagem), a pilha de paletes (na altura do joelho) e o topo do muro baixo de concreto do fundo (cerca de 1,5 vez a altura do personagem acima do chão, logo atrás das caçambas).
+- SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além das letras "A" e "B" com as setas.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 7 - Corredor do "B": o pátio com a casinha de chapa
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela06.png (a tela anterior: estilo, escala e chão); 2) o print do corredor (CS:GO).
+
+Agora crie a TELA 7 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 6, o pátio das caçambas, que termina no muro pichado com a seta "-> B" e uma caçamba verde), como se a câmera andasse para a direita.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da tela anterior (as portas e os paletes com o mesmo tamanho dos objetos dela).
+
+IMPORTANTE: não repita objetos da tela anterior (o patamar com a escada, as caçambas verdes, o muro com a pichação verde e rosa, o prédio de apartamentos bege). A tela 7 começa logo DEPOIS da última caçamba.
+
+A segunda imagem anexada é este corredor no mapa Overpass do Counter-Strike, visto de cima. Transforme-o numa VISTA LATERAL, mantendo as estruturas, os materiais e as cores. IGNORE a ponte de trilhos de trem que passa no alto do print: ela NÃO aparece nesta tela.
+
+Trecho, da esquerda para a direita:
+- Um muro de concreto cinza-claro com uma pichação grande e arredondada em vermelho, branco e marrom (sem letras legíveis), uma cerca de tela de arame em cima dele presa em postes finos, uma pilha de paletes de madeira encostada e um pneu velho no chão.
+- No MEIO: uma CASINHA pequena de chapa ondulada de metal bege-enferrujada (uma cabine de vigia/depósito), com telhado plano de chapa verde-acinzentada um pouco inclinado, uma porta de metal verde-escura com janelinha e uma plaquinha triangular amarela de aviso.
+- Atrás da casinha, ao fundo: a parede alta de concreto de uma estrutura grande (a base do viaduto), com pilares de concreto e uma letra "B" pintada em laranja, meio apagada.
+- Um tambor de metal enferrujado e dois blocos de concreto soltos no chão.
+- À DIREITA: um muro de concreto bege mais alto, com uma cerca de tela de arame grossa (de cor ferrugem) em cima dele, um poste de luz alto de concreto inclinado e uma estrutura de metal velha (um suporte de cano enferrujado) presa no topo do muro.
+- No chão, papéis espalhados, uma tampa de bueiro redonda e cascalho.
+- BORDA DIREITA: o corredor continua aberto, com o chão e o muro baixo de concreto.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado).
+- A BORDA ESQUERDA continua naturalmente a borda direita da primeira imagem anexada, sem repetir objetos. A BORDA DIREITA termina no corredor aberto, SEM nenhum muro, casinha ou poste cortado ao meio.
+- O chão é o MESMO da primeira imagem anexada, na MESMA altura e espessura, reto de ponta a ponta: paralelepípedos cinza (pode ter asfalto gasto, cascalho e papéis por cima), a guia de pedra e a faixa escura de terra embaixo.
+- 4 plataformas com topo PLANO, reto e bem visível: a pilha de paletes (na altura do joelho do personagem), o tambor (na altura da cintura), o telhado da casinha de chapa (cerca de 1,5 vez a altura do personagem acima do chão) e o topo do muro de concreto da direita (mais ou menos na mesma altura do telhado da casinha).
+- SEM escadas, SEM trilhos de trem, SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B".
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 8 - O canal embaixo da ponte de trilhos
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela07.png (a tela anterior: estilo, escala e o nível do chão de onde o personagem vem); 2) o print do canal (CS:GO).
+
+Agora crie a TELA 8 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 7, o corredor que termina num muro baixo de concreto), como se a câmera andasse para a direita. Ao ar livre, vista lateral, como num jogo run-and-gun.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da tela anterior.
+
+IMPORTANTE: não repita objetos da tela anterior (a casinha de chapa, o pilar do viaduto com o "B", o tambor, os muros com cerca).
+
+A segunda imagem anexada é o canal seco embaixo da ponte de trilhos no mapa Overpass do Counter-Strike, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: o chão de paralelepípedos da tela anterior continua por um trecho curto, na MESMA ALTURA, e termina na beira de uma ESCADA de concreto que DESCE para a direita até o fundo do canal, com um corrimão de metal fino. O canal fica cerca de 1,5 vez a altura do personagem ABAIXO do chão da tela anterior.
+- O FUNDO DO CANAL: um leito largo e plano de concreto coberto de AREIA clara e cascalho, com um monte baixo de areia e entulho, um tambor enferrujado deitado, pedaços de concreto, garrafas e papéis espalhados, um carretel de cabo de madeira em pé e uma caixa de metal bege ao lado dele.
+- As paredes do canal, ao fundo: concreto manchado e inclinado, com uma faixa de concreto mais escura no alto.
+- No MEIO, na parede do fundo do canal: a boca de um TÚNEL redondo de concreto, grande e escuro (só decoração, ao fundo), e ao lado dele uma grade de ferro em arco fechando outra passagem.
+- À DIREITA: a parede do canal com uma pintura grande de um monstro de grafite rosa e roxo (um rosto bizarro com olhos esbugalhados e dentes, sem letras), e embaixo dela a boca de OUTRO TÚNEL redondo de concreto, grande e ABERTO, na altura do chão do canal (por ali o personagem vai entrar). Essa parede fecha a tela à direita.
+- No ALTO, atravessando a tela de lado a lado por cima do canal: uma PONTE de trilhos de trem de vigas de aço enferrujadas, com uma lateral de chapa de metal com reforços em X, postes de sinal de trem pretos em cima e um poste de catenária. Ela fica alta (mais de 4 vezes a altura do personagem acima do fundo do canal) e é só cenário.
+- Atrás de tudo, ao fundo: muros de concreto, uma cerca de tela, sacos de lixo pretos, a parede de tijolo de um galpão com uma letra "B" laranja e árvores.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro dos túneis NÃO pode ficar transparente: mostre o interior escuro.
+- A BORDA ESQUERDA continua naturalmente a borda direita da primeira imagem anexada, com o chão de paralelepípedos na MESMA altura e espessura. A BORDA DIREITA é fechada pela parede do canal com o túnel aberto.
+- Embaixo de tudo, a mesma faixa escura de terra da primeira imagem.
+- O fundo do canal é PLANO e reto de ponta a ponta (sem rampas além da escada), cerca de 1,5 vez a altura do personagem abaixo do chão de paralelepípedos.
+- 4 plataformas com topo PLANO, reto e bem visível: a caixa de metal bege (na altura do joelho do personagem, no fundo do canal), o carretel de cabo (na altura da cintura), o tambor deitado em cima do monte de areia (na altura da cintura) e uma laje de concreto saindo da parede do canal no meio (mais ou menos na altura do chão de paralelepípedos da esquerda).
+- SEM personagens, SEM inimigos, SEM animais, SEM trens, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B".
+- Pixel art nítida, cores sólidas, sem desfoque.
