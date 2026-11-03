@@ -295,3 +295,91 @@ Regras obrigatórias:
 - 4 plataformas com topo PLANO, reto e bem visível: a caixa de metal bege (na altura do joelho do personagem, no fundo do canal), o carretel de cabo (na altura da cintura), o tambor deitado em cima do monte de areia (na altura da cintura) e uma laje de concreto saindo da parede do canal no meio (mais ou menos na altura do chão de paralelepípedos da esquerda).
 - SEM personagens, SEM inimigos, SEM animais, SEM trens, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B".
 - Pixel art nítida, cores sólidas, sem desfoque.
+
+
+=============================================
+TÚNEL DO CANAL + ARENA (bomb B). Tudo colado, SEM transição de esmaecer:
+o jogador entra no túnel da direita da Tela 8 andando, atravessa o túnel (Tela 9, corte lateral)
+e sai direto na arena do bomb B.
+=============================================
+
+
+---------------------------------------------
+TELA 9 (versão 2) - O tubo embaixo da passarela (corte lateral)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela08.png (a tela anterior: estilo, escala e o nível do fundo do canal); 2) a 4) os prints dos arredores do tubo (CS:GO).
+
+Agora crie a TELA 9 de 9, que continua imediatamente à DIREITA da primeira imagem anexada (a tela 8, o canal seco com o grafite do monstro rosa). Vista lateral, como num jogo run-and-gun, ao ar livre.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta, mesma iluminação de dia e MESMA ESCALA da primeira imagem anexada (o personagem teria cerca de 1/7 da altura da imagem).
+
+As outras imagens anexadas são o lugar no mapa Overpass do Counter-Strike: o canal passa por baixo de uma PASSARELA de concreto por dentro de um TUBO CURTO de metal corrugado. NÃO é um túnel longo nem enterrado fundo: é só um tubo curto embaixo da passarela, com céu em cima. Transforme isso numa VISTA LATERAL, com o tubo mostrado em CORTE (como se a lateral do tubo tivesse sido cortada para a gente ver o personagem passando por dentro).
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: o fundo do canal continua aberto, plano, com areia clara, lodo, pedras e lixo, e a parede de concreto inclinada do canal ao fundo (com um pouco da tinta rosa e roxa do grafite do monstro).
+- No MEIO, ocupando mais ou menos um terço da largura da tela: o TUBO de metal corrugado cinza-esverdeado, redondo, em corte lateral, com a boca de concreto em anel nas duas pontas, por onde o personagem passa andando. O tubo é baixo: a altura interna é só um pouco maior que a altura do personagem (cerca de 1,3 vez). Dentro, o chão é plano com areia e um filete de água escura, e é mais escuro que lá fora.
+- Por CIMA do tubo: a PASSARELA, uma laje de concreto grossa e reta, apoiada numa parede de blocos de concreto; em cima da laje, um muro de blocos de concreto cinza com o topo em degraus, um corrimão de metal fino, e um deck de obra de compensado com tábuas empilhadas e tapumes de compensado em pé, cercado por uma grade de tela de metal enferrujada.
+- Depois do tubo, à DIREITA: o canal continua, mais largo, com as paredes de concreto inclinadas, areia, garrafas e papéis no chão (é o começo do bomb B).
+- No ALTO, atravessando a tela: a parte de baixo do viaduto, uma laje de concreto escura com vigas de aço por baixo. Entre a passarela e o viaduto, céu e o alto de prédios brancos e árvores ao fundo.
+- BORDA DIREITA: o canal continua aberto, sem nada cortado ao meio.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE onde seria o céu (PNG com canal alfa, sem xadrez pintado). Dentro do tubo NÃO pode ficar transparente.
+- O CHÃO do canal (fora e dentro do tubo) fica EXATAMENTE na mesma altura do fundo do canal da primeira imagem anexada, reto e plano de ponta a ponta. Embaixo, a mesma faixa de concreto e terra escura da primeira imagem.
+- 3 plataformas com topo PLANO, reto e bem visível: um bloco de concreto caído no canal antes do tubo (na altura do joelho do personagem), o topo da passarela de concreto em cima do tubo (cerca de 1,5 vez a altura do personagem acima do chão do canal) e o deck de compensado em cima da passarela (cerca de 1,5 vez a altura do personagem acima da passarela).
+- SEM personagens, SEM inimigos, SEM animais, SEM trens, SEM armas, SEM mãos, SEM interface, SEM texto legível.
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+ARENA DO CHEFÃO - Bomb B embaixo do viaduto
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela09.png (o tubo embaixo da passarela: a arena começa logo depois dele); 2) Fase05_Tela08.png (estilo e o fundo do canal); 3) em diante: os prints do bomb B (CS:GO).
+
+ATENÇÃO À ESCALA: nesta imagem o personagem fica MENOR (1/10 da altura), para a arena caber mais larga. Depois ela é ajustada no jogo e fica na mesma escala das outras telas.
+
+Agora crie a ARENA final da fase: o bomb B do mapa Overpass do Counter-Strike, embaixo do viaduto. Ela continua imediatamente à DIREITA da primeira imagem anexada (o canal depois do tubo embaixo da passarela). Ao ar livre, vista lateral, como num jogo run-and-gun.
+
+Mesmo estilo de pixel art, mesmo tamanho de pixel, mesma paleta e a mesma iluminação das imagens anexadas, mas com tudo um pouco menor: aqui o personagem teria cerca de 1/10 da altura da imagem, mantendo as proporções entre o personagem e os objetos.
+
+A partir da terceira, as imagens anexadas são o bomb B, em perspectiva. Transforme esse lugar numa VISTA LATERAL, mantendo as estruturas, os materiais, as texturas e as cores dele.
+
+Trecho, da esquerda para a direita:
+- BORDA ESQUERDA: o canal continua da primeira imagem anexada (mesmo chão, mesmas paredes de concreto inclinadas ao fundo), com a boca redonda de um segundo tubo, escuro, na parede do fundo (só decoração).
+- O CHÃO da arena: o fundo do canal, plano, de areia clara, lodo e um filete de água esverdeada, com entulho, pedras, um pneu e garrafas espalhadas.
+- No MEIO: o BOMB B, uma plataforma de obra elevada de madeira e concreto (um deck de tábuas apoiado em pilares de madeira), com uma grade de chapa enferrujada laranja em volta, em cima dela pilhas de chapas de compensado, sacos de cimento empilhados e tapumes de compensado em pé.
+- Atrás do deck, sustentando o viaduto: um PILAR redondo enorme de concreto com uma letra "B" laranja pintada e um grafite colorido de bonequinhos (sem letras).
+- À DIREITA: uma casinha de chapa ondulada de metal com porta e um contêiner de obra amarelo-claro com uma janela e uma placa branca SEM texto legível, em cima de uma laje de concreto mais alta; na frente, uma escada de concreto larga (só decoração, ao fundo).
+- No ALTO, cobrindo quase toda a largura: a parte de baixo do VIADUTO, uma laje de concreto enorme com vigas de aço escuras por baixo, apoiada no pilar. Mais ao fundo, prédios de apartamentos altos, um guindaste amarelo e um grande grafite colorido num muro.
+- BORDA DIREITA: um muro alto de concreto do canal, fechando a arena.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral.
+- Fundo REALMENTE TRANSPARENTE só onde aparece o céu (PNG com canal alfa, sem xadrez pintado). Dentro dos túneis NÃO pode ficar transparente.
+- O chão é reto e plano de ponta a ponta, a cerca de 22% da altura da imagem contando de baixo para cima. Embaixo dele, a MESMA borda de concreto e a MESMA terra marrom com pedras da primeira imagem anexada.
+- A laje do viaduto fica bem alta (pelo menos 5 vezes a altura do personagem acima do chão).
+- 5 plataformas com topo PLANO, reto e bem visível (medidas pela altura do personagem desta imagem, que é 1/10 da altura dela): o pneu (na altura do joelho), o deck de madeira do bomb B (cerca de 1,5 vez a altura do personagem acima do chão), a pilha de compensado em cima do deck (cerca de 1,5 vez a altura do personagem acima do deck), a laje de concreto da direita (mais ou menos na altura do deck) e o telhado da casinha de chapa (cerca de 1,5 vez a altura do personagem acima da laje). Cada plataforma fica no máximo a 1,5 vez a altura do personagem acima da anterior.
+- SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B".
+- Pixel art nítida, cores sólidas, sem desfoque.
+
+
+---------------------------------------------
+ARENA DO CHEFÃO (versão 3) - Bomb B embaixo do viaduto, com pilares nas DUAS pontas
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Arena.png (a versão anterior: manter os mesmos objetos e a mesma escala); 2) Fase05_Tela09.png (a tela que fica à ESQUERDA da arena); 3) em diante: os prints do bomb B (CS:GO).
+
+Refaça a primeira imagem anexada (a arena do bomb B do mapa Overpass do Counter-Strike), mantendo EXATAMENTE o mesmo estilo de pixel art, a mesma escala, a mesma paleta, o mesmo chão, a mesma terra embaixo e os mesmos objetos no meio e na direita (o tubo redondo com grade, o pneu, o deck de madeira do bomb B com a grade laranja, os sacos de cimento, as tábuas e os tapumes, o pilar redondo com o "B" e os bonequinhos, a escada de concreto, a laje da direita com a casinha de chapa e o contêiner amarelo, os prédios e o guindaste ao fundo).
+
+A ÚNICA mudança é nas PONTAS do viaduto: na imagem anterior o viaduto começa cortado no ar na borda esquerda. Agora:
+- BORDA ESQUERDA: um PILAR de concreto largo e retangular, do mesmo material e da mesma cor da laje do viaduto, que sobe do CHÃO do canal até a laje do viaduto e sustenta a ponta esquerda dele, ocupando cerca de 1/12 da largura da imagem, rente à borda. A laje do viaduto termina em cima desse pilar com um acabamento de concreto (sem ficar cortada no ar). A parede inclinada do canal fica logo à direita do pilar.
+- BORDA DIREITA: igual, um pilar de concreto largo do chão até o viaduto, sustentando a ponta direita, como já existe na imagem anterior.
+- O viaduto fica, portanto, apoiado nos dois pilares das pontas e no pilar redondo do meio.
+
+Regras obrigatórias:
+- Formato horizontal 1536x1024, vista lateral, o MESMO enquadramento da primeira imagem anexada (o chão na mesma altura, o viaduto na mesma altura).
+- Fundo REALMENTE TRANSPARENTE só onde aparece o céu (PNG com canal alfa, sem xadrez pintado). Dentro do tubo NÃO pode ficar transparente.
+- O chão é reto e plano de ponta a ponta, e embaixo dele a mesma borda de concreto e a mesma terra marrom com pedras.
+- As plataformas continuam as mesmas: pneu, deck de madeira, sacos de cimento, tábuas, tapumes, laje da direita, telhado da casinha e teto do contêiner, todos com o topo PLANO e reto.
+- SEM personagens, SEM inimigos, SEM animais, SEM armas, SEM mãos, SEM interface. Nenhum texto legível além da letra "B".
+- Pixel art nítida, cores sólidas, sem desfoque.

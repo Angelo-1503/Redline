@@ -80,3 +80,28 @@ Tela 8 (X = 122.171875, y = -5.51): Fase05_Tela08, 737x782 px, pivo (0, 0.294885
   ParedeFimPatioB movida para 134.19 (y -2.5). PortaParquinho: destinationEndX = 133.6875.
   Camera: segunda descida (leftDescent) de 1.965 entre x 123.86 e 126.32, valendo de 122.17 em diante.
   PortaTunelCanal (DoorTransition) no tunel do monstro: gatilho x >= 131.872, porta em (132.372, -6.555), so no fundo do canal. teleport DESMARCADO ate existir a passagem subterranea.
+Tela 9 (X = 133.6875, y = -7.325): Fase05_Tela09, 922x694 px, pivo (0, 0.175216) na linha 815 da original; a tela fica 0.15 acima para a linha 831 (borda da laje) cair no fundo do canal (-7.475). Fim: 148.09375.
+  Imagem reduzida por 0.6 (tubo com altura interna de ~1.45, o personagem tem 1.33); 80 px da laje do viaduto repetidos em cima.
+  Tubo corrugado embaixo da passarela, deck de compensado com grade, viaduto e pilar na direita.
+  Plataformas: bloco (x 1.594, h 0.48), deck (2.812, 2.73, 9.141). PassarelaTubo: bloco solido do teto do tubo ate o topo da passarela (x 137.42 a 144.60).
+  AnelTubo1 e AnelTubo2: as bocas de concreto do tubo recortadas e desenhadas NA FRENTE do jogador (ordem 10).
+  PortaTunelCanal (esmaecer) da Tela 8 REMOVIDA: o jogador passa andando. GroundCanal ate 148.09. ParedeFimPatioB em 148.59. PortaParquinho destinationEndX = 148.09375.
+  Viaduto e pilar REMOVIDOS da Tela 9 (ficam so na arena): topo da laje, vigas, suporte e pilar da direita viraram transparentes. Copia com viaduto no scratchpad (Fase05_Tela09_com_viaduto.png).
+BaseTrilhoEsquerda/BaseTrilhoDireita: blocos de concreto (sprites Fase05_BaseTrilhoEsq/Dir, 72 px de largura, textura do pilar da Tela 8) atras das telas (ordem -7), nas emendas 7|8 (x 122.17, de -5.51 ate -2.05) e 8|9 (x 133.69, de -7.475 ate -2.05): as pontas da ponte de trilhos apoiam neles. Sem colisor.
+AterroTrilhoEsquerda/AterroTrilhoDireita: a linha do trem continua dos dois lados da ponte num aterro de concreto (sprites Fase05_AterroTrilhoEsq 715x217 e Dir 922x343, desenhados por codigo + guarda-corpo da ponte repetido), atras de tudo (ordem -8). Esq: x 111.125 a 122.17 (por tras da Tela 7); Dir: x 133.69 a 148.09 (por tras da Tela 9). Topo = topo da viga da ponte. Sem colisor.
+  BaseTrilhoEsquerda/Direita REMOVIDOS (textura inconsistente); o aterro procedural preenche o vao. Predios brancos do fundo da Tela 9 apagados (apareciam na frente do aterro). Copia: scratchpad (Fase05_Tela09_com_predios.png).
+TERRA IGUALADA EM TODAS AS TELAS DE FORA (1,2,3,4,6,7,8,9; o subsolo, Tela 5, ficou como estava): a terra de cada coluna (de baixo para cima, ate a guia/borda clara) foi trocada pela terra da Tela 7 (linhas 612-753), repetida pela posicao no mundo (horizontal) e espelhada na vertical, entao emenda sem diferenca entre telas e niveis. Copias antes: scratchpad/antes_terra.
+Tela 6: predio alto da borda direita apagado (x 1064-1170, acima da cerca; a arvore cone ficou) e o muro do 'B' esticado ate a borda (colunas 1137-1145 repetidas), encostando no muro pichado da Tela 7. Copia antes: scratchpad (Fase05_Tela06_antes_predio.png).
+  Extensao do muro do B refeita: em vez de repetir colunas, concreto desenhado com a cor media de cada linha do muro + ruido e manchas, de x 1143 ate a borda, com a moita do pe do muro copiada.
+ARENA (bomb B) PROVISORIA (o usuario esta gerando outra versao): Fase05_Arena, imagem reduzida por 0.85 (porta da casinha na altura do personagem) -> 1306x870 px (20.4 unidades), pivo (0, 0.18).
+  Colada na Tela 9: X = 148.09375, y = -7.475 (nivel do canal). Fim 168.5. Topo do chao = linha 835 da original; terra (linha 852 para baixo) trocada pela da Tela 7.
+  Plataformas: pneu (x 2.152, h 0.66), bloco perto do tubo (5.047, 1.73), deck do bomb (5.883, 2.56), sacos de cimento (6.413, 3.39), tabuas (8.234, 3.16), tapumes (10.824, 3.75), laje da direita (13.215, 1.95, 7.18), telhado da casinha (14.104, 3.81), conteiner (17.039, 3.57).
+  AterroTrilhoArena: o aterro do trem continua atras da arena (mesma altura).
+  GroundCanal ate 168.5. ParedeFimPatioB em 169.0. PortaParquinho destinationEndX = 168.5.
+  Sentinela (chefao) em (163.77, -6.275). BossSpawner: arenaTriggerX 150.594, camera presa de 148.09 a 168.5.
+  Arena: pilar do viaduto acrescentado na borda esquerda (copia espelhada do pilar da direita, x 0-41, da laje do viaduto ate o chao), fechando a ponta do viaduto na divisa com a Tela 9. Copia antes: scratchpad (Fase05_Arena_antes_pilar.png).
+  Pilar da esquerda DESFEITO a pedido: Fase05_Arena voltou a versao sem ele.
+ARENA TROCADA PELA VERSAO 3 (pilares nas duas pontas do viaduto). Mesma posicao e escala (1306x870, X 148.09375), pivo (0, 0.184598), topo do chao linha 830, terra (846+) da Tela 7. v1 no scratchpad (Fase05_Arena_v1.png).
+  Plataformas: pneu (x 2.191, h 0.72), bloco (5.18, 1.74), deck (5.977, 2.60, 7.172), sacos (6.468, 3.36), tabuas (8.261, 3.13), tapumes (10.824, 3.75), laje (13.148, 1.98, 7.252), casinha (14.012, 3.79), conteiner (16.801, 3.53).
+TERRA MAIS FUNDA: todas as telas da Fase 5 (e a arena) estendidas para baixo ate y = -12 no mundo (pivos recalculados). Terra acrescentada = terra da Tela 7 (linhas 640-755 da original, sem a sombra da guia), espelhada na vertical e alinhada pelo mundo; o subsolo (Tela 5) ganhou a laje de concreto repetida. Copias antes: scratchpad/antes_terra_funda.
+CORRECAO DO PULO: GroundPatioB, CorrimaoEscadaPatio e BordaCanal estavam na layer 0 (Default, copiados de uma parede) e o PlayerController so detecta chao na layer Ground (7): no patio da Tela 6 em diante o jogador nao pulava. Os tres agora estao na layer 7.
