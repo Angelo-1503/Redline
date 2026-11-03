@@ -1,0 +1,90 @@
+REDLINE - CHEFOES (um pro player por fase) + ARENA FINAL
+=========================================================
+
+Ideia: o chefao de cada fase e o inimigo comum da faccao inimiga daquela fase, em escala maior (2x),
+com a CABECA trocada pela de um pro player em pixel art.
+
+Como montamos (para o corpo ficar identico ao dos inimigos e a animacao continuar funcionando):
+- O ChatGPT gera SO A CABECA (com pescoco), em pixel art, virada para a direita, fundo transparente.
+- Eu colo essa cabeca em cada quadro da corrida do inimigo (Insurgencia_run_0..5 ou Vanguarda_run_0..5),
+  amplio 2x e ligo os quadros no SpriteAnimator do chefao.
+
+Ordem dos chefoes (o corpo e sempre o da faccao inimiga daquela fase):
+  Fase 1 (Dust 2)   -> jogador Blue -> corpo INSURGENCIA (vermelho, lenco no rosto) -> olofmeister
+  Fase 2 (Nuke)     -> jogador Red  -> corpo VANGUARDA (azul, capacete)            -> device
+  Fase 3 (Mirage)   -> jogador Blue -> corpo INSURGENCIA                           -> s1mple
+  Fase 4 (Train)    -> jogador Red  -> corpo VANGUARDA                             -> ZywOo
+  Fase 5 (Overpass) -> jogador Blue -> corpo INSURGENCIA                           -> donk
+  Fase 6 (ARENA FINAL, sem inimigos comuns, so o chefao) -> FalleN contra ele mesmo:
+    o PERSONAGEM PRINCIPAL e o FalleN de hoje (mais velho); o CHEFAO e o FalleN jovem, da epoca da SK
+    (2016-2017), no auge. Tema: "o tempo esta vencendo ele". Mesmo vencendo a luta, o FalleN de hoje cai
+    no final e aparece uma cena com o texto de que o tempo venceu.
+    Corpo do chefao final: o MESMO corpo do jogador (Player_blue_run_0..5), 2x, com a cabeca do FalleN jovem,
+    para ficar claro que e o mesmo personagem.
+
+Observacoes:
+- O ChatGPT pode recusar desenhar uma pessoa real a partir do nome ou da foto. Se recusar, descreva os
+  tracos (cabelo, barba, oculos, bone) em vez de dizer o nome, e peca um "personagem caricato inspirado".
+- Se o jogo for publicado ou vendido, usar o rosto e o nome de jogadores reais precisa de autorizacao
+  deles. Para projeto academico/pessoal e tranquilo; para publicar, da para trocar por apelidos parecidos.
+
+
+---------------------------------------------
+CABECA DE UM CHEFAO (mesmo prompt para todos; troque so os anexos)
+---------------------------------------------
+Anexar NESTA ORDEM:
+  1) o corpo onde a cabeca vai entrar (Assets/Art/Characters):
+       Fases 1, 3 e 5 -> Insurgencia_run_0.png
+       Fases 2 e 4    -> Vanguarda_run_0.png
+  2) uma foto do rosto do jogador (de frente ou de lado, bem iluminada).
+
+Crie SO A CABECA (com o pescoco) de um personagem em pixel art, para ser encaixada no corpo do soldado da primeira imagem anexada, no lugar da cabeca dele (tirando o lenco ou o capacete que cobre o rosto).
+
+Use EXATAMENTE o estilo da primeira imagem: o mesmo tamanho de pixel, o mesmo contorno escuro de 1 pixel, a mesma paleta de cores e o mesmo sombreamento simples. A cabeca fica virada para a DIREITA, no mesmo angulo de perfil 3/4 da cabeca do soldado (olhando para frente, na direcao em que ele corre e mira).
+
+O rosto e baseado na segunda imagem anexada: mantenha os tracos principais dele (formato do rosto, cabelo, sobrancelhas, nariz, barba e expressao), simplificados em pixel art, com uma expressao seria e concentrada de quem esta mirando. O rosto fica a mostra. Pode ter um fone de ouvido de jogador por cima do cabelo, da mesma cor do uniforme do soldado.
+
+Regras obrigatorias:
+- Formato quadrado 1024x1024, a cabeca centralizada ocupando cerca de 70% da altura.
+- Fundo REALMENTE TRANSPARENTE (PNG com canal alfa, sem xadrez pintado).
+- So a cabeca e o pescoco ate a gola, nada de ombros, corpo, arma ou maos.
+- Pixel art nitida, cores solidas, sem desfoque, sem texto, sem logotipos.
+
+Ordem sugerida: olofmeister (Insurgencia), device (Vanguarda), s1mple (Insurgencia), ZywOo (Vanguarda), donk (Insurgencia).
+Gere todas na MESMA conversa, para o estilo ficar igual entre elas.
+
+
+---------------------------------------------
+CABECA DO CHEFAO FINAL - FalleN jovem (epoca SK)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Player_blue_run_0.png (Assets/Art/Characters: o corpo do personagem principal);
+2) uma foto do FalleN na epoca da SK (2016-2017).
+
+Use o MESMO prompt de cabeca acima, trocando o paragrafo do rosto por este:
+
+O rosto e baseado na segunda imagem anexada: um jogador jovem, no auge, com os tracos dele naquela epoca (cabelo, sobrancelhas, nariz, barba e expressao), simplificados em pixel art, com uma expressao confiante e determinada. O rosto fica a mostra. Ele usa um fone de ouvido de jogador e a gola de uma camisa de time azul e branca, SEM nenhum logotipo nem escrita.
+
+
+---------------------------------------------
+CABECA DO PERSONAGEM PRINCIPAL - FalleN de hoje (opcional, para o jogador)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Player_red_run_0.png (Assets/Art/Characters); 2) uma foto recente do FalleN.
+
+Use o MESMO prompt de cabeca acima, trocando o paragrafo do rosto por este:
+
+O rosto e baseado na segunda imagem anexada: o mesmo jogador, mais velho, com os tracos dele hoje (cabelo, barba, sinais de idade e expressao), simplificados em pixel art, com uma expressao seria e cansada, mas firme. O rosto fica a mostra. Ele usa um fone de ouvido de jogador.
+
+(Com essa cabeca eu troco o rosto do jogador nos quadros Player_red_run e Player_blue_run, e o jogo inteiro passa a ser jogado com o FalleN de hoje.)
+
+
+=============================================
+NOTAS TECNICAS - CHEFOES MONTADOS
+=============================================
+Cabecas recebidas na ordem: olofmeister, device, s1mple, ZywOo, donk (assumida a ordem do envio).
+Sprites em Assets/Art/Characters/Chefoes/Chefe<Nome>_idle.png e _run_0..5.png: corpo do inimigo da faccao
+(Insurgencia ou Vanguarda) ampliado 2x (NEAREST), cabeca antiga apagada e a cabeca nova colada (58 px de altura).
+Meta: 128 px por unidade, pivo (0.4, 0). Como o objeto Sentinela tem escala 2, o chefao fica 2x o tamanho de um inimigo.
+Em cada FaseNN.unity, o objeto Sentinela recebeu: sprite idle do chefao, cor branca (antes roxa), SpriteAnimator
+(idle + 6 quadros de corrida, 12 fps) e BoxCollider2D com tamanho (0.65, 1.35) e offset (0, 0.68).
+Para refazer: scratchpad/chefes.py (gera os sprites) e scratchpad/chefes_cena.py (liga nas cenas).
+Chefao final: ChefeFallen_idle/run_0..5 (corpo do jogador Player_blue_run, 2x, cabeca do FalleN jovem da SK). Ainda sem cena: vai no chefao da Fase 6.
