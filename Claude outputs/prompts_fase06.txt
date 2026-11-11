@@ -1,0 +1,398 @@
+REDLINE - FASE 06 (INFERNO) - PLANO + PROMPT DO FUNDO
+=====================================================
+
+Tema: o FalleN de hoje (jogador) contra o FalleN jovem da epoca da SK (chefao). "O tempo esta vencendo ele."
+O FalleN comeca no bomb B do Inferno (onde ele costuma jogar), a C4 e plantada no A e ele faz a rotacao
+para o retake. Jogador = CT (Vanguarda, azul), forcado so nesta fase. Chefao = T (corpo da Insurgencia
+com a cabeca do FalleN jovem). Fase curta: 4 telas + arena.
+
+Final: chefao derrotado -> o jogador perde o controle, anda ate a C4 e se ajoelha para desarmar;
+o bip acelera e a tela escurece no ultimo bip; aparece a frase sobre o tempo.
+(Opcional no comeco: aviso "Bomba plantada no A" e o bip baixinho ao fundo.)
+
+
+---------------------------------------------
+PLANO DO TRAJETO
+---------------------------------------------
+ 1. Dentro da igreja (em obra = a "construcao"): o FalleN comeca escondido la dentro.
+ 2. Saida da igreja = base CT: praca de tijolinho com o poco, a pergola, a casinha e os arcos com a seta do A.
+    Emenda direto na porta da Tela 1, sem transicao.
+ 3. Passagem do arco (arch): da galeria de arcos da base CT, pelo beco com a fonte de 1926, ate o arco de tijolo que leva ao A.
+ 4. Saida do meio para o xuxa: beco de paralelepipedo entre a casa amarela e o predio branco com o "A".
+ 5. Xuxa: o apartamento laranja com a varandinha, a tenda do cogu e a carroca de feno.
+ Arena = Bomb A: a C4 plantada, o FalleN jovem defendendo.
+
+
+---------------------------------------------
+FUNDO DA FASE 6 - A vila do Inferno ao por do sol
+---------------------------------------------
+Anexar: 1) Fase05_Fundo.png (Assets/Art/Maps: referencia de ESTILO); 2) 1 a 3 prints do Inferno
+(os telhados, a igreja, o campanario).
+
+Crie o FUNDO (cenario distante, parallax) de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral.
+
+Use EXATAMENTE o estilo da primeira imagem anexada (o fundo da fase anterior): mesmo tamanho de pixel, mesma nitidez, contornos limpos, cores solidas sem desfoque, mesma composicao em camadas (ceu em cima e o cenario ocupando a metade de baixo, com construcoes mais proximas embaixo e mais distantes perto do horizonte). NAO copie a cidade alema dela: use so o estilo.
+
+O CONTEUDO vem das outras imagens anexadas (o mapa Inferno do Counter-Strike): uma vila antiga do interior da Italia, numa colina, vista de longe, AO POR DO SOL.
+
+O que deve aparecer:
+- Casas de pedra e reboco em tons de ocre, bege, terracota e amarelo queimado, coladas umas nas outras, com telhados de telha vermelha, chamines, janelas com venezianas verdes e varais com roupas.
+- O campanario alto de pedra de uma igreja se destacando no meio da vila, com um sino.
+- Ciprestes altos e escuros e algumas oliveiras entre as casas.
+- Ao fundo, colinas suaves com vinhedos em fileiras e mais casinhas pequenas perto do horizonte.
+- Ceu de por do sol: laranja e dourado perto do horizonte, passando para rosa e roxo no alto, com nuvens finas iluminadas por baixo e o sol baixo e grande atras das colinas.
+- Luz quente e baixa, sombras compridas, clima melancolico de fim de dia.
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024.
+- Ceu ocupando mais ou menos a metade de cima; a vila e as colinas ocupando a metade de baixo ate a borda inferior.
+- Paleta quente de fim de tarde: ocre, terracota, dourado, laranja, rosa e roxo, com o verde-escuro dos ciprestes.
+- SEM personagens, SEM pessoas, SEM animais, SEM texto legivel, SEM logotipos, SEM interface.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 1 - Dentro da igreja do bomb B (cenario fechado)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase05_Tela04.png (Assets/Art/Maps: ESTILO, tamanho do pixel e ESCALA desta campanha);
+2) Player_blue_run_0.png (Assets/Art/Characters: tamanho do personagem);
+NAO anexar os prints da igreja do CS:GO (ela e simples demais): a igreja aqui e mais rica, e do Inferno ficam
+so as colunas coríntias, o vitral gotico, os andaimes e os sacos de cimento em paletes (a igreja em reforma).
+
+Crie a TELA 1 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral: o INTERIOR de uma pequena igreja antiga de pedra numa vila do interior da Italia (a igreja do bomb B do mapa Inferno do Counter-Strike), no fim da tarde. Cenario FECHADO, visto de lado, como um corte do predio: paredes ao fundo, teto em cima, chao embaixo. O personagem comeca aqui, escondido, e anda da esquerda para a direita ate a porta de saida.
+
+Use o estilo, o tamanho de pixel, a nitidez e a ESCALA da primeira imagem anexada (um personagem de pe teria a altura de uma porta comum), mas aqui a imagem e TODA preenchida, sem ceu. O personagem da segunda imagem teria cerca de 1/7 da altura da imagem e serve so de medida: ele NAO aparece.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a parede do fundo da igreja com o ALTAR: uma mesa de pedra com uma toalha branca gasta, castiçais com velas acesas e derretidas, um crucifixo simples de madeira na parede e um afresco antigo e desbotado no alto (figuras e anjos apagados pelo tempo, sem rostos detalhados). Essa parede fecha a tela a esquerda.
+- Ao longo da nave: fileiras de bancos de madeira escura vistos de lado, alguns tombados, e um tapete vermelho gasto no chao de pedra.
+- Nas paredes de tijolo de pedra clara: COLUNAS coríntias grossas e caneladas (com capiteis de folhas em espiral) sustentando arcos, nichos com estatuas pequenas e velas, e VITRAIS goticos altos e estreitos, de ponta em arco, com vidros coloridos (vermelho, rosa, azul, dourado) por onde entra a luz alaranjada do por do sol, fazendo faixas de luz com poeira no ar ate o chao.
+- No alto: o teto em abobada de pedra com vigas de madeira escura e um lustre de ferro com velas.
+- Um velho relogio de parede de madeira, parado, encostado num pilar (detalhe do tema do tempo).
+- A igreja esta EM REFORMA: um ANDAIME de tubos de metal com tabuas de madeira encostado numa parede, placas de compensado apoiadas no chao, e pilhas de SACOS DE CIMENTO de papel bege sobre paletes de madeira, junto com alguns caixotes (que tambem servem de cobertura num combate).
+- BORDA DIREITA: a PORTA de saida da igreja: um portal alto de pedra em arco, com as duas folhas de madeira grossa ABERTAS, por onde entra a luz forte do por do sol e se ve um pedaco da pracinha de pedra la fora. O portal fecha a tela a direita.
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral, cenario fechado.
+- NADA transparente: a imagem inteira e preenchida, inclusive a vista de fora pela porta.
+- O CHAO por onde se anda e o piso de lajes de pedra da igreja, reto e plano de ponta a ponta, a cerca de 25% da altura da imagem contando de baixo para cima, com a fundacao de pedra escura embaixo.
+- O teto fica a pelo menos 4 vezes a altura do personagem acima do chao.
+- 4 plataformas com topo PLANO, reto e bem visivel: os bancos de madeira (na altura do joelho do personagem), a pilha de sacos de cimento sobre o palete (na altura do peito), o altar de pedra (na altura da cintura) e a plataforma de tabuas do ANDAIME, no meio da igreja (cerca de 1,5 vez a altura do personagem acima dos sacos de cimento, logo acima deles).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM maos, SEM interface, SEM texto legivel, SEM logotipos.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 2 - Saida da igreja: a base CT (emenda direto na porta da Tela 1, sem transicao)
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase06_Tela01.png (Assets/Art/Maps: a igreja; ESTILO, ESCALA e a borda a continuar);
+2) Player_blue_run_0.png (Assets/Art/Characters); 3) e 4) os 2 prints da base CT do Inferno (praca com o poco).
+
+Crie a TELA 2 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela continua EXATAMENTE a borda direita da primeira imagem anexada: o personagem sai pela porta aberta da igreja e anda, da esquerda para a direita, pela base CT do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), uma pracinha de uma vila antiga do interior da Italia, no fim da tarde.
+
+Use o mesmo estilo, o mesmo tamanho de pixel, a mesma iluminacao de por do sol e a MESMA ESCALA da primeira imagem. O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO (as construcoes e os objetos), redesenhado em vista lateral.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a parede de FORA da igreja: pedra cinza com uma janela redonda no alto e o portal de pedra em arco por onde o personagem acabou de sair, com a folha de madeira da porta aberta encostada na parede. Ocupa so uma faixa estreita da borda.
+- Uma rua curta de paralelepipedos que se abre para a praca.
+- O chao da praca de TIJOLINHOS vermelhos em espinha de peixe.
+- Um POCO antigo de pedra com um telhadinho de madeira em cima e um balde.
+- Um terraco de pedra com uma PERGOLA de madeira coberta de flores cor-de-rosa, com uma escadinha de pedra.
+- Uma casinha de reboco branco descascado com telhado de telha, porta dupla de madeira em arco, caixinhas de correio vermelhas na parede e vasos de flores na porta.
+- Ao fundo: casas de reboco branco e laranja com varandas de ferro, venezianas, vasos de flores, fios eletricos entre as casas, a torre de pedra do campanario aparecendo ao longe e o ceu de por do sol.
+- BORDA DIREITA: uma galeria de ARCOS de tijolo com pilares de pedra (um portico), com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta vermelha gasta na parede debaixo de um arco. Os arcos ficam ABERTOS para o personagem seguir andando para a direita (o caminho para o bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral.
+- O ceu aparece por cima dos telhados e NAO pode ser transparente.
+- O CHAO por onde se anda continua o piso da primeira imagem na MESMA altura, reto e plano de ponta a ponta, a cerca de 33% da altura da imagem contando de baixo para cima, com a fundacao de pedra escura embaixo.
+- 4 plataformas com topo PLANO, reto e bem visivel: a borda do poco (na altura da cintura do personagem), o terraco da pergola (na altura do peito), o telhado da casinha (cerca de 2 vezes a altura do personagem) e uma varanda de ferro de uma das casas do fundo (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta pintados na parede.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 3 - Passagem do arco (arch): continua a borda direita da Tela 2
+---------------------------------------------
+Anexar NESTA ORDEM: 1) Fase06_Tela02.png (Assets/Art/Maps: a base CT; ESTILO, ESCALA e a borda a continuar);
+2) Player_blue_run_0.png (Assets/Art/Characters); 3) a 5) os 3 prints do arco do Inferno (beco, arco de tijolo, fonte de 1926).
+
+Crie a TELA 3 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela continua EXATAMENTE a borda direita da primeira imagem anexada (a galeria de arcos de tijolo com pilares de pedra e o "A" com a seta): o personagem passa por baixo desses arcos e segue, da esquerda para a direita, pela passagem do arco (arch) do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), em direcao ao bomb A, no fim da tarde.
+
+Use o mesmo estilo, o mesmo tamanho de pixel, a mesma iluminacao de por do sol e a MESMA ESCALA da primeira imagem. O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO (as construcoes e os objetos), redesenhado em vista lateral.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a continuacao da galeria de arcos de tijolo com pilares de pedra da primeira imagem, com o telhado de telha por cima.
+- Debaixo dos arcos, um patio pequeno com piso de lajes de pedra avermelhadas e, no meio, uma FONTE antiga em forma de coluna alta de tijolo e pedra clara, com uma bica e uma bacia de pedra na frente.
+- Um beco estreito de paralelepipedos entre casas de reboco branco descascado (aparecendo os tijolos por baixo), com janelas de venezianas verdes e de madeira, floreiras com flores vermelhas, uma luminaria de parede, fios eletricos e uma porta de madeira com moldura de pedra em arco.
+- Encostados numa parede: PALETES de madeira em pe e um caixote, com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta laranja gasta na parede logo acima.
+- Uma sacada de ferro com mesa de madeira e vasos de flores no alto de uma das casas.
+- BORDA DIREITA: o ARCO: uma passagem baixa e escura por dentro de um predio, com um arco grosso de tijolos aparentes por cima e pilares de tijolo dos lados, e uma grelha de ferro no chao da entrada. Ao fundo do tunel aparece a luz do outro lado. A passagem fica ABERTA para o personagem seguir andando para a direita (o caminho para o bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral.
+- O ceu aparece por cima dos telhados e NAO pode ser transparente.
+- O CHAO por onde se anda continua o chao da primeira imagem na MESMA altura, reto e plano de ponta a ponta, a cerca de 33% da altura da imagem contando de baixo para cima, com a guia de pedra e a fundacao de pedra escura embaixo iguais as da primeira imagem.
+- 4 plataformas com topo PLANO, reto e bem visivel: a pilha de paletes com o caixote (na altura do peito do personagem), a bacia da fonte (na altura do joelho), o topo dos pilares da galeria de arcos (cerca de 2 vezes a altura do personagem) e a sacada de ferro (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta pintados na parede (nem a data da fonte).
+- Pixel art nitida, cores solidas, sem desfoque.
+
+CORRECAO DA TELA 3 (mandar na mesma conversa, com a imagem gerada):
+Corrija esta imagem mantendo tudo igual (estilo, escala, cores, chao, a galeria de arcos, a fonte, os paletes com o "A", a sacada), com duas mudancas:
+1) Tire a BRECHA entre os dois predios (o beco estreito com a escadinha e a luminaria no meio da imagem). Os dois predios ficam COLADOS: a parede de reboco do predio da direita continua ate encostar no predio da galeria de arcos, sem nenhum vao, rua ou escada entre eles. O ceu so aparece por cima dos telhados.
+2) O ARCO da direita vira um tunel que o personagem atravessa andando, visto de lado como um corte do predio: o arco de tijolos e o pilar de tijolo ficam so na ENTRADA do tunel; depois dela, o tunel continua por dentro do predio ate a BORDA DIREITA da imagem, com o teto baixo de tijolo em cima, as paredes escuras de reboco e tijolo ao fundo e o chao de lajes de pedra na MESMA altura do chao da rua, reto e plano. Nao desenhe a luz do fim do tunel nem a saida: o tunel sai pela borda direita da imagem, aberto, e continua na proxima tela.
+Regras: mesmo formato 1536x1024, nada transparente, SEM personagens, SEM armas, NENHUM texto alem do "A" com a seta.
+
+TUNEL DO ARCO - NOVA IDEIA (a correcao acima ficou estranha):
+No jogo, a fachada do predio fica NA FRENTE do jogador e some (esmaece) quando ele entra no tunel, mostrando o tunel por
+dentro; quando ele sai, a fachada volta. Para isso sao 2 imagens IGUAIS, mudando so o tunel:
+ A) a tela com a fachada FECHADA (o arco visto de fora) -> o ChatGPT gera primeiro;
+ B) a mesma imagem com o tunel aberto por dentro -> gerada como edicao da A, na mesma conversa.
+Eu recorto a diferenca entre as duas e monto a fachada que esmaece.
+
+PROMPT A (mandar na conversa da Tela 3, com a PRIMEIRA versao da Tela 3 anexada):
+Corrija esta imagem mantendo tudo igual (estilo, escala, cores, chao, a galeria de arcos, a fonte, os paletes com o "A", a sacada), com duas mudancas:
+1) Tire a BRECHA entre os dois predios (o beco estreito com a escadinha e a luminaria no meio da imagem). Os dois predios ficam COLADOS: a parede de reboco do predio da direita continua ate encostar no predio da galeria de arcos, sem vao, rua ou escada entre eles. O ceu so aparece por cima dos telhados.
+2) O predio da direita vai ate a BORDA DIREITA da imagem, e a entrada do tunel em arco de tijolos fica no MEIO da fachada dele (nao na borda), com a parede de reboco continuando depois dela ate a borda. Dentro do arco o tunel e escuro, sem luz no fim.
+Regras: mesmo formato 1536x1024, nada transparente, SEM personagens, SEM armas, NENHUM texto alem do "A" com a seta.
+
+PROMPT B (mandar logo em seguida, na mesma conversa):
+Agora faca a MESMA imagem, identica pixel por pixel em tudo, mudando SO o predio do tunel: a parte de BAIXO da fachada dele, da entrada do arco ate a borda direita e do chao ate logo acima do arco, foi "cortada" como num desenho de corte, mostrando o tunel POR DENTRO visto de lado: teto baixo em abobada de tijolo, parede do fundo de tijolo e reboco escuro com uma lampada pequena acesa, e o chao de lajes de pedra na MESMA altura do chao da rua, reto, indo ate a borda direita. A parte de cima do predio (janelas, sacada, telhado) continua exatamente igual.
+
+TELA 3 - PROMPT REFEITO (as edicoes estragaram o estilo; gerar numa CONVERSA NOVA, do zero)
+Ideia do tunel: a entrada do arco fica na BORDA DIREITA desta tela; o tunel continua na proxima tela, que termina
+na saida para o bomb A. O personagem passa por tras do pilar e do arco da entrada (recortados e desenhados na frente
+dele, como os aneis do tubo da Fase 5), sem transicao.
+Anexar NESTA ORDEM: 1) Fase06_Tela02.png; 2) Player_blue_run_0.png; 3) a 5) os 3 prints do arco do Inferno.
+
+Crie a TELA 3 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela continua EXATAMENTE a borda direita da primeira imagem anexada (a galeria de arcos de tijolo com pilares de pedra e o "A" com a seta): o personagem passa por baixo desses arcos e segue, da esquerda para a direita, pela passagem do arco (arch) do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), em direcao ao bomb A, no fim da tarde.
+
+Use EXATAMENTE o estilo da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmas cores, mesmas texturas de reboco e tijolo, mesma iluminacao de por do sol e a MESMA ESCALA (a porta da casinha da primeira imagem tem o tamanho de uma porta desta tela). O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO, redesenhado em vista lateral.
+
+A tela e UMA FACHADA CONTINUA, sem nenhum vao, beco, rua ou escada entre os predios. Da esquerda para a direita:
+- BORDA ESQUERDA (cerca de 1/3 da largura): a continuacao da galeria de arcos de tijolo com pilares de pedra e telhado de telha da primeira imagem. Debaixo de um dos arcos, um patio pequeno com piso de lajes de pedra avermelhadas, um banco de madeira e uma FONTE antiga em forma de coluna alta de tijolo e pedra clara, com uma bica e uma bacia de pedra.
+- COLADO na galeria, sem espaco entre eles: um predio de dois andares de reboco branco descascado (aparecendo tijolos), com janelas de venezianas verdes, floreiras com flores vermelhas, uma trepadeira com flores rosa, uma luminaria de parede e uma sacada de ferro com mesa e vasos no segundo andar. No terreo, PALETES de madeira em pe e um caixote encostados na parede, com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta laranja gasta logo acima.
+- BORDA DIREITA: a ENTRADA DO TUNEL do arco, no terreo desse mesmo predio, encostada na borda: um pilar de tijolo e um arco grosso de tijolos aparentes por cima, cortado pela borda direita da imagem. Dentro dele, o tunel e escuro (sombra de tijolo e reboco), sem luz no fim, com o chao de lajes de pedra na MESMA altura da rua, continuando ate a borda.
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral.
+- O ceu aparece SO por cima dos telhados e NAO pode ser transparente.
+- O CHAO por onde se anda continua o chao da primeira imagem na MESMA altura, reto e plano de ponta a ponta, a cerca de 33% da altura da imagem contando de baixo para cima, com a guia de pedra e a fundacao de pedra escura embaixo iguais as da primeira imagem.
+- 4 plataformas com topo PLANO, reto e bem visivel: a pilha de paletes com o caixote (na altura do peito do personagem), a bacia da fonte (na altura do joelho), o topo dos pilares da galeria (cerca de 2 vezes a altura do personagem) e a sacada de ferro (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta (nem a data da fonte).
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 3 - REFAZER (mesma ideia: 2 imagens, tunel FECHADO e ABERTO), ligando certo com a Tela 2
+---------------------------------------------
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM: 1) Fase06_Tela02.png (Assets/Art/Maps, a versao com a galeria de arcos na
+borda direita); 2) Player_blue_run_0.png; 3) a 5) os 3 prints do arco do Inferno.
+
+PROMPT 1 (tunel FECHADO):
+Crie a TELA 3 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela e a CONTINUACAO DIRETA da primeira imagem anexada: se as duas imagens forem colocadas lado a lado (a primeira na esquerda), tem que parecer UMA UNICA imagem, sem emenda. O personagem segue andando da esquerda para a direita pela passagem do arco (arch) do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), em direcao ao bomb A, no fim da tarde.
+
+LIGACAO COM A PRIMEIRA IMAGEM (o mais importante):
+- A borda direita da primeira imagem termina no meio de uma galeria de arcos de tijolo com pilares de pedra e telhado de telha. A borda ESQUERDA desta tela continua EXATAMENTE essa galeria: os mesmos arcos, os mesmos pilares, o mesmo telhado na MESMA altura e com a MESMA inclinacao, o mesmo tamanho de tijolo e de telha, como se a imagem tivesse sido cortada ali.
+- O chao continua na mesma altura e com o mesmo piso de tijolinho, a mesma guia de pedra e a mesma fundacao escura embaixo.
+- O ceu continua com as mesmas cores e o mesmo tipo de nuvem.
+
+ESTILO (igual a primeira imagem): mesmo tamanho de pixel, mesma nitidez, MESMO CONTRASTE, mesma saturacao e mesmas cores (nem mais claro, nem mais escuro, nem mais vivo), mesmas texturas de reboco, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (as portas, janelas e pilares desta tela tem o mesmo tamanho dos da primeira imagem). O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO, redesenhado em vista lateral.
+
+O que deve aparecer, da esquerda para a direita, numa FACHADA CONTINUA (sem vao, beco, rua ou escada entre os predios):
+- A continuacao da galeria de arcos, terminando num arco maior com um patio pequeno de lajes de pedra avermelhadas, um banco de madeira e uma FONTE antiga em forma de coluna alta de tijolo e pedra clara, com bica e bacia de pedra.
+- COLADO na galeria: um predio de dois andares de reboco branco descascado (aparecendo tijolos), com janelas de venezianas verdes, floreiras com flores vermelhas, uma trepadeira com flores rosa e uma sacada de ferro com mesa e vasos no segundo andar. No terreo, PALETES de madeira em pe e um caixote encostados na parede, com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta laranja gasta logo acima.
+- No terreo desse mesmo predio, a ENTRADA DO TUNEL do arco, no meio da fachada: um arco grosso de tijolos aparentes com pilares de tijolo, escuro por dentro, sem luz no fim. Depois dela, a parede do predio continua ate a BORDA DIREITA.
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu aparece SO por cima dos telhados e NAO pode ser transparente.
+- O CHAO por onde se anda e reto e plano de ponta a ponta, na mesma altura do chao da primeira imagem.
+- Plataformas com topo PLANO, reto e bem visivel: a pilha de paletes com o caixote (altura do peito do personagem), a bacia da fonte (altura do joelho), o topo dos pilares da galeria (cerca de 2 vezes a altura do personagem) e a sacada de ferro (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta (nem a data da fonte).
+- Pixel art nitida, cores solidas, sem desfoque.
+
+PROMPT 2 (tunel ABERTO, mandar logo depois, na mesma conversa):
+Agora faca a MESMA imagem, identica em tudo (mesmo enquadramento, mesmas cores, mesmo contraste, mesmas posicoes), mudando SO o predio do tunel: a parte de BAIXO da fachada dele, da entrada do arco ate a borda direita e do chao ate logo acima do arco, foi "cortada" como num desenho de corte, mostrando o tunel POR DENTRO visto de lado: teto baixo em abobada de tijolo, parede do fundo de tijolo e reboco escuro com uma lampada pequena acesa, e o chao de lajes de pedra na MESMA altura do chao da rua, reto, indo ate a borda direita. A parte de cima do predio (janelas, sacada, telhado) continua exatamente igual.
+
+
+---------------------------------------------
+TELA 2 - REFAZER (predios INTEIROS, nada cortado nas bordas)
+---------------------------------------------
+Regra para TODAS as proximas telas: nenhum predio, telhado, arco ou galeria cortado pela borda; cada borda termina
+num espaco aberto (rua, ceu) ou numa parede lisa, para a emenda com a tela vizinha dar certo.
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_tela2):
+1) 1_Tela2_antiga_estilo.png (estilo, escala e conteudo); 2) 2_Tela3_proxima.png (a tela que vem DEPOIS, a direita);
+3) Player_blue_run_0.png; 4) e 5) os 2 prints da base CT do Inferno.
+
+Crie a TELA 2 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral: a base CT do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), uma pracinha de uma vila antiga do interior da Italia, no fim da tarde. O personagem anda da esquerda para a direita.
+
+ESTILO E ESCALA: refaca a primeira imagem anexada com o MESMO estilo, mesmo tamanho de pixel, mesmo contraste, mesmas cores, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e pilares do mesmo tamanho). Pode reaproveitar os mesmos elementos dela (o poco, a pergola com flores, a casinha branca com a porta em arco e as caixinhas de correio, as casas do fundo). O personagem da terceira imagem serve so de medida: ele NAO aparece.
+
+REGRA MAIS IMPORTANTE: TODOS os predios, casas, telhados, muros e arcos aparecem INTEIROS dentro da imagem. NENHUM predio pode ser cortado pela borda esquerda nem pela borda direita: cada construcao comeca e termina dentro da imagem, com as duas paredes laterais e o telhado completos. Nas duas bordas fica so ceu por cima e o chao da rua embaixo (ou uma parede lisa sem janela).
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: uma faixa estreita de rua de paralelepipedos com ceu por cima (nada cortado).
+- A parede de FORA da igreja vista de lado, INTEIRA: um predio de pedra cinza com uma janela redonda no alto e o portal de pedra em arco com a porta de madeira aberta (por onde o personagem sai), terminando dentro da imagem.
+- A praca de TIJOLINHOS vermelhos em espinha de peixe com o POCO de pedra com telhadinho de madeira e um balde.
+- Um terraco de pedra com a PERGOLA de madeira coberta de flores cor-de-rosa, com escadinha de pedra.
+- A casinha de reboco branco descascado com telhado de telha, porta dupla de madeira em arco, caixinhas de correio vermelhas e vasos de flores, INTEIRA.
+- Ao fundo, casas de reboco branco e laranja com varandas de ferro e varal, todas INTEIRAS, mais baixas que o topo da imagem, com o ceu de por do sol por cima.
+- BORDA DIREITA: depois da ultima casa, um trecho de rua livre com ceu por cima: e ali que comeca a galeria de arcos da segunda imagem anexada (a proxima tela), entao NAO desenhe arcos nem galeria nesta tela.
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- O CHAO por onde se anda e reto e plano de ponta a ponta, a cerca de 33% da altura da imagem contando de baixo para cima, com a guia de pedra e a fundacao de pedra escura embaixo iguais as da primeira imagem.
+- Plataformas com topo PLANO, reto e bem visivel: a borda do poco (altura da cintura do personagem), o terraco da pergola (altura do peito), o telhado da casinha (cerca de 2 vezes a altura do personagem) e uma varanda de ferro de uma das casas do fundo (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, SEM texto.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 3 - REFAZER (predios inteiros; o tunel atravessa um predio INTEIRO dentro da tela)
+---------------------------------------------
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_tela3):
+1) 1_Tela2_anterior.png (a tela de ANTES: estilo, escala e a borda direita a continuar);
+2) 2_Tela3_antiga_conteudo.png (conteudo: galeria, fonte, paletes com o "A", predio com sacada e o arco);
+3) 3_Player_blue_run_0.png; 4) a 6) os 3 prints do arco do Inferno.
+
+PROMPT 1 (tunel FECHADO):
+Crie a TELA 3 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela vem logo DEPOIS da primeira imagem anexada (que fica a esquerda dela): o personagem segue andando da esquerda para a direita pela passagem do arco (arch) do mapa Inferno do Counter-Strike, em direcao ao bomb A, no fim da tarde.
+
+ESTILO E ESCALA: exatamente iguais aos da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmo contraste, mesmas cores, mesmas texturas de reboco, pedra, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e pilares do mesmo tamanho que os da primeira imagem). O ceu tem as mesmas cores e nuvens. O personagem da terceira imagem serve so de medida: ele NAO aparece. Use a segunda imagem como referencia do CONTEUDO (os mesmos elementos, redesenhados).
+
+REGRA MAIS IMPORTANTE: TODOS os predios, telhados, galerias e arcos aparecem INTEIROS dentro da imagem. NENHUM predio pode ser cortado pela borda esquerda nem pela borda direita: cada construcao comeca e termina dentro da imagem, com as paredes laterais e o telhado completos. Nas duas bordas fica so ceu por cima e o chao da rua embaixo.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: um trecho curto de rua com ceu por cima, continuando a borda direita da primeira imagem (o muro baixo de pedra e o piso).
+- Uma GALERIA de arcos de tijolo com pilares de pedra e telhado de telha, INTEIRA (com as duas pontas fechadas), com um patio de lajes de pedra avermelhadas, um banco de madeira e uma FONTE antiga em forma de coluna alta de tijolo e pedra clara, com bica e bacia de pedra.
+- COLADO na galeria: um predio de dois andares de reboco branco descascado (aparecendo tijolos), INTEIRO, com janelas de venezianas verdes, floreiras, uma trepadeira com flores rosa e uma sacada de ferro com mesa e vasos. No terreo, PALETES de madeira em pe e um caixote, com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta laranja gasta.
+- O TUNEL DO ARCO atravessando o terreo desse predio de um lado ao outro: na fachada, a ENTRADA em arco grosso de tijolos aparentes com pilares de tijolo (escura por dentro) e, mais a direita, a SAIDA igual, ainda dentro do mesmo predio. O predio termina inteiro depois da saida.
+- BORDA DIREITA: depois do predio, um trecho de rua livre com ceu por cima (o caminho para o bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- O CHAO por onde se anda e reto e plano de ponta a ponta, na MESMA altura do chao da primeira imagem, com a mesma guia de pedra e a mesma fundacao escura embaixo.
+- Plataformas com topo PLANO, reto e bem visivel: a pilha de paletes com o caixote (altura do peito do personagem), a bacia da fonte (altura do joelho), o topo dos pilares da galeria (cerca de 2 vezes a altura do personagem) e a sacada de ferro (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+PROMPT 2 (tunel ABERTO, mandar logo depois, na mesma conversa):
+Agora faca a MESMA imagem, identica em tudo (mesmo enquadramento, mesmas cores, mesmo contraste, mesmas posicoes), mudando SO o terreo do predio do tunel: a parede da frente entre a entrada e a saida do tunel, do chao ate logo acima dos arcos, foi "cortada" como num desenho de corte, mostrando o tunel POR DENTRO visto de lado: teto baixo em abobada de tijolo, parede do fundo de tijolo e reboco escuro com uma lampada pequena acesa, e o chao de lajes de pedra na MESMA altura do chao da rua, reto, ligando a entrada a saida. Os arcos de tijolo da entrada e da saida continuam no lugar. A parte de cima do predio (janelas, sacada, telhado) continua exatamente igual.
+
+
+---------------------------------------------
+TELA 3 - REFAZER SEM O TUNEL (so as construcoes; chao no padrao da Tela 2)
+---------------------------------------------
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_tela3_sem_tunel):
+1) 1_Tela2_atual.png (a tela de ANTES: estilo, escala, CHAO e a borda direita a continuar);
+2) 2_Tela3_conteudo.png (conteudo: galeria com a fonte, predio com a sacada, paletes com o "A");
+3) 3_Player_blue_run_0.png.
+
+Crie a TELA 3 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela vem logo DEPOIS da primeira imagem anexada (que fica a esquerda dela): se as duas forem colocadas lado a lado, tem que parecer UMA UNICA imagem. O personagem segue andando da esquerda para a direita por uma vila antiga do interior da Italia (o mapa Inferno do Counter-Strike), em direcao ao bomb A, no fim da tarde.
+
+ESTILO E ESCALA: exatamente iguais aos da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmo contraste, mesmas cores, mesmas texturas de reboco, pedra, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e pilares do mesmo tamanho). O ceu tem as mesmas cores e nuvens. O personagem da terceira imagem serve so de medida: ele NAO aparece. Use a segunda imagem como referencia do CONTEUDO (os mesmos elementos, redesenhados), mas SEM o tunel.
+
+O CHAO (muito importante): IGUAL ao da primeira imagem, continuando a borda direita dela: o mesmo piso de TIJOLINHOS vermelhos em espinha de peixe, do mesmo tamanho e cor, com o mesmo caminho de pedrinhas cinza na borda, a mesma guia de pedra clara na frente e a mesma fundacao de pedra escura embaixo, na MESMA altura, reto e plano de ponta a ponta.
+
+REGRA: TODAS as construcoes aparecem INTEIRAS dentro da imagem; nenhum predio, telhado ou galeria cortado pelas bordas. Nas duas bordas fica so ceu por cima, o muro baixo de pedra e o chao.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a continuacao do muro baixo de pedra e da rua da borda direita da primeira imagem, com ceu por cima.
+- Uma GALERIA de arcos de tijolo com pilares de pedra e telhado de telha, INTEIRA (as duas pontas fechadas), com um banco de madeira e uma FONTE antiga em forma de coluna alta de tijolo e pedra clara, com bica e bacia de pedra.
+- COLADO na galeria: um predio de dois andares de reboco branco descascado (aparecendo tijolos), INTEIRO, com janelas de venezianas verdes, floreiras, uma trepadeira com flores rosa e uma sacada de ferro com mesa e vasos no segundo andar. O TERREO E UMA PAREDE FECHADA, SEM TUNEL, SEM ARCO E SEM PASSAGEM: so reboco com tijolos aparentes, uma porta de madeira comum fechada e uma janela. Encostados na parede, PALETES de madeira em pe e um caixote, com uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta laranja gasta.
+- BORDA DIREITA: depois do predio, um trecho de rua livre com o muro baixo de pedra e ceu por cima (o caminho para o bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- Plataformas com topo PLANO, reto e bem visivel: a pilha de paletes com o caixote (altura do peito do personagem), a bacia da fonte (altura do joelho) e a sacada de ferro (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta.
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 4 - Saida do meio para o xuxa (continua a borda direita da Tela 3)
+---------------------------------------------
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_tela4):
+1) 1_Tela3_anterior.png (a tela de ANTES: estilo, escala, ceu, CHAO e a borda direita a continuar);
+2) 2_Player_blue_run_0.png; 3) a 5) os 3 prints do Inferno (beco com a casa amarela, o mural, o predio com o "A").
+
+Crie a TELA 4 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela vem logo DEPOIS da primeira imagem anexada (que fica a esquerda dela): se as duas forem colocadas lado a lado, tem que parecer UMA UNICA imagem. O personagem segue andando da esquerda para a direita pelo beco que sai do meio do mapa Inferno do Counter-Strike (as ultimas imagens anexadas) em direcao ao bomb A, no fim da tarde.
+
+ESTILO E ESCALA: exatamente iguais aos da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmo contraste, mesmas cores, mesmas texturas de reboco, pedra, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e muros do mesmo tamanho). O CEU e IGUAL ao da primeira imagem: roxo em cima, rosa e laranja perto do horizonte, com as mesmas nuvens alaranjadas. O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO, redesenhado em vista lateral.
+
+O CHAO (muito importante): IGUAL ao da primeira imagem, continuando a borda direita dela: o mesmo piso de TIJOLINHOS vermelhos em espinha de peixe, do mesmo tamanho e cor, com o mesmo caminho de pedrinhas cinza na borda, a mesma guia de pedra clara na frente e a mesma fundacao de pedra escura embaixo, na MESMA altura, reto e plano de ponta a ponta.
+
+REGRA: TODAS as construcoes aparecem INTEIRAS dentro da imagem; nenhum predio, telhado ou muro cortado pelas bordas. Nas duas bordas fica so ceu por cima, o muro baixo de pedra e o chao.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a continuacao do muro baixo de pedra com o vaso de flores vermelhas e da rua da borda direita da primeira imagem, com ceu por cima.
+- Uma casa de dois andares de reboco AMARELO-OCRE descascado (aparecendo tijolos cinza por baixo), INTEIRA, com telhado de telha, janelas de madeira com moldura de pedra, uma calha de metal descendo pela parede, uma porta em arco de pedra com uma luminaria ao lado, um canteiro baixo de pedra com floreiras e flores rosa e amarelas.
+- Uma casa menor de reboco LARANJA-TERRACOTA com um alpendre de telhado de telha inclinado sobre a porta e um canteiro de flores na calcada.
+- Fios eletricos pretos cruzando o ceu entre as casas, presos num poste de madeira com isoladores.
+- Um muro alto de pedra e reboco branco gasto com pilares de pedra e um beiral de telha, com um grande MURAL antigo e desbotado pintado (dois leoes segurando um escudo redondo, SEM nenhuma escrita).
+- O predio branco de pedra do bomb A, INTEIRO, com telhado de telha ondulada, uma porta dupla de madeira, um palete de madeira encostado na parede e uma letra "A" e uma seta apontando para a DIREITA pintadas em tinta vermelha. Uma bicicleta amarela antiga e um barril de madeira encostados na parede.
+- BORDA DIREITA: depois do predio, um trecho de rua livre com o muro baixo de pedra e ceu por cima (o caminho para o bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- Plataformas com topo PLANO, reto e bem visivel: o canteiro de pedra com as floreiras (altura do joelho do personagem), o barril (altura da cintura), o alpendre de telha da casa laranja (cerca de 1,5 vez a altura do personagem) e o topo do muro do mural (cerca de 2,5 vezes a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta (nada de "Tenuta Auty", nada de numero "42").
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+TELA 5 - Xuxa (continua a borda direita da Tela 4; depois dela vem a arena do bomb A)
+---------------------------------------------
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_tela5):
+1) 1_Tela4_anterior.png (a tela de ANTES: estilo, escala, ceu, CHAO e a borda direita a continuar);
+2) 2_Player_blue_run_0.png; 3) a 5) os 3 prints do xuxa (apartamento com a varanda, a tenda, a carroca de feno).
+
+Crie a TELA 5 de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral. Ela vem logo DEPOIS da primeira imagem anexada (que fica a esquerda dela): se as duas forem colocadas lado a lado, tem que parecer UMA UNICA imagem. O personagem segue andando da esquerda para a direita por uma pracinha do mapa Inferno do Counter-Strike (as ultimas imagens anexadas), logo antes do bomb A, no fim da tarde.
+
+ESTILO E ESCALA: exatamente iguais aos da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmo contraste, mesmas cores, mesmas texturas de reboco, pedra, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e muros do mesmo tamanho). O CEU e IGUAL ao da primeira imagem: roxo em cima, rosa e laranja perto do horizonte, com as mesmas nuvens alaranjadas. O personagem da segunda imagem serve so de medida: ele NAO aparece. Das imagens do Counter-Strike use so o CONTEUDO, redesenhado em vista lateral.
+
+O CHAO (muito importante): IGUAL ao da primeira imagem, continuando a borda direita dela: o mesmo piso de TIJOLINHOS vermelhos em espinha de peixe, do mesmo tamanho e cor, com o mesmo caminho de pedrinhas cinza na borda, a mesma guia de pedra clara na frente e a mesma fundacao de pedra escura embaixo, na MESMA altura, reto e plano de ponta a ponta.
+
+REGRA: TODAS as construcoes aparecem INTEIRAS dentro da imagem; nenhum predio, telhado ou muro cortado pelas bordas. Nas duas bordas fica so ceu por cima, o muro baixo de pedra e o chao.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a continuacao do muro baixo de pedra e da rua da borda direita da primeira imagem, com ceu por cima.
+- O APARTAMENTO: um predio de dois andares de reboco LARANJA-TERRACOTA descascado (aparecendo tijolos), INTEIRO, com telhado de telha, janelas com venezianas de madeira e floreiras, uma porta de madeira no terreo com uma luminaria, e no segundo andar uma VARANDA comprida de madeira com grade de ferro trabalhado, com uma porta branca aberta para dentro do apartamento.
+- Na frente do apartamento, uma CARROCA de madeira cinza com rodas grandes de raios, carregada de FARDOS DE FENO empilhados, com um barril de madeira e um pouco de feno espalhado no chao.
+- A TENDA (alpendre): uma cobertura inclinada de telhas sobre uma porta em arco de madeira avermelhada, apoiada num pilar quadrado de pedra cinza, com uma caixinha de correio na parede.
+- Ao fundo, uma casa de reboco AMARELO-OCRE com venezianas verdes e um muro baixo de reboco com vasos de flores em cima.
+- BORDA DIREITA: depois das casas, um trecho de rua livre com o muro baixo de pedra e ceu por cima (a entrada do bomb A).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- Plataformas com topo PLANO, reto e bem visivel: o barril (altura da cintura do personagem), os fardos de feno na carroca (altura do peito), a VARANDA do apartamento (cerca de 2 vezes a altura do personagem, com o piso de madeira bem visivel) e o telhado da tenda (cerca de 1,5 vez a altura do personagem).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba, SEM interface, SEM logotipos, SEM texto (nada de "A", nada de numeros).
+- Pixel art nitida, cores solidas, sem desfoque.
+
+
+---------------------------------------------
+ARENA FINAL - Bomb A (continua a borda direita da Tela 5; fim da fase)
+---------------------------------------------
+A C4 NAO vem desenhada: ela vira um sprite separado (para a cena final do desarme). O chefao tambem e sprite.
+Gerar numa CONVERSA NOVA. Anexar NESTA ORDEM (pasta Claude outputs/referencias_arena):
+1) 1_Tela5_anterior.png (a tela de ANTES: estilo, escala, ceu, CHAO e a borda direita a continuar);
+2) 2_Player_blue_run_0.png; 3) o print do bomb A.
+
+Crie a ARENA FINAL de uma fase de um jogo 2D de acao run-and-gun em pixel art, vista lateral: o bomb A do mapa Inferno do Counter-Strike (a ultima imagem anexada), no fim da tarde. Ela vem logo DEPOIS da primeira imagem anexada (que fica a esquerda dela): se as duas forem colocadas lado a lado, tem que parecer UMA UNICA imagem. E aqui que acontece a luta final contra o chefao, entao o meio da tela precisa de espaco livre para a luta.
+
+ESTILO E ESCALA: exatamente iguais aos da primeira imagem: mesmo tamanho de pixel, mesma nitidez, mesmo contraste, mesmas cores, mesmas texturas de reboco, pedra, tijolo e telha, mesma luz de por do sol e a MESMA ESCALA (portas, janelas e muros do mesmo tamanho). O CEU e IGUAL ao da primeira imagem: roxo em cima, rosa e laranja perto do horizonte, com as mesmas nuvens alaranjadas. O personagem da segunda imagem serve so de medida: ele NAO aparece. Da imagem do Counter-Strike use so o CONTEUDO, redesenhado em vista lateral.
+
+O CHAO (muito importante): IGUAL ao da primeira imagem, continuando a borda direita dela: o mesmo piso de TIJOLINHOS vermelhos em espinha de peixe, do mesmo tamanho e cor, com a mesma guia de pedra clara na frente e a mesma fundacao de pedra escura embaixo, na MESMA altura, reto e plano de ponta a ponta.
+
+O que deve aparecer, da esquerda para a direita:
+- BORDA ESQUERDA: a continuacao do muro baixo de reboco e da rua da borda direita da primeira imagem, com ceu por cima.
+- No fundo, ocupando o meio da tela: um GALPAO comprido de reboco branco gasto com estrutura de vigas de madeira escura e telhado de telha ondulada, com DUAS grandes portas em ARCO de tijolo fechadas por portas de enrolar de metal escuro, com chamines de metal no telhado e fios eletricos. Atras dele, a torre de pedra do campanario da igreja aparecendo contra o ceu.
+- Na frente do galpao, o BOMB A: uma plataforma baixa de concreto (da altura do joelho do personagem) com o piso de ladrilhos vermelhos e uma marca circular laranja pintada no meio (o lugar da bomba), com uma escadinha de concreto de tres degraus na frente e CAIXOTES grandes de madeira com setas pretas pintadas: uma pilha de dois caixotes na esquerda da plataforma, um caixote medio no meio e um caixote largo na direita.
+- BORDA DIREITA (fecha a fase): uma casinha de reboco branco gasto, INTEIRA, com telhado de telha ondulada e uma porta dupla de madeira, com uma letra "A" e uma seta pintadas em tinta laranja. A casinha encosta na borda direita e fecha o caminho (a fase termina aqui).
+
+Regras obrigatorias:
+- Formato horizontal 1536x1024, vista lateral. O ceu NAO pode ser transparente.
+- Plataformas com topo PLANO, reto e bem visivel: a plataforma de concreto do bomb (altura do joelho), o caixote do meio (altura do peito), a pilha de dois caixotes da esquerda (cerca de 2 vezes a altura do personagem), o caixote largo da direita (altura do peito) e o telhado da casinha da direita (cerca de 2,5 vezes a altura do personagem).
+- O espaco entre os caixotes deve ser LIVRE (para a luta).
+- SEM personagens, SEM pessoas, SEM animais, SEM armas, SEM bomba (a marca circular fica vazia), SEM interface, SEM logotipos, e NENHUM texto alem do "A" com a seta (nada de "Vino Auty").
+- Pixel art nitida, cores solidas, sem desfoque.

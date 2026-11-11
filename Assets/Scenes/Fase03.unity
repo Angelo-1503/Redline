@@ -1692,6 +1692,7 @@ GameObject:
   - component: {fileID: 1714594194}
   - component: {fileID: 2947724388818297881}
   - component: {fileID: 7310668109858554014}
+  - component: {fileID: 7400000000000009002}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1769,6 +1770,7 @@ GameObject:
   - component: {fileID: 1969491605}
   - component: {fileID: 1969491604}
   - component: {fileID: 1969491606}
+  - component: {fileID: 7400000000000009001}
   m_Layer: 0
   m_Name: WaveSpawner
   m_TagString: Untagged
@@ -1840,7 +1842,7 @@ MonoBehaviour:
   cameraFollow: {fileID: 519420033}
   arenaStartX: 207.9375
   arenaEndX: 230.015625
-  nextSceneName: 
+  nextSceneName: Fase04
   nextSceneDelay: 2.5
 --- !u!1 &1975929947
 GameObject:
@@ -5154,6 +5156,141 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 020d5f66bc59400388176fa52f364fb7, type: 3}
   runFps: 12
   moveThreshold: 0.1
+--- !u!114 &7400000000000009001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969491603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8defe1a2ab46e4afd51cdc7da7463b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Waves.EncounterSpawner
+  encounters:
+  - name: 01 Rua do spawn
+    triggerX: -12
+    spawns:
+    - role: 0
+      x: -2
+      height: 0
+    - role: 1
+      x: 0.8
+      height: 1.26
+  - name: 02 Mercado
+    triggerX: -1
+    spawns:
+    - role: 0
+      x: 10
+      height: 0
+    - role: 1
+      x: 12
+      height: 0
+    - role: 0
+      x: 13
+      height: 0
+  - name: 03 Praca
+    triggerX: 10
+    spawns:
+    - role: 0
+      x: 21
+      height: 0
+    - role: 1
+      x: 18.9
+      height: 1.03
+    - role: 0
+      x: 23
+      height: 0
+  - name: 04 Escada de baixo
+    triggerX: 22
+    spawns:
+    - role: 0
+      x: 33
+      height: -3.21
+    - role: 0
+      x: 35
+      height: -3.21
+  - name: 05 Passagem do rato
+    triggerX: 62
+    spawns:
+    - role: 0
+      x: 74
+      height: -2.45
+    - role: 1
+      x: 77
+      height: -2.45
+    - role: 0
+      x: 79
+      height: -2.45
+  - name: 06 Cozinha
+    triggerX: 100
+    spawns:
+    - role: 0
+      x: 93
+      height: 1.86
+    - role: 1
+      x: 95.5
+      height: 1.86
+  - name: 07 Sala
+    triggerX: 136
+    spawns:
+    - role: 0
+      x: 147
+      height: -2.45
+    - role: 1
+      x: 156.9
+      height: -1.54
+    - role: 0
+      x: 149
+      height: -2.45
+  - name: 08 Tapete
+    triggerX: 150
+    spawns:
+    - role: 0
+      x: 161
+      height: -2.45
+    - role: 1
+      x: 169
+      height: -1.24
+    - role: 0
+      x: 163
+      height: -2.45
+  - name: 09 Sacada
+    triggerX: 162
+    spawns:
+    - role: 0
+      x: 172
+      height: -2.45
+    - role: 0
+      x: 150
+      height: -2.45
+  player: {fileID: 73011451}
+  roadY: -2.5
+  feetToPivot: 0.67
+--- !u!114 &7400000000000009002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714594193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383065a54bae4c42b3aa257c4c842c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.LevelIntro
+  title: FASE 3
+  subtitle: Mirage
+  titleHold: 1.8
+  fadeDuration: 0.9
+  announcement: 
+  announcementColor: {r: 1, g: 0.6, b: 0.15, a: 1}
+  announcementHold: 2.5
+  announcementClip: {fileID: 0}
+  announcementVolume: 1
+  introClip: {fileID: 8300000, guid: d2baee9cf90b46ea8a174d578e3afa5b, type: 3}
+  introVolume: 0.9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

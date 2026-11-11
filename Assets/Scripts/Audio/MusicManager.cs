@@ -1,4 +1,5 @@
 using UnityEngine;
+using Redline.Settings;
 
 namespace Redline.Audio
 {
@@ -34,8 +35,15 @@ namespace Redline.Audio
 
             audioSource.playOnAwake = false;
             audioSource.loop = true;
-            audioSource.volume = volume;
+            audioSource.volume = volume * GameSettings.MusicVolume;
             audioSource.spatialBlend = 0f; // música 2D, não posicional
+        }
+
+        private void OnEnable() { GameSettings.Changed += ApplyVolume; }
+        private void OnDisable() { GameSettings.Changed -= ApplyVolume; }
+        private void ApplyVolume()
+        {
+            if (audioSource != null) audioSource.volume = volume * GameSettings.MusicVolume;
         }
 
         private void Start()

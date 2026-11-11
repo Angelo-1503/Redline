@@ -1,0 +1,13 @@
+REDLINE - INIMIGOS COMUNS (EncounterSpawner) NAS FASES 2 A 6
+Mesmo modelo da Fase 1: componente EncounterSpawner (id 7400000000000009001) no objeto WaveSpawner de cada cena,
+roadY -2.5, feetToPivot 0.67. role 0 = corpo-a-corpo, 1 = atirador (a faccao vem do LevelFaction).
+Regras usadas: o gatilho fica ~11 antes dos inimigos (nascem fora da tela, a direita); 2 ou 3 inimigos por encontro;
+atirador em cima de uma plataforma (height = altura da plataforma); as vezes um corpo-a-corpo nasce atras.
+Em niveis mais baixos height e negativo (relativo a y -2.5). Nas areas fechadas (portas) os inimigos ficam dentro das paredes;
+nenhum gatilho fica nos vaos entre as areas, porque o teletransporte das portas pula para frente.
+Fase 2: WaveSpawner DESATIVADO (as ondas foram trocadas pelos encontros). 9 encontros, 23 inimigos. Nivel de baixo (T7-T9): height -2.32.
+Fase 3: 9 encontros, 23 inimigos. Escada de baixo -3.21; rato/cozinha/sala -2.45. Cozinha: o encontro dispara ao chegar pela porta (o jogador anda para a esquerda).
+Fase 4: 10 encontros, 28 inimigos (rua, tunel, bomb A).
+Fase 5: 11 encontros, 31 inimigos (rua, subsolo, patio -3.01, canal -4.975, tubo).
+Fase 6: 7 encontros, 19 inimigos (igreja, base CT, arco, mural, predio do A, xuxa). Arena so com o chefao.
+Para ajustar: selecione WaveSpawner na cena; os gatilhos aparecem como linhas amarelas e os inimigos como circulos (vermelho/azul).

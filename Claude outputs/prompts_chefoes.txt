@@ -88,3 +88,4 @@ Em cada FaseNN.unity, o objeto Sentinela recebeu: sprite idle do chefao, cor bra
 (idle + 6 quadros de corrida, 12 fps) e BoxCollider2D com tamanho (0.65, 1.35) e offset (0, 0.68).
 Para refazer: scratchpad/chefes.py (gera os sprites) e scratchpad/chefes_cena.py (liga nas cenas).
 Chefao final: ChefeFallen_idle/run_0..5 (corpo do jogador Player_blue_run, 2x, cabeca do FalleN jovem da SK). Ainda sem cena: vai no chefao da Fase 6.
+ATENCAO: os sprites dos chefoes foram REFEITOS em outra conversa (corpos inteiros gerados pelo ChatGPT, em chatgpt_chefoes/ e scripts_chefoes/). Os scripts chefes.py/chefes_cena.py do scratchpad desta conversa NAO devem ser rodados de novo: sobrescreveriam a versao nova.

@@ -1,0 +1,188 @@
+REDLINE - FASE 06 (INFERNO) - NOTAS TECNICAS
+Cena Fase06.unity era uma copia da Fase 5: todos os objetos da Overpass foram removidos (telas 2-9, arena, portas, chaos,
+paredes, aterros, aneis). Copia antes da limpeza: scratchpad (Fase06_antes_igreja.unity).
+Mantidos: Badfallen, Main Camera, Ground, Canvas, GameManager (levelNumber 5 = jogador azul/CT), WaveSpawner+BossSpawner,
+Sentinela (chefao, ainda com o sprite do donk), SpawnPoints, Fundo (ainda o Fase05_Fundo ate gerar o da Fase 6).
+Tela 1 (X = 0, y = -2.5): Fase06_Tela01, igreja do bomb B por dentro. Imagem 1536x1024 reduzida por 0.6 (personagem ~1/7
+da altura) + 150 px de teto de madeira desenhado por codigo em cima (cobre a camera ate y 6) -> 922x764 px (14.406 unid.),
+pivo (0, 0.261257). Topo do piso = linha 685 da original (na frente dos pes dos bancos). Fim: 14.40625.
+  Plataformas: altar (x 0.103, h 1.35, w 1.978), bancos (2.709 / 5.062 / 7.266, h 0.95), sacos de cimento (9.844, 1.54),
+  caixote (11.166, 1.45), andaime (8.803, 2.89, 3.122).
+  ParedeIgrejaEsquerda (era ParedeSubsoloEsquerda) em x -0.5 (face em 0). ParedeFimProvisoria em 14.906 (tirar quando a Tela 2 entrar).
+  Ground: 0 a 14.406. Jogador comeca em (2.2, -1.55). Camera e parallax: 0 a 14.40625; descidas zeradas; arenaTriggerX 9999.
+  Saida da igreja SEM transicao: a Tela 2 vai colada em X = 14.40625, com o piso trocado pelo da Tela 1.
+Fundo: Fase06_Fundo (1536x1024, mesmas configuracoes do Fase05_Fundo), vila do Inferno ao por do sol; salvo da copia webp enviada no chat.
+TRAJETO MUDADO: a igreja (em obra) e a "construcao"; a saida dela da direto na base CT. Sem praca do B.
+Tela 2 (X = 14.40625, y = -2.5): Fase06_Tela02, base CT (poco, pergola, casinha, arcos com "A ->"). Colada na porta da igreja, sem transicao.
+  Imagem cortada em 145 px na esquerda (a parede de fora da igreja com outra porta, que duplicava a porta da Tela 1) e reduzida por 0.6
+  (mesma escala da Tela 1: o portal da igreja ficou do mesmo tamanho nas duas). Topo do piso = linha 643 da original.
+  Da guia para baixo (linha 665 da original), chao trocado pelo da Tela 1 (guia + fundacao, colunas espelhadas): emenda sem diferenca.
+  170 px de ceu acrescentados em cima, tirados do ceu do Fase06_Fundo (linhas 0-265), misturados nas 30 primeiras linhas da tela.
+  835x784 px (13.047 unid.), pivo (0, 0.28648). Fim: 27.453125.
+  Plataformas: poco (x 2.25, h 1.01), muro do terraco (3.778, 1.45, 1.912), pergola (3.469, 2.89, 2.672), telhado da casinha (6.75, 3.20, 3.609),
+  varanda da esquerda (0.375, 2.61), capitel do pilar (12.0, 2.28).
+  Ground 0 a 27.453. ParedeFimProvisoria em 27.953. Camera e parallax: levelEndX 27.453125.
+EMENDA DIRETA IGREJA -> BASE CT NAO FICOU BOA: trocada por porta com esmaecer.
+  Fase06_Tela02 refeita SEM o corte (fica a parede de fora da igreja com a porta, onde o jogador aparece): 922x784 px (14.406 unid.),
+  pivo (0, 0.28648). Versao cortada guardada no scratchpad (Fase06_Tela02_cortada.png).
+  Tela 2 agora separada em X = 40 (fim 54.40625). Plataformas: poco (3.609, 1.01), muro do terraco (5.138, 1.45), pergola (4.828, 2.89),
+  telhado da casinha (8.109, 3.20), varanda (1.734, 2.61), capitel (13.359, 2.28).
+  PortaIgreja (DoorTransition, copia da PortaParquinho da Fase 5): gatilho x >= 12.6, porta em (13.27, -1.58) no portal da igreja;
+  leva para (40.7, -1.55), na porta da igreja desenhada na Tela 2; camera presa de 40 a 54.40625.
+  ParedeFimIgreja em 14.906. ParedeBaseCTEsquerda em 39.5 (face 40). ParedeFimBaseCT em 54.906 (provisoria ate o proximo trecho).
+  Ground 0 a 54.406 (o vao 14.4-40 fica fechado pelas paredes). Camera: levelEndX 14.40625 (so a igreja); parallax: 0 a 54.40625.
+ESCALA DAS TELAS 1 E 2 AUMENTADA PARA 0.75 (a 0.6 a igreja tinha 14.4 de largura, menor que a camera, ~17.8, e aparecia o fundo do lado).
+  Tela 1: 1152x808 px (18 unid.), teto de madeira desenhado so com 40 px, pivo (0, 0.310149). Fim 18.
+    Plataformas: altar (0.129, 1.69, 2.473), bancos (3.387 / 6.328 / 9.082, h 1.18), sacos (12.305, 1.92), caixote (13.957, 1.82), andaime (11.004, 3.61, 3.902).
+  Tela 2 (X = 40): 1152x848 px (18 unid.), 80 px de ceu do fundo em cima, pivo (0, 0.333255). Fim 58.
+    Plataformas: poco (4.512, 1.27), muro (6.422, 1.82), pergola (6.035, 3.61), telhado (10.137, 4.00, 4.512), varanda (2.168, 3.26), capitel (16.699, 2.85).
+  PortaIgreja: gatilho 15.85, porta (16.59, -1.58), destino (40.8, -1.55), camera 40 a 58. ParedeFimIgreja 18.5, ParedeFimBaseCT 58.5.
+  Ground 0 a 58. Camera levelEndX 18; parallax 0 a 58. Versoes 0.6 no scratchpad (escala06/).
+CAMERA EM TELA MAIS LARGA QUE 16:9: com o Game em Free Aspect (~2.16:1) a camera mostra ~21.6 de largura e as telas tem 18.
+  CameraFollow ganhou fitWidthIfNarrow (ligado so na Fase 6): se o trecho for mais estreito que a tela, a camera se aproxima
+  (orthographicSize menor) ate o trecho ocupar a largura toda. Em 16:9 nao muda nada (18 > 17.8). Vale tambem nas portas (LockToRange).
+Tela 3 (X = 58, y = -2.5): Fase06_Tela03, passagem do arco. Colada na Tela 2 (sem transicao).
+  Geradas 2 imagens iguais: tunel ABERTO (corte, vira a tela) e tunel FECHADO (fachada com o arco). Originais no scratchpad
+  (f6_t3_aberto.png / f6_t3_fechado.png). Reduzidas por 0.6 (pilares da galeria ~ do tamanho dos da Tela 2), topo do piso = linha 737,
+  chao da guia para baixo (linha 765) trocado pelo da Tela 1 (colunas seguidas), 110 px de ceu do fundo em cima.
+  922x724 px (14.406 unid.), pivo (0, 0.232873). Fim 72.40625.
+  Plataformas: paletes (5.953, 1.71), caixote (7.594, 1.10), bacia da fonte (3.731, 0.91), pilar do arco grande (5.344, 2.41),
+  pilares da galeria (0, 2.41, 2.55), sacada (8.578, 3.96, 3.844).
+  FachadaTunel: recorte da imagem FECHADA (x 875-1536, y 372-706 da original), mesmo tamanho/pivo/posicao da Tela 3, ordem 10
+  (na frente do jogador). Script novo FadeWhenPlayerInside: com o jogador em x >= 65.9 a fachada esmaece ("raio X") e mostra o
+  tunel por dentro; ao sair, volta.
+  Ground 0 a 72.406. ParedeFimProvisoria (era ParedeFimBaseCT) em 72.906. PortaIgreja destinationEndX e parallax: 72.40625.
+EMENDA TELA 2 | TELA 3 CORRIGIDA: a galeria de arcos da ponta da Tela 2 (com o "A") nao batia com a da Tela 3.
+  Fase06_Tela02 cortada em 930 px (linha 1240 da original, logo depois da casinha): 14.531 unid., fim 54.53125. Plataforma do capitel removida.
+  Versao com a galeria no scratchpad (Fase06_Tela02_com_galeria.png).
+  Tela 3 e FachadaTunel movidas para X = 54.53125 (fim 68.9375). FadeWhenPlayerInside minX 62.43.
+  ParedeFimProvisoria 69.4375. Ground 0 a 68.9375. PortaIgreja destinationEndX e parallax: 68.9375.
+O "SUMIR NO TUNEL" ERA O SCRIPT NAO COMPILADO: o Play comecou antes do Unity compilar o FadeWhenPlayerInside ("missing script").
+  ExternalSceneReloader agora da Refresh e so aperta Play de novo depois de terminar de importar e compilar.
+Tela 3: ponta esquerda da galeria de arcos fechada com uma parede de empena (26 px de reboco com tijolo da propria tela, capa e base de pedra), para a galeria nao comecar do nada. Sem ela: scratchpad (Fase06_Tela03.png).
+TELA 3 REFEITA (nova geracao com a galeria continuando a da Tela 2; Tela 2 voltou a versao com a galeria e o capitel).
+  Originais: scratchpad f6_t3_aberto.png / f6_t3_fechado.png. Reduzida por 0.7 (o telhado da galeria encontra o da Tela 2 na emenda),
+  topo do piso linha 737, guia (765) para baixo trocada pela da Tela 1, 60 px de ceu do fundo em cima.
+  1075x777 px (16.797 unid.), pivo (0, 0.254311). X = 58, fim 74.796875.
+  Plataformas: paletes (7.109, 1.94), caixote (8.914, 1.22), bacia (4.353, 1.06), pilar do arco grande (6.256, 2.76),
+  pilares da galeria (0, 2.72, 2.975), sacada (10.008, 4.65, 4.484).
+  FachadaTunel: recorte da imagem fechada (x 905-1536, y 360-708 da original), mesmo tamanho/pivo. FadeWhenPlayerInside minX 67.3.
+  ParedeFimProvisoria 75.297. Ground 0 a 74.797. PortaIgreja destinationEndX e parallax: 74.796875.
+TELA 3 v3 (nova geracao, galeria reta, so a versao FECHADA): scratchpad f6_t3_v3.png. Versao anterior em scratchpad/t3_v2.
+  Cortada 105 px na esquerda (primeiro pilar e o "A" repetido: o arco encosta no pilar da frente da Tela 2), reduzida por 0.74
+  (telhado da galeria o mais perto possivel do da Tela 2), topo do piso linha 678, guia (700) para baixo trocada pela da Tela 1, 60 px de ceu.
+  Versao ABERTA montada aqui: o tunel em corte da geracao anterior (f6_t3_aberto.png, x 918-1536, y 380-705) reduzido por 0.87 e encaixado
+  pelo pilar esquerdo do arco (x 1120, chao 670) -> f6_t3_v3_aberto.png.
+  1059x818 px (16.547 unid.), pivo (0, 0.308802). X = 58, fim 74.546875.
+  Plataformas: paletes (9.423, 1.54), caixote (10.695, 0.96), bacia (6.359, 0.93), banco (3.238, 1.31), capiteis da galeria
+  (0 / 2.313 / 4.972 / 7.979, h 2.75), sacada (11.713, 3.65).
+  FachadaTunel: recorte da versao fechada (x 1110-1536, y 385-672 da original). FadeWhenPlayerInside minX 69.
+  ParedeFimProvisoria 75.047. Ground 0 a 74.547. PortaIgreja destinationEndX e parallax: 74.546875.
+ESCALA DA TELA 3 CORRIGIDA PARA 0.6: medida pelos pilares da galeria e pelas janelas de veneziana, que agora tem o mesmo tamanho
+  dos da Tela 2 (a 0.74 eles ficavam ~22% maiores). 859x764 px (13.422 unid.), 150 px de ceu, pivo (0, 0.266492). Fim 71.421875.
+  Plataformas: paletes (7.641, 1.25), caixote (8.672, 0.78), bacia (5.156, 0.75), banco (2.625, 1.06), capiteis (0 / 1.875 / 4.031 / 6.469, h 2.23),
+  sacada (9.497, 2.96). FadeWhenPlayerInside minX 66.9. ParedeFimProvisoria 71.922. Ground 0 a 71.422. destinationEndX/parallax 71.421875.
+  Comparacao 0.74 x 0.6 com o personagem: Claude outputs/comparacao_tela3/.
+CAMERA: o zoom do fitWidthIfNarrow agora so aproxima e nunca volta: o zoom da igreja (trecho mais estreito) vale para a fase inteira,
+  senao a igreja aparecia maior que a base CT e o arco numa tela mais larga que 16:9.
+EMENDA 2|3 REFEITA: em vez de tentar casar as duas galerias (desenhadas em perspectivas diferentes), a Tela 2 foi cortada em 930 px
+  (logo depois da casinha com o barril de lavanda, sem a galeria) e a Tela 3 entra INTEIRA (sem o corte de 105 px), com a galeria dela
+  e o primeiro "A". Escala 0.6 nas duas. Tela 2: 14.531 unid., fim 54.53125 (plataforma do capitel removida).
+  Tela 3: 922x764 px (14.406 unid.), pivo (0, 0.266492), X = 54.53125, fim 68.9375.
+  Plataformas: paletes (8.625, 1.25), caixote (9.656, 0.78), bacia (6.141, 0.75), banco (3.609, 1.06), capiteis (0.75 / 2.859 / 5.015 / 7.453, h 2.23),
+  sacada (10.481, 2.96). FadeWhenPlayerInside minX 64.44. ParedeFimProvisoria 69.4375. Ground 0 a 68.9375. destinationEndX/parallax 68.9375.
+Emenda 2|3: o predio laranja alto cortado na borda da Tela 2 continua na Tela 3 (colunas 862-929 da Tela 2 espelhadas nas colunas 0-67 da Tela 3, da linha do telhado ate o telhado da casa da Tela 3; abaixo do varal, parede lisa com a cor media). Fica um predio de empena com a ponta na emenda. Tela 3 antes: scratchpad (Fase06_Tela03_antes_predio.png).
+TELA 2 REFEITA (predios inteiros): original no scratchpad (f6_t2_v2.png). Cortada 195 px na esquerda (antes do portal da igreja),
+  reduzida por 0.83 (porta da casinha do mesmo tamanho da Tela 2 antiga a 0.75), topo do piso linha 752, guia (772) para baixo trocada
+  pela da Tela 1. Sem ceu acrescentado (a imagem ja cobre a camera). 1113x850 px (17.391 unid.), pivo (0, 0.261882). X = 40, fim 57.390625.
+  Plataformas: poco (4.37, 1.26), muro baixo esq (1.945, 1.45), terraco (5.966, 1.65), pergola (5.966, 3.37, 4.02), varanda branca (9.376, 3.96),
+  telhado da casinha (10.505, 3.75, 4.215), varanda laranja (14.33, 4.09), varanda esq (2.853, 3.11), muro dir (15.135, 1.95, 2.257).
+  PortaIgreja destino (41, -1.55). Tela 3 (versao sem o predio espelhado) em X = 57.390625, fim 71.796875. FadeWhenPlayerInside minX 67.3.
+  ParedeFimProvisoria 72.297. Ground 0 a 71.797. destinationEndX/parallax 71.796875. Tela 2 anterior: scratchpad (Fase06_Tela02_v1_cortada.png).
+TELA 3 REFEITA (predios inteiros; tunel com entrada e saida no mesmo predio). Originais: scratchpad f6_t3n_aberto.png / f6_t3n_fechado.png.
+  Na versao fechada a vista atraves do tunel (luz da saida) foi fechada com parede de tijolo escuro (f6_t3n_fechado_parede.png).
+  Reduzida por 0.667 (paletes e caixote do tamanho dos da Tela 3 anterior), topo do piso 735, guia (769) para baixo trocada pela da Tela 1, 70 px de ceu.
+  1025x753 px (16.016 unid.), pivo (0, 0.251793). X = 57.390625, fim 73.40625.
+  Plataformas: paletes (7.66, 1.35), caixote (8.859, 0.89), bacia (4.012, 0.70), banco (2.064, 1.06), capiteis/galeria (1.042, 2.03, 6.253),
+  sacada (9.88, 3.33), floreira dir (13.84, 3.20), muros baixos das pontas (0 e 15.372, h 1.38).
+  FachadaTunel: recorte da versao fechada (x 912-1445, y 445-722). FadeWhenPlayerInside: x 67.2 a 72.4 (some so dentro do tunel).
+  ParedeFimProvisoria 73.906. Ground 0 a 73.406. destinationEndX/parallax 73.40625. Versao anterior: scratchpad/t3_v3.
+TUNEL "RAIO X" REMOVIDO: FachadaTunel (objeto e sprite) apagados; Tela 3 agora e a versao FECHADA original (arco com a vista da saida).
+  O script FadeWhenPlayerInside continua no projeto, sem uso.
+  Muro e chao igualados a Tela 2: o conteudo da Tela 3 subiu 33 px (muro baixo e base dos predios na mesma altura dos da Tela 2), o piso foi
+  esticado repetindo as linhas de cima e a guia/fundacao da Tela 1 colada na mesma linha da Tela 2 (577 da Tela 3). Mesmo tamanho e pivo.
+  Plataforma da galeria (topo dos arcos) removida. Plataformas: paletes (7.66, 1.87), caixote (8.859, 1.41), bacia (4.012, 1.22), banco (2.064, 1.58),
+  sacada (9.88, 3.85), floreira dir (13.84, 3.72), muros baixos (0 e 15.372, h 1.90).
+Chao da Tela 3 trocado pelo da Tela 2: da base das construcoes (linha 515) ate a guia (577), piso de tijolinho em espinha de peixe da Tela 2 (colunas 690-1000, repetido; linhas acima de 606 repetidas a cada 32), e as pontas (90 px) continuam as bordas da Tela 2, com o caminho de pedra cinza. Antes: scratchpad (Fase06_Tela03_antes_chao.png).
+Chao da Tela 3 refeito (a versao anterior repetia uma faixa e ficava duplicado): piso da Tela 2 na MESMA escala (1:1, linhas +64); onde a Tela 2 tem objetos (acima da linha 604) o piso segue o proprio padrao em espinha de peixe (deslocamento 20 px / 19 linhas), sem faixa repetida.
+TELA 3 SEM TUNEL (nova geracao, mesmo layout da anterior, terreo fechado com porta): original scratchpad f6_t3_semtunel.png. Mesmo processo (0.667, +70 px de ceu, conteudo subido 33 px, guia/fundacao da Tela 1 na linha 577, piso da Tela 2). Mesmo tamanho, pivo e plataformas. Versao com o tunel: scratchpad (Fase06_Tela03_com_tunel.png).
+Tela 3: aplicada a imagem ORIGINAL sem mexer no chao nem subir o conteudo (so reduzida por 0.667 + 70 px de ceu do fundo). 1025x753, pivo (0, 0.251793). Plataformas de volta as alturas sem o deslocamento (paletes 1.35, caixote 0.89, bacia 0.70, banco 1.06, sacada 3.33, floreira 3.20, muros 1.38).
+TELA 3 v5 (nova geracao enviada pelo usuario): original scratchpad f6_t3_v5.png. Imagem original, sem trocar o chao.
+  Escala 0.71 (muro de pedra e portas do mesmo tamanho dos da Tela 2), topo do piso linha 753 (guia na mesma altura da Tela 2), 40 px de ceu do fundo.
+  Unica correcao: os muros baixos das pontas (x 0-53 e 1040-1091) subiram 16 px para ficar na altura do muro da Tela 2 (16 linhas de pedrinha repetidas embaixo).
+  1091x767 px (17.047 unid.), pivo (0, 0.245893). X = 57.390625, fim 74.4375.
+  Plataformas: paletes, caixote, bacia, banco, sacada, 2 floreiras da direita, muros das pontas (h 1.93).
+  ParedeFimProvisoria 74.9375. Ground 0 a 74.4375. destinationEndX/parallax 74.4375.
+Tela 3 v5: chao trocado pelo da Tela 2 na mesma escala (1:1, linha de pisar da Tela 2 = 624 <-> 575 da Tela 3), da base das construcoes (549; 526 nas pontas) ate o fim; pontas de 90 px = bordas da Tela 2 (caminho de pedra cinza). Antes: scratchpad (Fase06_Tela03_v5_chao_proprio.png).
+Ceu da Tela 3 igualado ao da Tela 2: cada linha do ceu da Tela 3 recebeu a diferenca de cor media para a linha correspondente da Tela 2 (media suavizada, ate a altura dos telhados; abaixo disso o ajuste some aos poucos), e os 70 px da emenda misturam com a borda da Tela 2. Antes: scratchpad (Fase06_Tela03_antes_ceu.png).
+TELA 4 (saida do meio para o xuxa): original scratchpad f6_t4_orig.png. Mesmo processo da Tela 3 v5: 0.71, +40 px de ceu do fundo,
+  muros baixos das pontas subidos 12 px (so de y 300 para baixo), chao da Tela 2 (1:1), ceu ajustado linha a linha ao da Tela 3 e misturado nos 90 px da emenda.
+  1091x767 px (17.047 unid.), pivo (0, 0.245893). X = 74.4375, fim 91.484375.
+  Plataformas: canteiros (1.553 e 3.716, h 1.23), alpendre da casa laranja (5.081, 3.05), topo do muro do mural (7.266, 4.23, 4.659),
+  palete (12.514, 1.75), barril (15.753, 1.70), muros das pontas (h 1.93).
+  ParedeFimProvisoria 91.984. Ground 0 a 91.484. destinationEndX/parallax 91.484375.
+TELA 3 corrigida: o levantamento dos muros das pontas puxava o ceu junto (linha vertical no ceu); agora so mexe de y 300 para baixo. Chao e ceu refeitos.
+TELA 4 chao corrigido: a praca dela era mais funda que a da Tela 2 (base das casas 18 px acima) e sobrava uma faixa do chao original em cima do chao da Tela 2. Construcoes descidas 18 px (base na mesma linha da Tela 3), muros das pontas subidos 30, chao da Tela 2 a partir da linha 549. Plataformas 0.28 mais baixas (canteiros 0.95, alpendre 2.77, muro do mural 3.95, palete 1.47, barril 1.42).
+TELA 5 (xuxa: apartamento com varanda, carroca de feno, tenda): original scratchpad f6_t5_orig.png. Mesmo processo (0.71, +40 px de ceu,
+  base das casas ja na linha 549, muro baixo da esquerda subido 18 px de y 300 para baixo, chao da Tela 2, ceu ajustado ao da Tela 4 com mistura de 90 px).
+  1091x767 px, pivo (0, 0.245893). X = 91.484375, fim 108.53125.
+  Plataformas: barril (7.743, 0.94), feno baixo (5.88, 1.75, 2.995), feno alto (6.623, 2.16), varanda (2.463, 3.34, 7.167), pilar da tenda (12.558, 2.90),
+  muro de reboco da direita (13.202, 2.25, 3.838), muro baixo da esquerda (0, 1.93).
+  ParedeFimProvisoria 109.031. Ground 0 a 108.531. destinationEndX/parallax 108.53125. Proxima: arena do bomb A em X = 108.53125.
+ARENA (bomb A): original scratchpad f6_arena_orig.png. Cortada 226 px na esquerda (repetia o apartamento e a tenda da Tela 5); de x 226 a 342
+  (antes do galpao) o ceu, o cipreste e o muro baixo foram trocados pela borda direita da Tela 5 espelhada (emenda sem diferenca).
+  Escala 0.71, +40 px de ceu, ceu ajustado ao da Tela 5, guia e fundacao da Tela 5 a partir da linha 588. Chao de tijolinho e plataforma do bomb da propria imagem.
+  930x767 px (14.531 unid.), pivo (0, 0.245893). X = 108.53125, fim 123.0625. Marca do bomb vazia (C4 sera sprite separado).
+  Plataformas: plataforma de concreto do bomb (0.399, 0.35, 10.828), pilha de caixotes esq (1.686, 2.73), caixote do meio (5.147, 1.97),
+  caixote da dir (8.309, 1.84, 2.185), telhado da casinha (10.14, 3.96, 4.393).
+  ParedeFimFase (era ParedeFimProvisoria) em 123.5625. Ground 0 a 123.0625. Camera/parallax/PortaIgreja ate 123.0625.
+  BossSpawner: arenaTriggerX 110.5, arena 108.53125 a 123.0625, sem proxima cena. Sentinela em (120.5, -1.3) com os sprites do ChefeFallen (antes donk).
+FINAL DA FASE 6 (C4 + desarme):
+  Sprites novos em Assets/Art/Props: C4.png (34x18, desenhada por codigo: 3 tijolos de explosivo com fita, caixa do timer com visor e fios; pivo embaixo no meio)
+  e C4_led.png (LED vermelho 5x5). 64 px por unidade.
+  Objeto C4 em (114.39, -1.89), em cima da marca circular do bomb, ordem -1; filho LedC4 em (0.117, 0.242), ordem 0.
+  Script novo BombDefuseEnding (no objeto C4): o LED pisca devagar durante a fase. Quando o chefao morre (evento OnBossDefeated do BossSpawner):
+  espera 1.5 s, tira o controle, a musica some, o jogador anda ate o lado da C4 (0.55 de distancia), vira para ela e se ajoelha (abaixa a 78% com os pes no chao);
+  aparece a barra de desarme; o bip (gerado por codigo, onda quadrada 2400 Hz) comeca a cada 0.9 s e acelera (x0.82) ate 0.07 s, com o LED acendendo a cada bip;
+  a barra so chega a 90%: no ultimo bip a tela fica preta, espera 1.5 s e a frase "O tempo venceu." aparece em 2.5 s. Tudo ajustavel no Inspector.
+ABERTURA E TROCA DE FASE (todas as fases): script novo LevelIntro no GameManager (id 7400000000000009002). A cena comeca preta com o titulo
+  ("FASE 1" / "Dust II" ... "FASE FINAL" / "Inferno"), o jogador fica sem controle ~3.5 s e a tela clareia. Opcional: aviso depois da abertura
+  com dois toques de som gerados por codigo. Fase 6: aviso "BOMB HAS BEEN PLANTED" em laranja no alto da tela.
+  BossSpawner: antes de carregar a proxima fase a tela escurece em 1 s (LevelIntro.FadeToBlack).
+  BombDefuseEnding: bip baixinho (volume 0.12) a cada 1.2 s durante a fase, junto com o LED, a partir de 4 s (depois da abertura).
+FINAL TROCADO (o desarme nao ficou bom): BombDefuseEnding agora, quando o chefao morre: espera 1.5 s, tira o controle, o jogador cai para tras
+  (gira 90 graus em volta dos pes em 0.7 s) e fica deitado 1.2 s; a tela escurece em 2.5 s junto com a musica e aparece "O tempo venceu voce.".
+  Sem barra de desarme e SEM SONS gerados: bip da C4 removido (o LED so pisca) e o toque do aviso "BOMB HAS BEEN PLANTED" desligado (announcementSound 0).
+FINAL DE VOLTA PARA A BOMBA, COM AUDIOS REAIS (Assets/Audio): BombHasBeenPlanted.mp3 (voz, 1.65 s) e C4BipExplosao.mp3 (16.2 s).
+  Mapa do C4BipExplosao (medido pelo envelope do mp3): 0-1.6 voz "bomb has been planted"; bips em 1.88, 2.59, 3.37, 4.08, 4.70, 5.17, 5.64, 6.19,
+  6.66, 7.13, 7.60, 7.92, 8.23, 8.46, 8.78; bips seguidos ate ~10.9; explosao em ~10.95; cauda ate 16.2.
+  O arquivo NAO foi recortado: o jogo toca a partir de 1.75 s (clipStart), pulando a voz.
+  LevelIntro: toque gerado removido; campo announcementClip (Fase 6 = BombHasBeenPlanted.mp3, toca junto com o aviso "BOMB HAS BEEN PLANTED").
+  BombDefuseEnding: chefao morre -> 1.5 s -> anda ate a C4 e ajoelha -> toca o audio a partir de 1.75 s, barra de desarme enche ate 90%, LED acende nos bips
+  -> na explosao (10.95 do arquivo) clarao branco que escurece em 1.4 s -> 2 s de preto -> "O tempo venceu voce.".
+  Bip durante a fase: pedaco do mesmo arquivo (1.86 s, 0.16 s de duracao), volume 0.25, a cada 1.5 s, a partir de 7 s.
+Final: embaixo de 'O tempo venceu voce.' (agora no alto, 72 px) aparece o texto finalSubtext, 6 linhas, uma de cada vez (1.6 s entre elas, fade 1.2 s); a ultima em negrito. Editavel no Inspector da C4.
+
+RETOMADA CODEX — 11/11/2026:
+- Corrigido erro nativo "Transform child can't be loaded": linha em branco na lista m_Children da C4. Confirmado em importação limpa do Unity 6000.3.27f1.
+- Health.IsInvulnerable protege abertura, passagens (DoorTransition, AreaTransition, WindowBreakCutscene), fade de vitória e final. Os estados anteriores são restaurados nas passagens.
+- BombDefuseEnding: se a caminhada ficar presa ou terminar em cima de um caixote, um corte curto posiciona o jogador no piso ao lado da C4 antes do desarme. Testado chegando pela esquerda e pela direita com obstáculos forçados.
+- Corrigido Sprite.Create da barra para usar as dimensões reais de Texture2D.whiteTexture; fade de áudio termina exatamente em volume zero; bip não reinicia durante pausa e intervalo tem limite mínimo.
+- FalleN final: 600 HP, moveSpeed 2.4, fireRate 1.1, bulletSpeed 10, bulletDamage 15, burstCooldown 2.5. Ajuste inicial; balanceamento depende de playtest humano.
+- Aviso traduzido para "BOMBA PLANTADA NO A", mantendo a voz existente.
+- Epílogo revisado e gravado explicitamente na cena: "O tempo venceu você." + seis linhas, terminando em "O auge passa. O legado fica.".
+- Encontros já existiam nas Fases 2 a 6: 9/9/10/11/7 encontros; Fase 6 com 19 inimigos. Nenhum spawner duplicado foi adicionado.
+VALIDAÇÃO: scripts compilados no Unity; seis cenas carregadas sem scripts ausentes nem erro de hierarquia; porta da igreja, retorno dos controles, proteção contra dano letal, ativação do boss e final verificados em Play Mode. Progressão real de vitória 1 -> 2 -> 3 -> 4 -> 5 -> 6 aprovada, com derrotas de chefão provocadas pelo teste.
+- Relatórios e código descartável de teste em Logs/ (ignorado pelo Git): phase6-results.txt, phase6-sequence-results.txt e CodexPhase6Validation/Assets/Editor/Phase6*Validation.cs. Prévia em Logs/phase6-final.png.
+LIMITES: os testes usam posicionamento automático e dano direto nos chefões; não substituem percorrer todas as plataformas, avaliar emendas, ouvir os áudios ou balancear o combate jogando. Nenhum teste acadêmico com voluntários foi realizado.
+PRÓXIMA ETAPA: playtest manual da Fase 6; depois créditos e menu (adiados a pedido do usuário), músicas/SFX, roteiro acadêmico e build Windows. Sem commit nem push.

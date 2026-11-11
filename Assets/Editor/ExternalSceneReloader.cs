@@ -32,6 +32,11 @@ namespace Redline.EditorTools
             EditorSceneManager.sceneSaved += scene => Remember(scene.path);
             EditorApplication.update += Tick;
             EditorApplication.playModeStateChanged += OnPlayModeChanged;
+            // Se a compilação recarregou os scripts no meio do caminho, continua esperando para dar Play.
+            if (SessionState.GetBool(PlayAfterCompileKey, false))
+            {
+                EditorApplication.update += PlayWhenReady;
+            }
         }
 
         /// <summary>
@@ -49,11 +54,33 @@ namespace Redline.EditorTools
             EditorApplication.isPlaying = false;
             EditorApplication.delayCall += () =>
             {
+                // Importa também scripts novos (senão o Play começa antes de compilar e o
+                // componente fica "missing script").
+                AssetDatabase.Refresh();
                 if (ReloadIfChanged())
                 {
-                    EditorApplication.delayCall += () => EditorApplication.isPlaying = true;
+                    SessionState.SetBool(PlayAfterCompileKey, true);
+                    EditorApplication.update += PlayWhenReady;
                 }
             };
+        }
+
+        private const string PlayAfterCompileKey = "Redline.ExternalSceneReloader.PlayAfterCompile";
+
+        /// <summary>Aperta Play só depois que o Unity terminar de importar e compilar.</summary>
+        private static void PlayWhenReady()
+        {
+            if (EditorApplication.isCompiling || EditorApplication.isUpdating)
+            {
+                return;
+            }
+
+            EditorApplication.update -= PlayWhenReady;
+            if (SessionState.GetBool(PlayAfterCompileKey, false))
+            {
+                SessionState.SetBool(PlayAfterCompileKey, false);
+                EditorApplication.isPlaying = true;
+            }
         }
 
         private static string Stamp(string path)

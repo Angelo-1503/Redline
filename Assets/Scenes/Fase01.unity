@@ -1684,6 +1684,7 @@ GameObject:
   - component: {fileID: 1714594194}
   - component: {fileID: 2947724388818297881}
   - component: {fileID: 7310668109858554014}
+  - component: {fileID: 7400000000000009002}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4613,6 +4614,29 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6ebb5741ecd849e7b96b775c67542c72, type: 3}
   runFps: 12
   moveThreshold: 0.1
+--- !u!114 &7400000000000009002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714594193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383065a54bae4c42b3aa257c4c842c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Level.LevelIntro
+  title: FASE 1
+  subtitle: Dust II
+  titleHold: 1.8
+  fadeDuration: 0.9
+  announcement: 
+  announcementColor: {r: 1, g: 0.6, b: 0.15, a: 1}
+  announcementHold: 2.5
+  announcementClip: {fileID: 0}
+  announcementVolume: 1
+  introClip: {fileID: 8300000, guid: d2baee9cf90b46ea8a174d578e3afa5b, type: 3}
+  introVolume: 0.9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

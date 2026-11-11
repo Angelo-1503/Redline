@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Redline.Settings;
 
 namespace Redline.Core
 {
@@ -30,6 +31,9 @@ namespace Redline.Core
         public int CurrentHealth { get; private set; }
         public bool IsDead { get; private set; }
 
+        /// <summary>Protege o personagem durante aberturas e sequências automáticas.</summary>
+        public bool IsInvulnerable { get; set; }
+
         /// <summary>Disparado sempre que a vida muda: (vidaAtual, vidaMaxima).</summary>
         public event Action<int, int> OnHealthChanged;
 
@@ -45,7 +49,7 @@ namespace Redline.Core
 
         public void TakeDamage(int amount)
         {
-            if (IsDead || amount <= 0)
+            if (IsDead || IsInvulnerable || amount <= 0)
             {
                 return;
             }
@@ -69,7 +73,7 @@ namespace Redline.Core
             }
             else if (hitClip != null)
             {
-                AudioSource.PlayClipAtPoint(hitClip, transform.position);
+                AudioSource.PlayClipAtPoint(hitClip, transform.position, GameSettings.EffectsVolume);
             }
         }
 
@@ -100,7 +104,7 @@ namespace Redline.Core
 
             if (deathClip != null)
             {
-                AudioSource.PlayClipAtPoint(deathClip, transform.position);
+                AudioSource.PlayClipAtPoint(deathClip, transform.position, GameSettings.EffectsVolume);
             }
 
             OnDied?.Invoke();

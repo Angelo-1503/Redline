@@ -1,5 +1,6 @@
 using Redline.Combat;
 using UnityEngine;
+using Redline.Settings;
 
 namespace Redline.Player
 {
@@ -29,7 +30,7 @@ namespace Redline.Player
 
         private void Update()
         {
-            bool fireHeld = Input.GetButton("Fire1");
+            bool fireHeld = GameInput.Held(GameAction.Shoot);
             if (fireHeld && Time.time >= nextFireTime)
             {
                 Fire();

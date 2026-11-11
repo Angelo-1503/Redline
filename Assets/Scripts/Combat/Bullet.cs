@@ -1,5 +1,6 @@
 using Redline.Core;
 using UnityEngine;
+using Redline.Settings;
 
 namespace Redline.Combat
 {
@@ -57,7 +58,7 @@ namespace Redline.Combat
 
             if (shootClip != null)
             {
-                AudioSource.PlayClipAtPoint(shootClip, transform.position);
+                AudioSource.PlayClipAtPoint(shootClip, transform.position, GameSettings.EffectsVolume);
             }
 
             Destroy(gameObject, lifeTime);
@@ -88,7 +89,7 @@ namespace Redline.Combat
 
             if (impactClip != null)
             {
-                AudioSource.PlayClipAtPoint(impactClip, transform.position);
+                AudioSource.PlayClipAtPoint(impactClip, transform.position, GameSettings.EffectsVolume);
             }
 
             Destroy(gameObject);

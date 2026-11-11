@@ -1,0 +1,55 @@
+REDLINE - CHEFOES COMPLETOS NO CHATGPT
+======================================
+
+Como usar:
+- Uma conversa NOVA para cada chefao.
+- Anexe as 2 imagens da pasta do chefao, nesta ordem: 1_poses.png, 2_cabeca.png. (Nao usar 3_parado_certo.png: a montagem esta errada.)
+- Cole o prompt abaixo. Troque [N] pelo numero de quadros: 7 para todos, 6 para o Fallen.
+- Peca o Donk primeiro. Se ficar bom, faca os outros.
+
+---------------- PROMPT ----------------
+
+Estou fazendo um jogo 2D de tiro em pixel art e preciso de uma folha de sprites com um personagem completo.
+
+Imagens anexadas:
+1) As [N] poses da animacao, em uma grade de 4 colunas e 2 linhas. A primeira linha comeca pelo quadro parado (no Fallen, todos sao de corrida). O soldado dessa imagem e so a referencia de pose, corpo, roupa e arma.
+2) A cabeca do personagem, com pescoco.
+
+O que fazer:
+Redesenhe o soldado da imagem 1 em cada uma das [N] poses, ja com a cabeca da imagem 2 no lugar do lenco, do capacete ou da cabeca original. A cabeca deve fazer parte do desenho, com pescoco ligado aos ombros e gola natural, e deve acompanhar a inclinacao do tronco em cada pose.
+
+Regras obrigatorias:
+- Uma unica imagem de 1536x1024, com a mesma grade de 4 colunas e 2 linhas da imagem 1.
+- Cada pose na mesma celula e na mesma ordem da imagem 1.
+- O MESMO personagem em todas as poses: mesma altura, mesma proporcao, mesmo rosto, mesmo cabelo, mesmo fone, mesma roupa, mesmas cores e mesma arma.
+- Copie as poses da imagem 1 com fidelidade: pernas, bracos, arma e inclinacao. Nao invente poses novas.
+- Personagem virado para a DIREITA, de perfil 3/4, apontando a arma para a direita.
+- Pes na mesma linha do chao em cada celula, sem cortar nenhuma parte do corpo ou da arma.
+- Pixel art com pixels grandes e nitidos, contorno escuro, sem desfoque, sem suavizacao e sem brilho.
+- Mesmo estilo, paleta e sombreamento da imagem 1.
+- Fundo transparente. Sem chao, sem sombra, sem cenario, sem texto, sem numeros e sem linhas de grade.
+
+---------------- SE VIER ERRADO ----------------
+
+Personagem diferente entre as poses:
+"As poses nao estao com o mesmo personagem. Refaca mantendo exatamente a altura, a proporcao, a roupa e o rosto da primeira pose em todas as outras."
+
+Fundo xadrez ou branco no lugar do transparente:
+"Refaca com fundo liso na cor magenta #FF00FF, sem nenhuma outra alteracao." (Eu removo essa cor depois.)
+
+Recusa por ser pessoa real:
+Remova a imagem 2 da explicacao e descreva os tracos (cabelo, barba, fone, tom de pele) como um personagem ficticio.
+
+
+---------------- SE ELE IGNORAR A CABECA E CRIAR OUTRO PERSONAGEM ----------------
+Anexe 1_poses_com_cabeca.png e 2_cabeca.png e use este prompt, em conversa nova:
+
+Esta e uma edicao de imagem, nao um desenho novo. A imagem 1 e minha folha de sprites, com 7 quadros, e a cabeca de cada quadro ja e a certa. A imagem 2 mostra essa mesma cabeca ampliada, como referencia exata.
+
+Mantenha a imagem 1 como esta e corrija apenas a ligacao entre a cabeca e o corpo: pescoco, gola e ombros, para a cabeca parecer parte do boneco e acompanhar a inclinacao do tronco em cada quadro.
+
+Regras obrigatorias:
+- NAO crie outro personagem e NAO redesenhe o rosto. O rosto, o cabelo, a pele, o fone e o microfone devem continuar identicos aos da imagem 2 em todos os quadros.
+- NAO mude as poses, a roupa, as cores, a arma nem o tamanho do boneco.
+- Mantenha cada quadro na mesma posicao da grade de 4 colunas e 2 linhas.
+- Uma unica imagem de 1536x1024, em pixel art nitida, com fundo branco liso, sem texto e sem sombra.

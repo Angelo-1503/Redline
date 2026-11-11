@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Redline.Settings;
 
 namespace Redline.Player
 {
@@ -21,8 +22,6 @@ namespace Redline.Player
         [SerializeField] private LayerMask groundLayer;
 
         [Header("Descer de plataformas")]
-        [Tooltip("Tecla que faz o personagem descer da plataforma em que está (caixas, rampas, sacadas). Baixo + Pulo também funciona.")]
-        [SerializeField] private KeyCode dropKey = KeyCode.C;
         [Tooltip("Por quanto tempo a plataforma deixa de segurar o personagem depois de descer.")]
         [SerializeField] private float dropDuration = 0.35f;
 
@@ -55,16 +54,16 @@ namespace Redline.Player
 
         private void Update()
         {
-            horizontalInput = Input.GetAxisRaw("Horizontal");
-            IsAimingUp = Input.GetAxisRaw("Vertical") > 0.5f;
+            horizontalInput = GameInput.Horizontal;
+            IsAimingUp = GameInput.Vertical > 0.5f;
 
-            bool holdingDown = Input.GetAxisRaw("Vertical") < -0.5f;
-            if (IsGrounded && (Input.GetKeyDown(dropKey) || (holdingDown && Input.GetButtonDown("Jump"))))
+            bool holdingDown = GameInput.Vertical < -0.5f;
+            if (IsGrounded && (GameInput.Down(GameAction.Drop) || (holdingDown && GameInput.Down(GameAction.Jump))))
             {
                 // Descer da plataforma (só funciona em plataformas de mão única; no chão firme não faz nada).
                 dropRequested = true;
             }
-            else if (Input.GetButtonDown("Jump") && IsGrounded)
+            else if (GameInput.Down(GameAction.Jump) && IsGrounded)
             {
                 jumpRequested = true;
             }
@@ -83,7 +82,7 @@ namespace Redline.Player
                 spriteRenderer.flipX = !facingRight;
             }
 
-            AimDirection = ComputeAimDirection(horizontalInput, Input.GetAxisRaw("Vertical"));
+            AimDirection = ComputeAimDirection(horizontalInput, GameInput.Vertical);
         }
 
         private Vector2 ComputeAimDirection(float horizontal, float vertical)
@@ -123,6 +122,7 @@ namespace Redline.Player
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpRequested = false;
+                IsGrounded = false;
             }
         }
 
@@ -157,6 +157,7 @@ namespace Redline.Player
 
             // Um empurrãozinho para baixo para sair de cima da plataforma na hora.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Min(rb.linearVelocity.y, -2f));
+            IsGrounded = false;
             yield return new WaitForSeconds(dropDuration);
 
             foreach (Collider2D mine in myColliders)

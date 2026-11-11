@@ -19,6 +19,8 @@ namespace Redline.CameraSystem
         [SerializeField] private bool clampToLevel = true;
         [SerializeField] private float levelStartX = -10f;
         [SerializeField] private float levelEndX = 20f;
+        [Tooltip("Se o trecho for mais estreito que a tela (ex.: monitor mais largo que 16:9), aproxima a câmera para o trecho ocupar a tela inteira, em vez de mostrar o fundo do lado.")]
+        [SerializeField] private bool fitWidthIfNarrow = false;
 
         [Header("Desnível (escada)")]
         [Tooltip("Quanto a câmera desce, em unidades, entre descentStartX e descentEndX. 0 = fase toda no mesmo nível.")]
@@ -42,10 +44,15 @@ namespace Redline.CameraSystem
 
         private Vector3 currentVelocity;
         private Camera cam;
+        private float baseOrthoSize;
 
         private void Awake()
         {
             cam = GetComponent<Camera>();
+            if (cam != null)
+            {
+                baseOrthoSize = cam.orthographicSize;
+            }
         }
 
         /// <summary>Metade da largura do que a câmera mostra, em unidades do mundo.</summary>
@@ -62,7 +69,19 @@ namespace Redline.CameraSystem
         public void LockToRange(float startX, float endX, bool alignLeftIfNarrow = false)
         {
             clampToLevel = true;
-            if (alignLeftIfNarrow)
+            if (fitWidthIfNarrow)
+            {
+                // A câmera se aproxima para caber no trecho (já agora, para a porta posicionar certo).
+                levelStartX = startX;
+                levelEndX = endX;
+                if (cam != null && cam.orthographic && cam.aspect > 0f)
+                {
+                    // Só aproxima, nunca afasta: o zoom fica o mesmo na fase inteira (senão um trecho
+                    // parece maior que o outro).
+                    cam.orthographicSize = Mathf.Min(cam.orthographicSize, (endX - startX) / (2f * cam.aspect));
+                }
+            }
+            else if (alignLeftIfNarrow)
             {
                 levelStartX = startX;
                 levelEndX = Mathf.Max(endX, startX + ViewHalfWidth * 2f);
@@ -109,6 +128,12 @@ namespace Redline.CameraSystem
             if (lockY)
             {
                 desiredPosition.y = fixedY - DescentAt(target.position.x);
+            }
+
+            if (fitWidthIfNarrow && clampToLevel && cam != null && cam.orthographic && cam.aspect > 0f)
+            {
+                float sizeToFit = (levelEndX - levelStartX) / (2f * cam.aspect);
+                cam.orthographicSize = Mathf.Min(cam.orthographicSize, sizeToFit);
             }
 
             if (clampToLevel && cam != null && cam.orthographic)

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Redline.CameraSystem;
 using Redline.Core;
+using Redline.Level;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -236,6 +237,18 @@ namespace Redline.Waves
                 yield break;
             }
 
+            // A vitória já foi confirmada: projéteis restantes não podem causar Game Over no fade.
+            if (playerHealth != null) playerHealth.IsInvulnerable = true;
+            if (player != null)
+            {
+                var controller = player.GetComponent<Redline.Player.PlayerController>();
+                var shooting = player.GetComponent<Redline.Player.PlayerShooting>();
+                if (controller != null) controller.enabled = false;
+                if (shooting != null) shooting.enabled = false;
+                var body = player.GetComponent<Rigidbody2D>();
+                if (body != null) body.linearVelocity = new Vector2(0f, body.linearVelocity.y);
+            }
+            yield return LevelIntro.FadeToBlack(1f);
             SceneManager.LoadScene(nextSceneName);
         }
 

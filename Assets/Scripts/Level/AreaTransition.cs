@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Redline.CameraSystem;
 using Redline.Player;
+using Redline.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -91,8 +92,14 @@ namespace Redline.Level
 
         private IEnumerator Run()
         {
+            Health health = player.GetComponent<Health>();
+            if (health != null && health.IsDead) yield break;
+            bool wasInvulnerable = health != null && health.IsInvulnerable;
+            if (health != null) health.IsInvulnerable = true;
             PlayerController controller = player.GetComponent<PlayerController>();
             PlayerShooting shooting = player.GetComponent<PlayerShooting>();
+            bool controllerWasEnabled = controller != null && controller.enabled;
+            bool shootingWasEnabled = shooting != null && shooting.enabled;
 
             // 1) Tira o controle do jogador e para ele.
             if (controller != null) controller.enabled = false;
@@ -132,8 +139,12 @@ namespace Redline.Level
             // 4) Clareia e devolve o controle.
             yield return Fade(black, 1f, 0f);
             Destroy(black.transform.parent.gameObject);
-            if (controller != null) controller.enabled = true;
-            if (shooting != null) shooting.enabled = true;
+            if (health != null) health.IsInvulnerable = wasInvulnerable;
+            if (health == null || !health.IsDead)
+            {
+                if (controller != null) controller.enabled = controllerWasEnabled;
+                if (shooting != null) shooting.enabled = shootingWasEnabled;
+            }
             OnFinished?.Invoke();
         }
 
