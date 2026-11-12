@@ -1,0 +1,15 @@
+<b>TRABALHO ACADÊMICO</b>
+
+<color=#D52B3B>INTEGRANTES</color>
+Ângelo Luiz Giroletto
+Levi de Sousa Gronenschild
+Kauane Zicato
+
+<color=#D52B3B>PROFESSOR E ORIENTADOR</color>
+Neilor Avelino Tonin
+
+<color=#D52B3B>DESENVOLVIDO COM</color>
+Unity
+
+<b>Obrigado por jogar.</b>
+O auge passa. O legado fica.

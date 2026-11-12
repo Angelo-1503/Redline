@@ -1,5 +1,7 @@
 using System.Collections;
 using Redline.Core;
+using Redline.Menu;
+using UnityEngine.SceneManagement;
 using Redline.Player;
 using Redline.Waves;
 using UnityEngine;
@@ -296,6 +298,13 @@ namespace Redline.Level
                     last ? FontStyle.Bold : FontStyle.Normal, last ? Color.white : soft);
                 yield return FadeText(line, subtextLineFade);
             }
+            yield return new WaitForSecondsRealtime(4f);
+            CreditsOverlay.Show(null, () =>
+            {
+                Time.timeScale = 1f;
+                AudioListener.pause = false;
+                SceneManager.LoadScene("MenuInicial");
+            }, true);
         }
 
         private static IEnumerator FadeText(Text text, float duration)

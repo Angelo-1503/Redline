@@ -6,11 +6,13 @@ namespace Redline.Settings
     {
         public static bool Held(GameAction action)
         {
+            if (Redline.UI.PauseMenu.BlocksGameplayInput) return false;
             var a = GameSettings.GetKey(action, 0); var b = GameSettings.GetKey(action, 1);
             return (a != KeyCode.None && Input.GetKey(a)) || (b != KeyCode.None && Input.GetKey(b));
         }
         public static bool Down(GameAction action)
         {
+            if (Redline.UI.PauseMenu.BlocksGameplayInput) return false;
             var a = GameSettings.GetKey(action, 0); var b = GameSettings.GetKey(action, 1);
             return (a != KeyCode.None && Input.GetKeyDown(a)) || (b != KeyCode.None && Input.GetKeyDown(b));
         }

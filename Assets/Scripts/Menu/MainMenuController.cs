@@ -27,7 +27,22 @@ namespace Redline.Menu
         readonly Slider[] volumeSliders = new Slider[3];
         readonly Text[] volumeNumbers = new Text[3];
         Text keyHint, homeStatus;
-        Button newGameButton, settingsButton, applyButton;
+        Button newGameButton, settingsButton, creditsButton, applyButton;
+        Button confirmLeave, cancelLeave;
+        bool showingCredits;
+        GameObject difficultyPanel;
+        Difficulty selectedDifficulty = Difficulty.Normal;
+        Text difficultyDescription;
+        readonly Button[] difficultyButtons = new Button[3];
+        System.Action resumeGame, returnToMenu;
+        public void InitializePause(System.Action resume, System.Action leave)
+        { resumeGame = resume; returnToMenu = leave; }
+        public void DisposePause()
+        {
+            if (settings != null && settings.activeSelf) CancelSettings();
+            if (canvas != null) Destroy(canvas.gameObject);
+            Destroy(gameObject);
+        }
         StandaloneInputModule inputModule;
         AudioSource previewSource;
         int captureAction = -1, captureSlot;
@@ -42,8 +57,7 @@ namespace Redline.Menu
         }
         void Start()
         {
-            Time.timeScale = 1f;
-            AudioListener.pause = false;
+            if (resumeGame == null) { Time.timeScale = 1f; AudioListener.pause = false; }
             GameSettings.Capture();
             if (menuFont == null) menuFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             if (EventSystem.current == null)
@@ -51,19 +65,22 @@ namespace Redline.Menu
             inputModule = EventSystem.current.GetComponent<StandaloneInputModule>();
             previewSource = gameObject.AddComponent<AudioSource>();
             previewSource.playOnAwake = false; previewSource.spatialBlend = 0f;
+            previewSource.ignoreListenerPause = true;
             BuildInterface();
             StartCoroutine(Reveal());
         }
         void Update()
         {
-            if (loading) return;
+            if (loading || showingCredits) return;
             if (captureAction >= 0)
             {
                 if (Time.unscaledTime < captureReadyAt) return;
                 for (int i = 0; i < 7; i++)
                     if (Input.GetMouseButtonDown(i)) { CaptureKey((KeyCode)((int)KeyCode.Mouse0 + i)); break; }
             }
+            else if (difficultyPanel != null && difficultyPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape)) CloseDifficulty();
             else if (settings != null && settings.activeSelf && Input.GetKeyDown(KeyCode.Escape)) CancelSettings();
+            else if (resumeGame != null && Input.GetKeyDown(KeyCode.Escape)) resumeGame();
         }
         void OnGUI()
         {
@@ -80,13 +97,14 @@ namespace Redline.Menu
         void BuildInterface()
         {
             var obj = new GameObject("RedlineMenuCanvas", typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
-            canvas = obj.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = 300;
+            canvas = obj.GetComponent<Canvas>(); canvas.renderMode = RenderMode.ScreenSpaceOverlay; canvas.sortingOrder = resumeGame != null ? 2500 : 300;
             var scaler = obj.GetComponent<CanvasScaler>(); scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080); scaler.matchWidthOrHeight = 0.5f;
             canvasGroup = obj.AddComponent<CanvasGroup>();
             Transform root = obj.transform;
             var backdrop = new GameObject("ArteDoRedline", typeof(RectTransform), typeof(Image)); backdrop.transform.SetParent(root, false);
             var art = backdrop.GetComponent<Image>(); art.sprite = backgroundArt; art.raycastTarget = false;
+            if (resumeGame != null) art.color = new Color(0.035f, 0.045f, 0.065f, 0.94f);
             Stretch(art.rectTransform);
             art.rectTransform.pivot = new Vector2(0.5f, 1f);
             if (backgroundArt != null)
@@ -102,17 +120,44 @@ namespace Redline.Menu
             home = new GameObject("Inicio", typeof(RectTransform)); home.transform.SetParent(root, false);
             var h = home.GetComponent<RectTransform>(); h.anchorMin = h.anchorMax = new Vector2(0, 0.5f); h.pivot = new Vector2(0, 0.5f);
             h.anchoredPosition = new Vector2(112, 0); h.sizeDelta = new Vector2(720, 860);
-            Label(h, "UMA HISTÓRIA. SEIS BATALHAS.", 18, Muted, 4, 10, 650, 30);
+            if (resumeGame != null)
+            {
+                Label(h, "REDLINE / " + GameDifficulty.Label, 20, Red, 4, 120, 650, 40);
+                Label(h, "EM PAUSA", 76, White, 0, 185, 720, 120).fontStyle = FontStyle.Bold;
+                newGameButton = MenuButton(h, "Continuar", "CONTINUAR", 4, 378, 600, 88, true, () => resumeGame(), "01");
+                settingsButton = MenuButton(h, "Configuracoes", "CONFIGURAÇÕES", 4, 484, 600, 78, false, OpenSettings, "02");
+                MenuButton(h, "MenuInicial", "VOLTAR AO MENU INICIAL", 4, 580, 600, 64, false, () =>
+                {
+                    homeStatus.text = "O progresso desta fase será perdido. Confirmar?";
+                    newGameButton.gameObject.SetActive(false);
+                    settingsButton.gameObject.SetActive(false);
+                    confirmLeave.gameObject.SetActive(true); cancelLeave.gameObject.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(cancelLeave.gameObject);
+                }, "03");
+                homeStatus = Label(h, "", 21, Muted, 4, 670, 680, 65);
+                confirmLeave = MenuButton(h, "ConfirmarSaida", "SIM, VOLTAR", 4, 748, 290, 64, false, () => returnToMenu());
+                cancelLeave = MenuButton(h, "CancelarSaida", "CANCELAR", 310, 748, 294, 64, true, () =>
+                {
+                    confirmLeave.gameObject.SetActive(false); cancelLeave.gameObject.SetActive(false);
+                    newGameButton.gameObject.SetActive(true); settingsButton.gameObject.SetActive(true);
+                    homeStatus.text = ""; EventSystem.current.SetSelectedGameObject(newGameButton.gameObject);
+                });
+                confirmLeave.gameObject.SetActive(false); cancelLeave.gameObject.SetActive(false);
+            }
+            else
+            {
             var logo = Label(h, "RED<color=#D52B3B>LINE</color>", 142, White, -6, 48, 740, 170); logo.fontStyle = FontStyle.BoldAndItalic;
             Label(h, "CADA RODADA DEIXA UMA MARCA.", 18, White, 4, 220, 650, 32);
             Fill(h, "AssinaturaVermelha", Red, 4, 278, 92, 4);
             Label(h, "A próxima rodada começa com você.", 23, Muted, 4, 302, 650, 38);
             newGameButton = MenuButton(h, "NovoJogo", "NOVO JOGO", 4, 378, 600, 88, true, StartNewGame, "01");
             settingsButton = MenuButton(h, "Configuracoes", "CONFIGURAÇÕES", 4, 484, 600, 78, false, OpenSettings, "02");
-            MenuButton(h, "Sair", "SAIR DO JOGO", 4, 580, 600, 64, false, Application.Quit, "03");
-            homeStatus = Label(h, "", 18, Muted, 4, 662, 650, 45);
+            creditsButton = MenuButton(h, "Creditos", "CRÉDITOS", 4, 576, 600, 64, false, OpenCredits, "03");
+            MenuButton(h, "Sair", "SAIR DO JOGO", 4, 652, 600, 64, false, Application.Quit, "04");
+            homeStatus = Label(h, "", 18, Muted, 4, 718, 650, 36);
             Fill(h, "LinhaRodape", new Color(1, 1, 1, 0.14f), 4, 766, 600, 1);
             Label(h, "MOUSE OU TECLADO  /  ENTER PARA SELECIONAR", 15, Muted, 4, 790, 700, 34);
+            }
             settingsDim = new GameObject("FundoConfiguracoes", typeof(RectTransform), typeof(Image)); settingsDim.transform.SetParent(root, false);
             Stretch(settingsDim.GetComponent<RectTransform>()); settingsDim.GetComponent<Image>().color = new Color(0, 0, 0, 0.58f);
             settings = new GameObject("PainelConfiguracoes", typeof(RectTransform), typeof(Image)); settings.transform.SetParent(root, false);
@@ -163,6 +208,18 @@ namespace Redline.Menu
             canvasGroup.alpha = 0f;
             for (float t = 0; t < 1; t += Time.unscaledDeltaTime / 0.55f) { canvasGroup.alpha = t; yield return null; }
             canvasGroup.alpha = 1f;
+        }
+        public void OpenCredits()
+        {
+            if (loading || showingCredits) return;
+            showingCredits = true;
+            home.SetActive(false);
+            CreditsOverlay.Show(menuFont, () =>
+            {
+                showingCredits = false;
+                home.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(creditsButton.gameObject);
+            });
         }
         public void OpenSettings()
         {
@@ -236,8 +293,56 @@ namespace Redline.Menu
         }
         public void StartNewGame()
         {
+            if (loading || resumeGame != null) return;
+            if (difficultyPanel == null) BuildDifficulty();
+            home.SetActive(false); difficultyPanel.SetActive(true);
+            SelectDifficulty(Difficulty.Normal);
+            EventSystem.current.SetSelectedGameObject(difficultyButtons[1].gameObject);
+        }
+        void BuildDifficulty()
+        {
+            difficultyPanel = new GameObject("EscolhaDificuldade", typeof(RectTransform), typeof(Image));
+            difficultyPanel.transform.SetParent(canvas.transform, false);
+            var rect = difficultyPanel.GetComponent<RectTransform>();
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0.5f, 0.5f);
+            rect.sizeDelta = new Vector2(1400, 850);
+            difficultyPanel.GetComponent<Image>().color = Panel;
+            Fill(rect, "FaixaSuperior", Red, 0, 0, 1400, 5);
+            Label(rect, "ESCOLHA A DIFICULDADE", 46, White, 70, 50, 1260, 80).fontStyle = FontStyle.Bold;
+            Label(rect, "Uma escolha para as seis batalhas da campanha.", 24, Muted, 74, 142, 1240, 50);
+            for (int i = 0; i < 3; i++)
+            {
+                var difficulty = (Difficulty)i;
+                difficultyButtons[i] = MenuButton(rect, "Dificuldade" + i, GameDifficulty.Name(difficulty),
+                    70 + i * 430, 260, 400, 100, false, () => SelectDifficulty(difficulty));
+            }
+            difficultyDescription = Label(rect, "", 27, White, 74, 410, 1240, 140);
+            MenuButton(rect, "Voltar", "VOLTAR", 70, 670, 340, 75, false, CloseDifficulty);
+            MenuButton(rect, "IniciarCampanha", "INICIAR CAMPANHA", 780, 670, 550, 75, true, ConfirmDifficulty);
+        }
+        void SelectDifficulty(Difficulty difficulty)
+        {
+            selectedDifficulty = difficulty;
+            for (int i = 0; i < 3; i++)
+                difficultyButtons[i].GetComponentInChildren<Text>().text =
+                    ((Difficulty)i == difficulty ? "› " : "") + GameDifficulty.Name((Difficulty)i);
+            difficultyDescription.text = difficulty == Difficulty.Easy
+                ? "FÁCIL — Mais espaço para aprender.\nVocê recebe 35% menos dano e causa 25% mais dano."
+                : difficulty == Difficulty.Hard
+                ? "DIFÍCIL — Cada confronto exige mais cuidado.\nVocê recebe 35% mais dano e causa 15% menos dano."
+                : "NORMAL — A experiência original do Redline.\nDano e equilíbrio atuais, sem modificações.";
+        }
+        void CloseDifficulty()
+        {
+            difficultyPanel.SetActive(false); home.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(newGameButton.gameObject);
+        }
+        void ConfirmDifficulty()
+        {
             if (loading) return;
-            if (!Application.CanStreamedLevelBeLoaded(firstLevel)) { homeStatus.text = "A fase inicial não está disponível no build."; return; }
+            if (!Application.CanStreamedLevelBeLoaded(firstLevel))
+            { difficultyDescription.text = "A fase inicial não está disponível no build."; return; }
+            GameDifficulty.BeginCampaign(selectedDifficulty);
             loading = true; StartCoroutine(LoadGame());
         }
         IEnumerator LoadGame()
@@ -305,3 +410,4 @@ namespace Redline.Menu
         { rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one; rect.offsetMin = rect.offsetMax = Vector2.zero; }
     }
 }
+

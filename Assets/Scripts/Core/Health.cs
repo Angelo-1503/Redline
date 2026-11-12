@@ -41,9 +41,14 @@ namespace Redline.Core
         public event Action OnDied;
 
         private float invulnerableUntil = -1f;
+        private bool difficultyPlayer, difficultyEnemy;
 
         private void Awake()
         {
+            difficultyPlayer = CompareTag("Player");
+            difficultyEnemy = GetComponent<Redline.Enemies.EnemyBasic>() != null
+                || GetComponent<Redline.Enemies.EnemyShooter>() != null
+                || GetComponent<Redline.Enemies.BossEnemy>() != null;
             CurrentHealth = maxHealth;
         }
 
@@ -59,6 +64,7 @@ namespace Redline.Core
                 return;
             }
 
+            amount = GameDifficulty.ScaleDamage(amount, difficultyPlayer, difficultyEnemy);
             CurrentHealth = Mathf.Max(0, CurrentHealth - amount);
             OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
 
