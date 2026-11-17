@@ -77,12 +77,15 @@ namespace Redline.Player
                 facingRight = false;
             }
 
-            if (spriteRenderer != null)
+            if (GameInput.TryControllerAim(out Vector2 controllerAim))
             {
-                spriteRenderer.flipX = !facingRight;
+                AimDirection = controllerAim;
+                IsAimingUp = controllerAim.y > 0.5f;
+                if (Mathf.Abs(controllerAim.x) > 0.01f) facingRight = controllerAim.x > 0f;
             }
+            else AimDirection = ComputeAimDirection(horizontalInput, GameInput.Vertical);
 
-            AimDirection = ComputeAimDirection(horizontalInput, GameInput.Vertical);
+            if (spriteRenderer != null) spriteRenderer.flipX = !facingRight;
         }
 
         private Vector2 ComputeAimDirection(float horizontal, float vertical)

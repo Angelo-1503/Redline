@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Redline.Settings;
 
@@ -23,6 +24,8 @@ namespace Redline.Audio
         [SerializeField] private float volume = 0.5f;
 
         private AudioSource audioSource;
+        private float fadeGain = 1f;
+        private Coroutine fadeRoutine;
 
         private void Awake()
         {
@@ -43,7 +46,7 @@ namespace Redline.Audio
         private void OnDisable() { GameSettings.Changed -= ApplyVolume; }
         private void ApplyVolume()
         {
-            if (audioSource != null) audioSource.volume = volume * GameSettings.MusicVolume;
+            if (audioSource != null) audioSource.volume = volume * GameSettings.MusicVolume * fadeGain;
         }
 
         private void Start()
@@ -53,8 +56,7 @@ namespace Redline.Audio
                 return;
             }
 
-            audioSource.clip = musicClip;
-            audioSource.Play();
+            PlayClip(musicClip);
         }
 
         /// <summary>Troca a música tocando (por exemplo, ao entrar na luta do chefe).</summary>
@@ -70,8 +72,33 @@ namespace Redline.Audio
                 return;
             }
 
+            if (fadeRoutine != null) StopCoroutine(fadeRoutine);
+            fadeGain = 1f;
+            ApplyVolume();
             audioSource.clip = clip;
             audioSource.Play();
+        }
+
+        /// <summary>Encerra a trilha sem permitir que ajustes de volume a reativem durante o final.</summary>
+        public void FadeOut(float duration)
+        {
+            if (fadeRoutine != null) StopCoroutine(fadeRoutine);
+            fadeRoutine = StartCoroutine(FadeToSilence(duration));
+        }
+
+        private IEnumerator FadeToSilence(float duration)
+        {
+            float initialGain = fadeGain;
+            for (float elapsed = 0f; elapsed < duration; elapsed += Time.deltaTime)
+            {
+                fadeGain = Mathf.Lerp(initialGain, 0f, elapsed / duration);
+                ApplyVolume();
+                yield return null;
+            }
+            fadeGain = 0f;
+            ApplyVolume();
+            if (audioSource != null) audioSource.Stop();
+            fadeRoutine = null;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Redline.Menu
     {
         [SerializeField] Sprite backgroundArt;
         [SerializeField] Font menuFont;
-        [SerializeField] AudioClip previewClip;
+        AudioClip previewClip;
         [SerializeField] string firstLevel = "Fase01";
 
         static readonly Color Red = new Color32(213, 43, 59, 255);
@@ -35,8 +35,9 @@ namespace Redline.Menu
         Text difficultyDescription;
         readonly Button[] difficultyButtons = new Button[3];
         System.Action resumeGame, returnToMenu;
+        int pauseOpenedFrame = -1;
         public void InitializePause(System.Action resume, System.Action leave)
-        { resumeGame = resume; returnToMenu = leave; }
+        { resumeGame = resume; returnToMenu = leave; pauseOpenedFrame = Time.frameCount; }
         public void DisposePause()
         {
             if (settings != null && settings.activeSelf) CancelSettings();
@@ -62,25 +63,35 @@ namespace Redline.Menu
             if (menuFont == null) menuFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             if (EventSystem.current == null)
                 new GameObject("MenuEventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            ControllerUIInput.Ensure(EventSystem.current);
             inputModule = EventSystem.current.GetComponent<StandaloneInputModule>();
             previewSource = gameObject.AddComponent<AudioSource>();
             previewSource.playOnAwake = false; previewSource.spatialBlend = 0f;
             previewSource.ignoreListenerPause = true;
+            // Sinal próprio e curto para testar efeitos, sem reutilizar vozes ou sons da C4.
+            const int sampleRate = 44100;
+            float[] samples = new float[(int)(sampleRate * 0.18f)];
+            for (int i = 0; i < samples.Length; i++)
+                samples[i] = Mathf.Sin(2f * Mathf.PI * 660f * i / sampleRate)
+                    * Mathf.Sin(Mathf.PI * i / (samples.Length - 1)) * 0.15f;
+            previewClip = AudioClip.Create("TesteDeEfeitos", samples.Length, 1, sampleRate, false);
+            previewClip.SetData(samples, 0);
             BuildInterface();
             StartCoroutine(Reveal());
         }
         void Update()
         {
-            if (loading || showingCredits) return;
+            if (loading || showingCredits || (resumeGame != null && Time.frameCount == pauseOpenedFrame)) return;
             if (captureAction >= 0)
             {
+                if (GameInput.MenuBackPressed) { CaptureKey(KeyCode.Escape); return; }
                 if (Time.unscaledTime < captureReadyAt) return;
                 for (int i = 0; i < 7; i++)
                     if (Input.GetMouseButtonDown(i)) { CaptureKey((KeyCode)((int)KeyCode.Mouse0 + i)); break; }
             }
-            else if (difficultyPanel != null && difficultyPanel.activeSelf && Input.GetKeyDown(KeyCode.Escape)) CloseDifficulty();
-            else if (settings != null && settings.activeSelf && Input.GetKeyDown(KeyCode.Escape)) CancelSettings();
-            else if (resumeGame != null && Input.GetKeyDown(KeyCode.Escape)) resumeGame();
+            else if (difficultyPanel != null && difficultyPanel.activeSelf && GameInput.MenuBackPressed) CloseDifficulty();
+            else if (settings != null && settings.activeSelf && GameInput.MenuBackPressed) CancelSettings();
+            else if (resumeGame != null && (GameInput.MenuBackPressed || GameInput.PausePressed)) resumeGame();
         }
         void OnGUI()
         {
@@ -91,6 +102,7 @@ namespace Redline.Menu
         }
         void OnDestroy()
         {
+            if (previewClip != null) Destroy(previewClip);
             if (captureAction >= 0 && inputModule != null) inputModule.enabled = true;
             if (settings != null && settings.activeSelf && before != null) GameSettings.Apply(before, false);
         }
@@ -156,7 +168,7 @@ namespace Redline.Menu
             MenuButton(h, "Sair", "SAIR DO JOGO", 4, 652, 600, 64, false, Application.Quit, "04");
             homeStatus = Label(h, "", 18, Muted, 4, 718, 650, 36);
             Fill(h, "LinhaRodape", new Color(1, 1, 1, 0.14f), 4, 766, 600, 1);
-            Label(h, "MOUSE OU TECLADO  /  ENTER PARA SELECIONAR", 15, Muted, 4, 790, 700, 34);
+            Label(h, "TECLADO / MOUSE / CONTROLE  •  A CONFIRMA  •  B VOLTA", 15, Muted, 4, 790, 700, 34);
             }
             settingsDim = new GameObject("FundoConfiguracoes", typeof(RectTransform), typeof(Image)); settingsDim.transform.SetParent(root, false);
             Stretch(settingsDim.GetComponent<RectTransform>()); settingsDim.GetComponent<Image>().color = new Color(0, 0, 0, 0.58f);
@@ -179,9 +191,9 @@ namespace Redline.Menu
                 volumeSliders[i] = MakeSlider(rect, "Volume" + i, 60, y + 42, 440);
                 volumeSliders[i].onValueChanged.AddListener(value => ChangeVolume(index, value));
             }
-            MenuButton(rect, "Previa", "OUVIR PRÉVIA", 60, 590, 440, 56, false, PlayPreview);
-            Label(rect, "Os volumes são testados na hora.\nAplique para guardar suas preferências.", 18, Muted, 60, 674, 445, 80);
-            Label(rect, "02  /  CONTROLES", 20, Red, 620, 178, 840, 36).fontStyle = FontStyle.Bold;
+            MenuButton(rect, "Previa", "TESTAR EFEITOS", 60, 590, 440, 56, false, PlayPreview);
+            Label(rect, "<b>CONTROLE XBOX</b>\nEsq./direcional: mover • Dir.: mirar\nA: pular • B: descer\nRT ou X: atirar\nMenu/Start: pausar", 17, Muted, 60, 666, 445, 128);
+            Label(rect, "02  /  TECLADO E MOUSE", 20, Red, 620, 178, 840, 36).fontStyle = FontStyle.Bold;
             Label(rect, "AÇÃO", 15, Muted, 620, 234, 300, 26);
             Label(rect, "PRINCIPAL", 15, Muted, 950, 234, 240, 26);
             Label(rect, "ALTERNATIVA", 15, Muted, 1210, 234, 240, 26);
@@ -195,11 +207,21 @@ namespace Redline.Menu
                     keyButtons[a, s] = MenuButton(rect, "Tecla_" + a + "_" + s, "", 950 + s * 260, y, 240, 48, false, () => BeginRebind((GameAction)a, s));
                 }
             }
-            keyHint = Label(rect, "Clique numa tecla para trocar. Esc cancela. Backspace limpa.", 17, Muted, 620, 744, 840, 42);
+            keyHint = Label(rect, "Teclado/mouse: selecione um atalho. B/Esc cancela. Backspace limpa.", 17, Muted, 620, 744, 840, 42);
             Fill(rect, "DivisoriaRodape", new Color(1, 1, 1, 0.14f), 60, 806, 1440, 1);
             MenuButton(rect, "Restaurar", "RESTAURAR PADRÕES", 60, 836, 380, 54, false, RestoreDefaults);
             MenuButton(rect, "Cancelar", "CANCELAR", 870, 836, 240, 54, false, CancelSettings);
             applyButton = MenuButton(rect, "Aplicar", "APLICAR E VOLTAR", 1130, 836, 370, 54, true, ApplyAndClose);
+            // Horizontal input edits a focused volume slider; vertical input changes rows.
+            var previewButton = rect.Find("Previa").GetComponent<Button>();
+            var closeButton = rect.Find("Fechar").GetComponent<Button>();
+            for (int i = 0; i < volumeSliders.Length; i++)
+            {
+                var navigation = new Navigation { mode = Navigation.Mode.Explicit };
+                navigation.selectOnUp = i == 0 ? (Selectable)closeButton : volumeSliders[i - 1];
+                navigation.selectOnDown = i == volumeSliders.Length - 1 ? (Selectable)previewButton : volumeSliders[i + 1];
+                volumeSliders[i].navigation = navigation;
+            }
             settings.SetActive(false); settingsDim.SetActive(false);
             EventSystem.current.SetSelectedGameObject(newGameButton.gameObject);
         }
@@ -234,7 +256,7 @@ namespace Redline.Menu
             for (int i = 0; i < 3; i++) { volumeSliders[i].SetValueWithoutNotify(volumes[i]); volumeNumbers[i].text = Mathf.RoundToInt(volumes[i] * 100) + "%"; }
             for (int a = 0; a < 7; a++) for (int s = 0; s < 2; s++)
                 keyButtons[a, s].GetComponentInChildren<Text>().text = GameSettings.KeyLabel((s == 0 ? draft.Primary : draft.Secondary)[a]);
-            keyHint.text = "Clique numa tecla para trocar. Esc cancela. Backspace limpa."; keyHint.color = Muted;
+            keyHint.text = "Teclado/mouse: selecione um atalho. B/Esc cancela. Backspace limpa."; keyHint.color = Muted;
         }
         void ChangeVolume(int index, float value)
         {
@@ -253,7 +275,7 @@ namespace Redline.Menu
         {
             EndCapture(); captureAction = (int)action; captureSlot = slot; captureReadyAt = Time.unscaledTime + 0.2f;
             keyButtons[captureAction, slot].GetComponentInChildren<Text>().text = "PRESSIONE...";
-            keyHint.text = "Pressione uma tecla ou botão do mouse. Esc cancela. Backspace limpa."; keyHint.color = White;
+            keyHint.text = "Pressione uma tecla ou botão do mouse. B/Esc cancela. Backspace limpa."; keyHint.color = White;
             EventSystem.current.SetSelectedGameObject(null);
             if (inputModule != null) inputModule.enabled = false;
         }
@@ -269,8 +291,10 @@ namespace Redline.Menu
         void EndCapture()
         {
             if (captureAction < 0) return;
+            var button = keyButtons[captureAction, captureSlot];
             captureAction = -1;
             if (inputModule != null) inputModule.enabled = true;
+            if (button != null && button.isActiveAndEnabled) EventSystem.current.SetSelectedGameObject(button.gameObject);
         }
         public void ApplyAndClose()
         {

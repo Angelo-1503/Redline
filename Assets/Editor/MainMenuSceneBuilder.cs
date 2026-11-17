@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using Redline.Menu;
+using Redline.Audio;
 
 namespace Redline.EditorTools
 {
@@ -25,11 +26,14 @@ namespace Redline.EditorTools
             cameraObject.tag = "MainCamera"; cameraObject.transform.position = new Vector3(0, 0, -10);
             var camera = cameraObject.GetComponent<Camera>(); camera.orthographic = true;
             camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = Color.black;
+            var music = new SerializedObject(cameraObject.AddComponent<MusicManager>());
+            music.FindProperty("musicClip").objectReferenceValue = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Music/Decisions.mp3");
+            music.FindProperty("volume").floatValue = 0.25f;
+            music.ApplyModifiedPropertiesWithoutUndo();
             var menu = new GameObject("RedlineMenu", typeof(MainMenuController));
             var data = new SerializedObject(menu.GetComponent<MainMenuController>());
             data.FindProperty("backgroundArt").objectReferenceValue = AssetDatabase.LoadAssetAtPath<Sprite>(artPath);
             data.FindProperty("menuFont").objectReferenceValue = AssetDatabase.LoadAssetAtPath<Font>("Assets/TextMesh Pro/Fonts/LiberationSans.ttf");
-            data.FindProperty("previewClip").objectReferenceValue = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/OkayLetsGo.mp3");
             data.ApplyModifiedPropertiesWithoutUndo();
             EditorSceneManager.SaveScene(scene, MenuPath);
             var scenes = EditorBuildSettings.scenes.Where(s => s.path != MenuPath).ToList();

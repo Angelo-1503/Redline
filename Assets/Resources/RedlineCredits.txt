@@ -11,5 +11,21 @@ Neilor Avelino Tonin
 <color=#D52B3B>DESENVOLVIDO COM</color>
 Unity
 
+<color=#D52B3B>TRILHA SONORA</color>
+Dark Electronic — BaoshunMusic / Pixabay
+pixabay.com/music/upbeat-dark-electronic-207913/
+Licença: pixabay.com/service/license-summary/
+
+Decisions — Kevin MacLeod (incompetech.com)
+incompetech.com/music/royalty-free/index.html?isrc=USUAN1100756
+Creative Commons: By Attribution 4.0
+creativecommons.org/licenses/by/4.0/
+Uso em loop e com ajuste de volume.
+
+Darkling — Kevin MacLeod (incompetech.com)
+incompetech.com/music/royalty-free/index.html?isrc=USUAN1700050
+Creative Commons: By Attribution 4.0
+creativecommons.org/licenses/by/4.0/
+Uso em loop, com ajuste de volume e fade de saída.
+
 <b>Obrigado por jogar.</b>
-O auge passa. O legado fica.

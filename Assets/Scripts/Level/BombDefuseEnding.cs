@@ -6,6 +6,7 @@ using Redline.Player;
 using Redline.Waves;
 using UnityEngine;
 using Redline.Settings;
+using Redline.Audio;
 using UnityEngine.UI;
 
 namespace Redline.Level
@@ -165,6 +166,8 @@ namespace Redline.Level
         private IEnumerator Run()
         {
             ending = true;
+            foreach (MusicManager music in FindObjectsByType<MusicManager>(FindObjectsSortMode.None))
+                music.FadeOut(2f);
             idleSource.Stop();
             if (led != null) led.enabled = false;
             yield return new WaitForSeconds(delayAfterBoss);
@@ -350,7 +353,8 @@ namespace Redline.Level
             {
                 for (int i = 0; i < sources.Length; i++)
                 {
-                    if (sources[i] != null && sources[i] != bombSource && sources[i] != idleSource)
+                    if (sources[i] != null && sources[i] != bombSource && sources[i] != idleSource
+                        && sources[i].GetComponent<MusicManager>() == null)
                     {
                         sources[i].volume = Mathf.Lerp(start[i], 0f, t);
                     }
@@ -359,7 +363,8 @@ namespace Redline.Level
             }
             foreach (AudioSource source in sources)
             {
-                if (source != null && source != bombSource && source != idleSource) source.volume = 0f;
+                if (source != null && source != bombSource && source != idleSource
+                    && source.GetComponent<MusicManager>() == null) source.volume = 0f;
             }
         }
 

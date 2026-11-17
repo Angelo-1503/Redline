@@ -34,6 +34,10 @@ namespace Redline.UI
             if (playerHealth != null) playerHealth.OnDied += HandlePlayerDied;
             else Debug.LogWarning("[GameOverUI] Não encontrou o Health do jogador.");
         }
+        void Update()
+        {
+            if (showing && !loading && group != null && group.interactable && GameInput.MenuBackPressed) ReturnToMenu();
+        }
         void HandlePlayerDied()
         {
             if (showing) return;
@@ -89,9 +93,10 @@ namespace Redline.UI
             retryButton = ActionButton(panel, "TentarNovamente", "TENTAR NOVAMENTE", "01", 490, true, Restart);
             ActionButton(panel, "MenuInicial", "VOLTAR AO MENU INICIAL", "02", 603, false, ReturnToMenu);
             status = Label(panel, "A fase reinicia na dificuldade escolhida.", 18, Muted, 0, 705, 750, 36);
-            Label(panel, "MOUSE OU TECLADO  /  ENTER PARA SELECIONAR", 15, Muted, 0, 768, 750, 30);
+            Label(panel, "TECLADO / MOUSE / CONTROLE  •  A CONFIRMA  •  B VOLTA", 15, Muted, 0, 768, 750, 30);
             if (EventSystem.current == null)
                 new GameObject("GameOverEventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            ControllerUIInput.Ensure(EventSystem.current);
             EventSystem.current.SetSelectedGameObject(null);
         }
         IEnumerator Reveal()

@@ -150,7 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Menu.MainMenuController
   backgroundArt: {fileID: 21300000, guid: 9b5d88fa48b8f7042991ec4529f483d6, type: 3}
   menuFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  previewClip: {fileID: 8300000, guid: d2baee9cf90b46ea8a174d578e3afa5b, type: 3}
   firstLevel: Fase01
 --- !u!4 &450431097
 Transform:
@@ -178,6 +177,7 @@ GameObject:
   - component: {fileID: 641810410}
   - component: {fileID: 641810409}
   - component: {fileID: 641810408}
+  - component: {fileID: 641810411}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -259,6 +259,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641810411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641810407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419387b616824f76bb67db55d38909fc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Redline.Audio.MusicManager
+  musicClip: {fileID: 8300000, guid: 0cf9865c8a1b4224a77dcdb128727afe, type: 3}
+  volume: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

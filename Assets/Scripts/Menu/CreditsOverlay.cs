@@ -1,4 +1,5 @@
 using System;
+using Redline.Settings;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace Redline.Menu
         Action onClose;
         bool closing;
         float readyAt;
+        ScrollRect scrollView;
 
         public static void Show(Font font, Action onClose, bool campaignComplete = false)
         {
@@ -28,6 +30,7 @@ namespace Redline.Menu
             scaler.matchWidthOrHeight = 0.5f;
             if (EventSystem.current == null)
                 new GameObject("CreditsEventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            ControllerUIInput.Ensure(EventSystem.current);
             if (font == null) font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
             var bg = Box(root.transform, "Fundo", Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
@@ -41,6 +44,7 @@ namespace Redline.Menu
             viewport.gameObject.AddComponent<Image>().color = new Color(1, 1, 1, 0.001f);
             viewport.gameObject.AddComponent<RectMask2D>();
             var scroll = viewport.gameObject.AddComponent<ScrollRect>();
+            overlay.scrollView = scroll;
             scroll.viewport = viewport; scroll.horizontal = false;
             scroll.movementType = ScrollRect.MovementType.Clamped;
             var content = Box(viewport, "TextoCreditos", new Vector2(0, 1), Vector2.one, Vector2.zero, new Vector2(0, 560));
@@ -69,7 +73,9 @@ namespace Redline.Menu
 
         void Update()
         {
-            if (Time.unscaledTime >= readyAt && Input.GetKeyDown(KeyCode.Escape)) Close();
+            if (Time.unscaledTime >= readyAt && GameInput.MenuBackPressed) { Close(); return; }
+            if (scrollView != null && Mathf.Abs(ControllerInput.Scroll) > 0.1f)
+                scrollView.verticalNormalizedPosition = Mathf.Clamp01(scrollView.verticalNormalizedPosition + ControllerInput.Scroll * Time.unscaledDeltaTime * 0.65f);
         }
         void Close()
         {

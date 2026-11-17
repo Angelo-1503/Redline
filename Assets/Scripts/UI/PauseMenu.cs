@@ -1,6 +1,7 @@
 using Redline.Core;
 using Redline.Menu;
 using Redline.Player;
+using Redline.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,7 +35,7 @@ namespace Redline.UI
         }
         void Update()
         {
-            if (paused || BlocksGameplayInput || !Input.GetKeyDown(KeyCode.Escape)) return;
+            if (paused || BlocksGameplayInput || !GameInput.PausePressed) return;
             if (player == null)
             {
                 var obj = GameObject.FindGameObjectWithTag("Player");
