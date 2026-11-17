@@ -26,7 +26,7 @@ namespace Redline.Menu
         readonly Button[,] keyButtons = new Button[7, 2];
         readonly Slider[] volumeSliders = new Slider[3];
         readonly Text[] volumeNumbers = new Text[3];
-        Text keyHint, homeStatus;
+        Text keyHint, homeStatus, displayModeText;
         Button newGameButton, settingsButton, creditsButton, applyButton;
         Button confirmLeave, cancelLeave;
         bool showingCredits;
@@ -81,6 +81,7 @@ namespace Redline.Menu
         }
         void Update()
         {
+            RefreshDisplayLabel();
             if (loading || showingCredits || (resumeGame != null && Time.frameCount == pauseOpenedFrame)) return;
             if (captureAction >= 0)
             {
@@ -179,6 +180,12 @@ namespace Redline.Menu
             Label(rect, "CONFIGURAÇÕES", 46, White, 58, 34, 1000, 64).fontStyle = FontStyle.Bold;
             Label(rect, "SEU RITMO. SEU CONTROLE.", 17, Muted, 62, 104, 1000, 32);
             MenuButton(rect, "Fechar", "×", 1450, 34, 54, 54, false, CancelSettings);
+            displayModeText = MenuButton(rect, "TelaCheia", "", 1130, 96, 370, 42, false, () =>
+            {
+                DisplaySettings.ToggleFullscreen();
+                RefreshDisplayLabel();
+            }).GetComponentInChildren<Text>();
+            RefreshDisplayLabel();
             Fill(rect, "DivisoriaTopo", new Color(1, 1, 1, 0.14f), 60, 148, 1440, 1);
             Label(rect, "01  /  ÁUDIO", 20, Red, 60, 178, 440, 36).fontStyle = FontStyle.Bold;
             Fill(rect, "DivisoriaColunas", new Color(1, 1, 1, 0.10f), 560, 188, 1, 566);
@@ -230,6 +237,11 @@ namespace Redline.Menu
             canvasGroup.alpha = 0f;
             for (float t = 0; t < 1; t += Time.unscaledDeltaTime / 0.55f) { canvasGroup.alpha = t; yield return null; }
             canvasGroup.alpha = 1f;
+        }
+        void RefreshDisplayLabel()
+        {
+            if (displayModeText != null)
+                displayModeText.text = "TELA CHEIA: " + (DisplaySettings.IsFullscreen ? "SIM" : "NÃO") + "  (F11)";
         }
         public void OpenCredits()
         {

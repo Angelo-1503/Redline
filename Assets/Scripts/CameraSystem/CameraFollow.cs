@@ -21,6 +21,9 @@ namespace Redline.CameraSystem
         [SerializeField] private float levelEndX = 20f;
         [Tooltip("Se o trecho for mais estreito que a tela (ex.: monitor mais largo que 16:9), aproxima a câmera para o trecho ocupar a tela inteira, em vez de mostrar o fundo do lado.")]
         [SerializeField] private bool fitWidthIfNarrow = false;
+        [Tooltip("Limita a borda inferior visível à base da arte do cenário.")]
+        [SerializeField] private bool clampBottom;
+        [SerializeField] private float minimumViewY;
 
         [Header("Desnível (escada)")]
         [Tooltip("Quanto a câmera desce, em unidades, entre descentStartX e descentEndX. 0 = fase toda no mesmo nível.")]
@@ -148,7 +151,16 @@ namespace Redline.CameraSystem
                     : minX;
             }
 
-            transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref currentVelocity, smoothTime);
+            float minimumCameraY = minimumViewY + (cam != null ? cam.orthographicSize : 0f);
+            if (clampBottom && cam != null && cam.orthographic)
+                desiredPosition.y = Mathf.Max(desiredPosition.y, minimumCameraY);
+            Vector3 position = Vector3.SmoothDamp(transform.position, desiredPosition, ref currentVelocity, smoothTime);
+            if (clampBottom && cam != null && cam.orthographic && position.y < minimumCameraY)
+            {
+                position.y = minimumCameraY;
+                currentVelocity.y = 0f;
+            }
+            transform.position = position;
         }
     }
 }

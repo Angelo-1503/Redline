@@ -38,7 +38,7 @@ namespace Redline.UI
             var scaler = obj.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.referenceResolution = new Vector2(1920, 1080); scaler.matchWidthOrHeight = 0.5f;
-            playerWidget = new Widget(obj.transform, false, "VIDA");
+            playerWidget = new Widget(obj.transform, false, "BadFallen");
             playerWidget.SetPortrait(Resources.Load<Texture2D>("UI/OperatorPortrait"));
             boss = FindFirstObjectByType<BossEnemy>(FindObjectsInactive.Include);
             if (boss != null)

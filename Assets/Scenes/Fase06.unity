@@ -2136,8 +2136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419387b616824f76bb67db55d38909fc, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Redline.Audio.MusicManager
-  musicClip: {fileID: 8300000, guid: cb0918a0002c4d7ea32a3097a22e1420, type: 3}
+  musicClip: {fileID: 8300000, guid: 8912db58986e42d2b6a2ce400efaecea, type: 3}
   volume: 0.32
+  bossSpawner: {fileID: 1969491606}
+  bossMusicClip: {fileID: 8300000, guid: cb0918a0002c4d7ea32a3097a22e1420, type: 3}
 --- !u!114 &7310668109858554014
 MonoBehaviour:
   m_ObjectHideFlags: 0

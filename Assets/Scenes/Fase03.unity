@@ -717,6 +717,8 @@ MonoBehaviour:
   offset: {x: 0, y: 1, z: -10}
   lockY: 1
   fixedY: 1
+  clampBottom: 1
+  minimumViewY: -10.35
   clampToLevel: 1
   levelStartX: -16.640625
   levelEndX: 36.875

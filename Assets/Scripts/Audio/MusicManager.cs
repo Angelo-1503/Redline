@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Redline.Settings;
+using Redline.Waves;
 
 namespace Redline.Audio
 {
@@ -22,6 +23,9 @@ namespace Redline.Audio
         [SerializeField] private AudioClip musicClip;
         [Range(0f, 1f)]
         [SerializeField] private float volume = 0.5f;
+        [Header("Música da arena (opcional)")]
+        [SerializeField] private BossSpawner bossSpawner;
+        [SerializeField] private AudioClip bossMusicClip;
 
         private AudioSource audioSource;
         private float fadeGain = 1f;
@@ -42,8 +46,17 @@ namespace Redline.Audio
             audioSource.spatialBlend = 0f; // música 2D, não posicional
         }
 
-        private void OnEnable() { GameSettings.Changed += ApplyVolume; }
-        private void OnDisable() { GameSettings.Changed -= ApplyVolume; }
+        private void OnEnable()
+        {
+            GameSettings.Changed += ApplyVolume;
+            if (bossSpawner != null) bossSpawner.OnBossActivated += PlayBossMusic;
+        }
+        private void OnDisable()
+        {
+            GameSettings.Changed -= ApplyVolume;
+            if (bossSpawner != null) bossSpawner.OnBossActivated -= PlayBossMusic;
+        }
+        private void PlayBossMusic() { PlayClip(bossMusicClip); }
         private void ApplyVolume()
         {
             if (audioSource != null) audioSource.volume = volume * GameSettings.MusicVolume * fadeGain;

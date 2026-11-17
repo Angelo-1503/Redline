@@ -1,7 +1,7 @@
 # Trilha sonora
 
-- Fases 1 a 5: Dark Electronic, de BaoshunMusic (Pixabay).
-- Fase 6: Darkling, de Kevin MacLeod (incompetech.com), CC BY 4.0.
+- Fases 1 a 5 e percurso da Fase 6: Dark Electronic, de BaoshunMusic (Pixabay).
+- Arena do FalleN na Fase 6: Darkling, de Kevin MacLeod (incompetech.com), CC BY 4.0. A troca ocorre pelo evento OnBossActivated do BossSpawner da cena.
 - Os arquivos completos estão em `Assets/Audio/Music`, com importação estéreo, streaming e compressão Vorbis. Nenhum download é necessário durante o jogo.
 - Referências explícitas nas seis cenas. Música 2D em loop, volume base de 0,32, multiplicado pelo volume de música das configurações. O volume geral continua no AudioListener.
 - Pausa e Game Over continuam usando o bloqueio de áudio já existente.
